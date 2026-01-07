@@ -125,7 +125,7 @@ export default function Home() {
 
   const projects = [
 {
-      image: "/images/novo-jardim-residencial.jpg",
+      image: "/images/novo-projeto-residencial.jpg",
       title: "Projeto de Paisagismo Residencial em São Roque",
       description: "Projeto completo em São Roque",
     },
