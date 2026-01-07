@@ -489,7 +489,7 @@ export default function Home() {
           >
             <p className="text-gold font-medium mb-2">Nossos Serviços</p>
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-              Soluções Completas em Paisagismo
+              Do Projeto à Execução
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto">
               Oferecemos uma gama completa de serviços para transformar e manter
