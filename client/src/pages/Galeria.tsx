@@ -143,7 +143,7 @@ export default function Galeria() {
       image: "/images/jardim-manutencao-profissional.jpg",
       titulo: "Jardim com Piscina",
       categoria: "residencial",
-      local: "São Roque - SP",
+      local: "São Paulo - SP",
       descricao: "Paisagismo tropical com área de lazer integrada.",
     },
   ];
