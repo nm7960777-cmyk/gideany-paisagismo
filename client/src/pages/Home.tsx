@@ -67,10 +67,10 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Cleidson Soares",
+      name: "Henrique Soares",
       location: "São Roque - SP",
       text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível como esperado.",
-      initial: "C",
+      initial: "H",
     },
     {
       name: "Ricardo Mendes",
@@ -91,7 +91,7 @@ export default function Home() {
       icon: Leaf,
       title: "Projetos de Paisagismo",
       description:
-        "Desenvolvemos projetos personalizados que transformam seu espaço em um ambiente único, harmonizando plantas, elementos decorativos e funcionalidade.",
+        "Desenvolvemos projetos personalizados para residências e empresas, transformando seu espaço em um ambiente único que harmoniza plantas, elementos decorativos e funcionalidade.",
     },
     {
       icon: Shovel,
@@ -343,9 +343,9 @@ export default function Home() {
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8 max-w-2xl"
             >
-              Projetos exclusivos de paisagismo que unem beleza, funcionalidade
-              e sustentabilidade. Design com técnicas atualizadas para criar
-              ambientes que encantam.
+              Projetos exclusivos de paisagismo residencial e comercial que unem
+              beleza, funcionalidade e sustentabilidade. Design com técnicas
+              atualizadas para criar ambientes que encantam.
             </motion.p>
 
             <motion.div
@@ -444,8 +444,9 @@ export default function Home() {
                 Paisagista com formação técnica e registro no CREA-SP,
                 apaixonada por transformar espaços em verdadeiros refúgios
                 naturais. Atuo em São Roque, Cotia, Sorocaba, São Paulo e toda a
-                região, oferecendo projetos personalizados que respeitam o meio
-                ambiente e valorizam cada detalhe do seu espaço.
+                região, oferecendo projetos personalizados para residências e
+                empresas que respeitam o meio ambiente e valorizam cada detalhe
+                do seu espaço.
               </p>
               <p className="text-foreground/80 text-lg leading-relaxed mb-8">
                 Com conhecimento atualizado nas últimas tendências de paisagismo
