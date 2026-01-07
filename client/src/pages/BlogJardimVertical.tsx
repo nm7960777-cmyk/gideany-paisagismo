@@ -67,7 +67,7 @@ export default function BlogJardimVertical() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                8 min de leitura
+                4 min de leitura
               </span>
             </div>
           </motion.div>

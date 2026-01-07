@@ -6,7 +6,7 @@
  * - Style: Luxury tropical with Art Deco influences
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -57,6 +57,11 @@ const staggerContainer = {
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // SEO: Define o título da página
+  useEffect(() => {
+    document.title = "Paisagista em São Roque SP | Gideany Rezende - CREA";
+  }, []);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({
     nome: "",
@@ -119,19 +124,19 @@ export default function Home() {
   ];
 
   const projects = [
-    {
-      image: "/images/novo-area-piscina.jpg",
-      title: "Jardim com Piscina",
-      description: "Projeto residencial",
+{
+      image: "/images/novo-jardim-residencial.jpg",
+      title: "Projeto de Paisagismo Residencial em São Roque",
+      description: "Projeto completo em São Roque",
     },
     {
       image: "/images/novo-jardim-vertical.jpg",
-      title: "Jardim Vertical",
+      title: "Jardim Vertical Residencial em Cotia SP",
       description: "Fachada verde moderna",
     },
     {
       image: "/images/antes-depois-novo.jpg",
-      title: "Transformação Completa",
+      title: "Transformação de Jardim - Antes e Depois",
       description: "Antes e depois",
     },
   ];
@@ -188,7 +193,7 @@ export default function Home() {
             <a href="#" className="flex items-center gap-3">
               <img
                 src="/images/logo_gr.png"
-                alt="GR Logo"
+                alt="Gideany Rezende Paisagismo - Logo"
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
@@ -350,9 +355,9 @@ export default function Home() {
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8 max-w-2xl"
             >
-              Projetos exclusivos de paisagismo residencial e comercial que unem
-              beleza, funcionalidade e sustentabilidade. Design com técnicas
-              atualizadas para criar ambientes que encantam.
+              Paisagista em São Roque, Cotia e Sorocaba. Projetos de jardins 
+              residenciais e comerciais que transformam seu espaço. 
+              Engenheira Agrônoma com CREA-SP. Orçamento grátis pelo WhatsApp!
             </motion.p>
 
             <motion.div
@@ -429,7 +434,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src="/images/gideany_foto.png"
-                  alt="Gideany Clarice Rezende"
+                  alt="Gideany Rezende - Paisagista em São Roque SP"
                   className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gold p-4 rounded-lg shadow-xl hidden md:block">
@@ -962,7 +967,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src="/images/logo_gr.png"
-                  alt="GR Logo"
+                  alt="Gideany Rezende Paisagismo - Logo"
                   className="h-10 w-auto"
                 />
                 <span className="font-display text-lg text-white">
@@ -1007,10 +1012,8 @@ export default function Home() {
                 >
                   Blog
                 </a>
-                <Link href="/faq">
-                  <a className="block text-white/60 hover:text-gold transition-colors text-sm">
+                <Link href="/faq" className="block text-white/60 hover:text-gold transition-colors text-sm">
                     Perguntas Frequentes
-                  </a>
                 </Link>
               </div>
             </div>

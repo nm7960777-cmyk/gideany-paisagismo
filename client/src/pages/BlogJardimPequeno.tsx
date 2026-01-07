@@ -15,16 +15,14 @@ export default function BlogJardimPequeno() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
                 <span className="text-gold font-cinzel font-bold text-lg">GR</span>
               </div>
               <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
                 Gideany Rezende <span className="text-gold">Paisagismo</span>
               </span>
-            </a>
-          </Link>
+            </Link>
           <Link href="/blog">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -39,9 +37,9 @@ export default function BlogJardimPequeno() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/"><a className="hover:text-gold">Início</a></Link>
+            <Link href="/" className="hover:text-gold">Início</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
+            <Link href="/blog" className="hover:text-gold">Blog</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Jardim Pequeno</span>
           </div>
@@ -68,7 +66,7 @@ export default function BlogJardimPequeno() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                8 min de leitura
+                6 min de leitura
               </span>
             </div>
           </motion.div>
@@ -310,7 +308,7 @@ export default function BlogJardimPequeno() {
                 </p>
               </div>
               <p className="text-sm text-gray-500 mt-4 italic">
-                → Quer saber mais? Tenho um artigo completo sobre <Link href="/blog/jardim-vertical"><a className="text-gold hover:underline">jardim vertical</a></Link>.
+                → Quer saber mais? Tenho um artigo completo sobre <Link href="/blog/jardim-vertical" className="text-gold hover:underline">jardim vertical</Link>.
               </p>
             </div>
 
@@ -512,8 +510,7 @@ export default function BlogJardimPequeno() {
             Continue Lendo
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link href="/blog/jardim-vertical">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/jardim-vertical" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group block">
                 <span className="text-sm text-gold">Jardim Vertical</span>
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors mt-2">
                   Como Fazer um Jardim Vertical em Casa
@@ -521,10 +518,8 @@ export default function BlogJardimPequeno() {
                 <p className="text-gray-600 text-sm mt-2">
                   Passo a passo completo para criar seu jardim vertical, mesmo em espaços pequenos.
                 </p>
-              </a>
             </Link>
-            <Link href="/blog/horta-apartamento">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/horta-apartamento" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group block">
                 <span className="text-sm text-gold">Horta em Apartamento</span>
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors mt-2">
                   Horta em Apartamento: O Guia Completo
@@ -532,7 +527,6 @@ export default function BlogJardimPequeno() {
                 <p className="text-gray-600 text-sm mt-2">
                   Tudo que você precisa saber para cultivar temperos e hortaliças em casa.
                 </p>
-              </a>
             </Link>
           </div>
         </div>
@@ -541,11 +535,9 @@ export default function BlogJardimPequeno() {
       {/* Footer */}
       <footer className="bg-emerald-dark py-8">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white font-cinzel hover:text-gold transition-colors">
+          <Link href="/" className="text-white font-cinzel hover:text-gold transition-colors">
               Gideany Rezende <span className="text-gold">Paisagismo</span>
-            </a>
-          </Link>
+            </Link>
           <p className="text-white/60 text-sm mt-2">
             © 2026 Todos os direitos reservados.
           </p>

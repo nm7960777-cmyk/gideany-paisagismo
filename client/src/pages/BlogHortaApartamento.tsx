@@ -67,7 +67,7 @@ export default function BlogHortaApartamento() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                10 min de leitura
+                4 min de leitura
               </span>
             </div>
           </motion.div>
