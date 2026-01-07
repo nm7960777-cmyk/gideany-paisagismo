@@ -83,7 +83,7 @@ export default function BlogHortaApartamento() {
           className="max-w-4xl mx-auto"
         >
           <img
-            src="/images/novo-projeto-residencial.jpg"
+            src="/images/blog-horta-apartamento-principal.jpg"
             alt="Horta em Apartamento"
             className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
           />

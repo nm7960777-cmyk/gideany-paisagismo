@@ -83,7 +83,7 @@ export default function BlogJardimVertical() {
           className="max-w-4xl mx-auto"
         >
           <img
-            src="/images/novo-jardim-vertical-fachada.jpg"
+            src="/images/blog-jardim-vertical-correto.jpg"
             alt="Jardim Vertical em Casa"
             className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
           />
