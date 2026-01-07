@@ -143,6 +143,7 @@ export default function Home() {
       title: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
+      link: "/blog/jardim-vertical",
     },
     {
       category: "Horta em Apartamento",
@@ -150,6 +151,7 @@ export default function Home() {
       title: "Horta em Apartamento: O Guia Completo",
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
+      link: "/blog/horta-apartamento",
     },
     {
       category: "Jardim Pequeno",
@@ -157,6 +159,7 @@ export default function Home() {
       title: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço",
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
+      link: "/blog/jardim-pequeno",
     },
   ];
 
@@ -710,12 +713,14 @@ export default function Home() {
                 Dicas e Curiosidades
               </h2>
             </div>
-            <Button
-              variant="ghost"
-              className="text-emerald hover:text-emerald hover:bg-emerald/10 mt-4 md:mt-0"
-            >
-              Ver todos os artigos <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
+            <Link href="/blog">
+              <Button
+                variant="ghost"
+                className="text-emerald hover:text-emerald hover:bg-emerald/10 mt-4 md:mt-0"
+              >
+                Ver todos os artigos <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -727,30 +732,32 @@ export default function Home() {
           >
             {blogPosts.map((post, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-foreground/50">
-                        {post.date}
-                      </span>
-                    </div>
-                    <h3 className="font-display text-lg text-forest mb-3 group-hover:text-emerald transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-foreground/70 text-sm leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    <Button
-                      variant="ghost"
-                      className="text-emerald hover:text-emerald hover:bg-emerald/10 p-0"
-                    >
-                      Ler mais <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
+                <Link href={post.link}>
+                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
+                          {post.category}
+                        </span>
+                        <span className="text-xs text-foreground/50">
+                          {post.date}
+                        </span>
+                      </div>
+                      <h3 className="font-display text-lg text-forest mb-3 group-hover:text-emerald transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <Button
+                        variant="ghost"
+                        className="text-emerald hover:text-emerald hover:bg-emerald/10 p-0"
+                      >
+                        Ler mais <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </motion.div>
