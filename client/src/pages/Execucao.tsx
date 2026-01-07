@@ -39,25 +39,25 @@ export default function Execucao() {
       icon: Users,
       titulo: "Equipe Própria",
       descricao:
-        "Profissionais treinados e supervisionados diretamente por nós. Qualidade garantida em cada etapa.",
+        "Não terceirizo. Minha equipe faz o serviço e eu acompanho pessoalmente.",
     },
     {
       icon: Shield,
       titulo: "Garantia de Serviço",
       descricao:
-        "Oferecemos garantia em todos os serviços executados. Sua tranquilidade é nossa prioridade.",
+        "Se alguma planta não pegar nos primeiros 30 dias, a gente repõe sem custo.",
     },
     {
       icon: Clock,
       titulo: "Prazo Cumprido",
       descricao:
-        "Cronograma detalhado e compromisso com prazos. Você sabe exatamente quando seu jardim estará pronto.",
+        "Passo o cronograma antes de começar. Você sabe a data de início e de entrega.",
     },
     {
       icon: Truck,
       titulo: "Materiais de Qualidade",
       descricao:
-        "Trabalhamos apenas com fornecedores certificados. Plantas saudáveis e materiais duráveis.",
+        "Compro de produtores que conheço. Planta saudável pega mais fácil e dá menos trabalho.",
     },
   ];
 
@@ -78,22 +78,22 @@ export default function Execucao() {
     {
       titulo: "Planejamento",
       descricao:
-        "Análise do projeto, cronograma detalhado e lista de materiais necessários.",
+        "Analiso o projeto, faço a lista de tudo que precisa e monto o cronograma.",
     },
     {
       titulo: "Preparação",
       descricao:
-        "Limpeza do terreno, correção do solo e instalação de infraestrutura básica.",
+        "Limpo o terreno, corrijo o solo se precisar e passo a tubulação de irrigação.",
     },
     {
       titulo: "Implantação",
       descricao:
-        "Execução do paisagismo conforme projeto: plantio, irrigação, iluminação.",
+        "Planto tudo conforme o projeto, instalo irrigação e iluminação se tiver.",
     },
     {
       titulo: "Acabamento",
       descricao:
-        "Detalhes finais, limpeza geral e orientações de cuidados iniciais.",
+        "Faço os ajustes finais, limpo tudo e te explico como cuidar nas primeiras semanas.",
     },
   ];
 

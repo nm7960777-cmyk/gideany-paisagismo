@@ -83,49 +83,49 @@ export default function Manutencao() {
       icon: Scissors,
       titulo: "Podas",
       descricao:
-        "Podas de formação, limpeza e contenção para manter suas plantas saudáveis e bonitas.",
+        "Poda certa na hora certa. Cada planta tem seu jeito de ser podada.",
     },
     {
       icon: Droplets,
       titulo: "Irrigação",
       descricao:
-        "Verificação, ajuste e manutenção de sistemas de irrigação automatizados.",
+        "Verifico se tá funcionando direito, ajusto os tempos conforme a estação do ano.",
     },
     {
       icon: Bug,
       titulo: "Controle de Pragas",
       descricao:
-        "Identificação e tratamento preventivo e corretivo de pragas e doenças.",
+        "Identifico o problema antes de virar infestação. Prevenção sai mais barato que tratamento.",
     },
     {
       icon: Leaf,
       titulo: "Adubação",
       descricao:
-        "Nutrição adequada para cada espécie, garantindo crescimento saudável e floração.",
+        "Adubo certo pra cada planta. Quer floração bonita? Precisa de nutrição adequada.",
     },
     {
       icon: Sun,
       titulo: "Corte de Grama",
       descricao:
-        "Corte regular com altura adequada para cada tipo de gramado.",
+        "Corte na altura certa pro seu tipo de grama. Cortar baixo demais queima.",
     },
     {
       icon: Sparkles,
       titulo: "Limpeza Geral",
       descricao:
-        "Remoção de folhas secas, galhos e detritos para manter o jardim impecável.",
+        "Tiro folha seca, galho caído, erva daninha. Jardim limpo dá menos praga.",
     },
   ];
 
   const beneficios = [
-    "Jardim sempre bonito e saudável",
-    "Economia com substituição de plantas",
-    "Prevenção de pragas e doenças",
-    "Valorização contínua do imóvel",
-    "Mais tempo livre para você",
-    "Profissionais especializados",
-    "Equipamentos profissionais",
-    "Produtos de qualidade",
+    "Você não precisa se preocupar com nada",
+    "Planta bem cuidada dura mais e gasta menos",
+    "Pego o problema antes de virar prejuízo",
+    "Jardim bonito valoriza o imóvel",
+    "Seu fim de semana livre pra descansar",
+    "Equipe que entende de plantas",
+    "Ferramentas certas pro serviço",
+    "Adubo e defensivo de qualidade",
   ];
 
   return (
