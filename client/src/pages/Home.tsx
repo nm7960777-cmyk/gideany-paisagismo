@@ -331,7 +331,7 @@ export default function Home() {
             >
               <MapPin className="w-4 h-4 text-gold" />
               <span className="text-white/90 text-sm">
-                São Roque • Cotia • Sorocaba • São Paulo e Região
+                São Roque • Cotia • Sorocaba e todo Estado de SP
               </span>
             </motion.div>
 
@@ -447,7 +447,7 @@ export default function Home() {
               <p className="text-foreground/80 text-lg leading-relaxed mb-6">
                 Engenheira Agrônoma com registro no CREA-SP,
                 apaixonada por transformar espaços em verdadeiros refúgios
-                naturais. Atuo em São Roque, Cotia, Sorocaba, São Paulo e toda a
+                naturais. Atuo em São Roque, Cotia, Sorocaba e todo o Estado de São Paulo,
                 região, oferecendo projetos personalizados para residências e
                 empresas que respeitam o meio ambiente e valorizam cada detalhe
                 do seu espaço.
@@ -822,7 +822,7 @@ export default function Home() {
                     <p className="text-gold font-medium">Área de Atendimento</p>
                   </div>
                   <p className="text-white/80">
-                    São Roque, Cotia, Sorocaba, São Paulo e Região
+                    São Roque, Cotia, Sorocaba e todo Estado de SP
                   </p>
                 </div>
               </div>
@@ -964,7 +964,7 @@ export default function Home() {
               </div>
               <p className="text-white/60 text-sm max-w-md">
                 Transformando espaços em jardins que inspiram. Projetos exclusivos
-                de paisagismo em São Roque, Cotia, Sorocaba, São Paulo e região.
+                de paisagismo em São Roque, Cotia, Sorocaba e todo Estado de SP.
               </p>
             </div>
             <div>

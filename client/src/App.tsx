@@ -9,6 +9,10 @@ import Projetos from "./pages/Projetos";
 import Execucao from "./pages/Execucao";
 import Manutencao from "./pages/Manutencao";
 import Galeria from "./pages/Galeria";
+import Blog from "./pages/Blog";
+import BlogJardimVertical from "./pages/BlogJardimVertical";
+import BlogHortaApartamento from "./pages/BlogHortaApartamento";
+import BlogJardimPequeno from "./pages/BlogJardimPequeno";
 
 function Router() {
   return (
@@ -18,6 +22,10 @@ function Router() {
       <Route path={"/servicos/execucao"} component={Execucao} />
       <Route path={"/servicos/manutencao"} component={Manutencao} />
       <Route path={"/galeria"} component={Galeria} />
+      <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/jardim-vertical"} component={BlogJardimVertical} />
+      <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
+      <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
