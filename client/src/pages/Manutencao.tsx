@@ -12,7 +12,6 @@ import {
   Scissors,
   Bug,
   Leaf,
-  Calendar,
   Phone,
   Sparkles,
   Sun,
@@ -34,50 +33,6 @@ const staggerContainer = {
 };
 
 export default function Manutencao() {
-  const planos = [
-    {
-      nome: "Básico",
-      frequencia: "Mensal",
-      preco: "Sob consulta",
-      servicos: [
-        "Poda de arbustos e cercas vivas",
-        "Corte de grama",
-        "Limpeza geral do jardim",
-        "Remoção de ervas daninhas",
-        "Verificação do sistema de irrigação",
-      ],
-      destaque: false,
-    },
-    {
-      nome: "Completo",
-      frequencia: "Quinzenal",
-      preco: "Sob consulta",
-      servicos: [
-        "Todos os serviços do plano Básico",
-        "Adubação programada",
-        "Controle de pragas e doenças",
-        "Replantio quando necessário",
-        "Poda de formação",
-        "Relatório mensal do jardim",
-      ],
-      destaque: true,
-    },
-    {
-      nome: "Premium",
-      frequencia: "Semanal",
-      preco: "Sob consulta",
-      servicos: [
-        "Todos os serviços do plano Completo",
-        "Acompanhamento técnico especializado",
-        "Renovação sazonal de plantas",
-        "Manutenção de iluminação",
-        "Limpeza de espelhos d'água",
-        "Atendimento prioritário",
-      ],
-      destaque: false,
-    },
-  ];
-
   const servicosManutencao = [
     {
       icon: Scissors,
@@ -89,7 +44,7 @@ export default function Manutencao() {
       icon: Droplets,
       titulo: "Irrigação",
       descricao:
-        "Verificação, ajuste e manutenção de sistemas de irrigação automatizados.",
+        "Verificação, ajuste e manutenção de sistemas de irrigação.",
     },
     {
       icon: Bug,
@@ -113,7 +68,7 @@ export default function Manutencao() {
       icon: Sparkles,
       titulo: "Limpeza Geral",
       descricao:
-        "Remoção de folhas secas, galhos e detritos para manter o jardim impecável.",
+        "Remoção de folhas secas, galhos e detritos para manter o jardim limpo.",
     },
   ];
 
@@ -183,9 +138,8 @@ export default function Manutencao() {
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8"
             >
-              Seu jardim merece cuidados profissionais. Oferecemos planos de
-              manutenção periódica que mantêm seu espaço verde sempre bonito,
-              saudável e valorizado.
+              Seu jardim merece cuidados profissionais. Oferecemos manutenção
+              periódica personalizada conforme a necessidade do seu espaço.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button
@@ -216,7 +170,7 @@ export default function Manutencao() {
               O que fazemos na manutenção
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Cuidados completos para manter seu jardim sempre impecável.
+              Cuidados completos para manter seu jardim sempre bonito.
             </p>
           </motion.div>
 
@@ -248,113 +202,35 @@ export default function Manutencao() {
         </div>
       </section>
 
-      {/* Planos */}
+      {/* Orçamento Personalizado */}
       <section className="py-20 bg-forest">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center max-w-3xl mx-auto"
           >
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-              Planos de Manutenção
+              Orçamento Personalizado
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              Escolha o plano ideal para as necessidades do seu jardim.
+            <p className="text-white/70 mb-8">
+              Cada jardim tem suas necessidades. Avaliamos seu espaço e montamos
+              um plano de manutenção sob medida, com a frequência ideal para
+              manter tudo em ordem — seja mensal, quinzenal ou conforme sua
+              preferência.
             </p>
+            <Button
+              size="lg"
+              className="bg-gold hover:bg-gold/90 text-forest font-semibold px-8"
+              onClick={() =>
+                window.open("https://wa.me/5511950583364", "_blank")
+              }
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Solicitar Orçamento
+            </Button>
           </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {planos.map((plano, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className={`relative ${plano.destaque ? "md:-mt-4 md:mb-4" : ""}`}
-              >
-                {plano.destaque && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-forest text-sm font-semibold px-4 py-1 rounded-full">
-                    Mais Popular
-                  </div>
-                )}
-                <Card
-                  className={`h-full ${
-                    plano.destaque
-                      ? "bg-gold border-gold"
-                      : "bg-forest-light border-gold/20"
-                  }`}
-                >
-                  <CardContent className="p-8">
-                    <div className="text-center mb-6">
-                      <h3
-                        className={`font-display text-2xl mb-2 ${
-                          plano.destaque ? "text-forest" : "text-white"
-                        }`}
-                      >
-                        {plano.nome}
-                      </h3>
-                      <div className="flex items-center justify-center gap-2 mb-4">
-                        <Calendar
-                          className={`w-5 h-5 ${
-                            plano.destaque ? "text-forest/70" : "text-gold"
-                          }`}
-                        />
-                        <span
-                          className={
-                            plano.destaque ? "text-forest/70" : "text-white/70"
-                          }
-                        >
-                          {plano.frequencia}
-                        </span>
-                      </div>
-                      <p
-                        className={`font-display text-xl ${
-                          plano.destaque ? "text-forest" : "text-gold"
-                        }`}
-                      >
-                        {plano.preco}
-                      </p>
-                    </div>
-                    <ul className="space-y-3 mb-8">
-                      {plano.servicos.map((servico, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle
-                            className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
-                              plano.destaque ? "text-forest" : "text-gold"
-                            }`}
-                          />
-                          <span
-                            className={`text-sm ${
-                              plano.destaque
-                                ? "text-forest/80"
-                                : "text-white/80"
-                            }`}
-                          >
-                            {servico}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Button
-                      className={`w-full ${
-                        plano.destaque
-                          ? "bg-forest hover:bg-forest/90 text-white"
-                          : "bg-gold hover:bg-gold/90 text-forest"
-                      }`}
-                      onClick={() =>
-                        window.open("https://wa.me/5511950583364", "_blank")
-                      }
-                    >
-                      Solicitar Orçamento
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -420,8 +296,7 @@ export default function Manutencao() {
               Seu jardim merece cuidado profissional
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto mb-8">
-              Entre em contato para conhecer nossos planos e receber um
-              orçamento personalizado para seu espaço.
+              Entre em contato para receber um orçamento personalizado para seu espaço.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -449,12 +324,11 @@ export default function Manutencao() {
         </div>
       </section>
 
-      {/* Footer simples */}
-      <footer className="py-8 bg-forest-light border-t border-gold/20">
+      {/* Footer */}
+      <footer className="py-8 bg-forest-dark border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2026 Gideany Rezende Paisagismo. CREA-SP 5071612380. Todos os
-            direitos reservados.
+            © 2025 Gideany Rezende Paisagismo. Todos os direitos reservados.
           </p>
         </div>
       </footer>
