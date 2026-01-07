@@ -49,13 +49,13 @@ export default function Projetos() {
       numero: "03",
       titulo: "Desenvolvimento do Projeto",
       descricao:
-        "Criamos o projeto paisagístico com plantas técnicas, perspectivas 3D, memorial descritivo e lista de espécies recomendadas.",
+        "Criamos o projeto paisagístico com plantas técnicas, memorial descritivo e lista de espécies recomendadas.",
     },
     {
       numero: "04",
       titulo: "Apresentação e Ajustes",
       descricao:
-        "Apresentamos o projeto completo e fazemos os ajustes necessários até que você esteja 100% satisfeito com o resultado.",
+        "Apresentamos o projeto e fazemos ajustes para alinhar o resultado final com suas expectativas.",
     },
     {
       numero: "05",
@@ -70,9 +70,9 @@ export default function Projetos() {
     "Escolha de espécies adaptadas ao clima local",
     "Otimização do uso da água com irrigação inteligente",
     "Valorização do imóvel em até 20%",
-    "Plantas técnicas para execução precisa",
+    "Plantas técnicas detalhadas",
     "Memorial descritivo completo",
-    "Perspectivas 3D realistas",
+    "Imagens ilustrativas do projeto",
     "Acompanhamento pós-projeto",
   ];
 
