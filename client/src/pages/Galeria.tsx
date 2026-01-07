@@ -130,6 +130,22 @@ export default function Galeria() {
       local: "São Roque - SP",
       descricao: "Antes e depois de uma transformação total.",
     },
+    {
+      id: 13,
+      image: "/images/hero-original.jpg",
+      titulo: "Jardim Residencial",
+      categoria: "residencial",
+      local: "São Roque - SP",
+      descricao: "Paisagismo tropical com área de piscina integrada.",
+    },
+    {
+      id: 14,
+      image: "/images/manutencao-jardim.png",
+      titulo: "Jardim em Manutenção",
+      categoria: "residencial",
+      local: "Cotia - SP",
+      descricao: "Projeto com manutenção periódica profissional.",
+    },
   ];
 
   const categorias = [
