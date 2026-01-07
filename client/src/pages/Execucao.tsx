@@ -57,7 +57,7 @@ export default function Execucao() {
       icon: Truck,
       titulo: "Materiais de Qualidade",
       descricao:
-        "Selecionamos cada planta pessoalmente. Só usamos o que funciona no clima da região.",
+        "Selecionamos cada planta pessoalmente. Plantas saudáveis e materiais duráveis.",
     },
   ];
 
@@ -83,12 +83,12 @@ export default function Execucao() {
     {
       titulo: "Preparação",
       descricao:
-        "Limpeza do terreno, correção do solo e instalação de infraestrutura básica.",
+        "Limpeza do terreno e preparo do solo para receber as plantas.",
     },
     {
       titulo: "Implantação",
       descricao:
-        "Execução do paisagismo conforme projeto: plantio, irrigação, iluminação.",
+        "Execução do paisagismo conforme o projeto aprovado.",
     },
     {
       titulo: "Acabamento",
