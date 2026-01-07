@@ -169,6 +169,17 @@ export default function BlogHortaApartamento() {
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               Temperos (Fáceis para Iniciantes)
             </h3>
+            
+            {/* Imagem de Temperos na Janela */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-ha-temperos-janela.jpg"
+                alt="Temperos frescos na janela da cozinha"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Temperos na janela: manjericão, alecrim, hortelã e cebolinha sempre frescos</p>
+            </div>
+            
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
               <li><strong>Manjericão:</strong> Cresce rápido, adora sol, perfeito para molhos</li>
               <li><strong>Hortelã:</strong> Muito resistente, cresce em qualquer lugar (cuidado: é invasiva!)</li>
@@ -192,6 +203,17 @@ export default function BlogHortaApartamento() {
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               Vegetais em Vasos Maiores
             </h3>
+            
+            {/* Imagem de Horta na Varanda */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-ha-vasos-hortalicas.jpg"
+                alt="Horta com hortaliças na varanda do apartamento"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Horta na varanda: tomates, pimentas e hortaliças em vasos</p>
+            </div>
+            
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
               <li><strong>Tomate-cereja:</strong> Precisa de vaso de 20L e tutor</li>
               <li><strong>Pimentas:</strong> Compactas, produzem muito</li>
@@ -239,6 +261,17 @@ export default function BlogHortaApartamento() {
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               1. Prepare o Vaso
             </h3>
+            
+            {/* Imagem de Preparo do Vaso */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-ha-preparo-vaso.jpg"
+                alt="Preparo do vaso com camadas de drenagem"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Preparo do vaso: argila expandida, manta geotêxtil e substrato</p>
+            </div>
+            
             <p className="text-gray-700 leading-relaxed mb-6">
               Coloque uma camada de 2-3cm de argila expandida no fundo do vaso. Cubra com uma manta 
               geotêxtil (ou TNT) para evitar que a terra escoe. Isso garante boa drenagem e evita 

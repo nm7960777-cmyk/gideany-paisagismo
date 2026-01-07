@@ -149,6 +149,16 @@ export default function BlogJardimPequeno() {
                 Plantas sugeridas: Echeveria, Sedum, Agave, Cactos variados
               </p>
             </div>
+            
+            {/* Imagem de Canteiro com Pedras */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jp-canteiro-pedras.jpg"
+                alt="Jardim de pedras com suculentas"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim de pedras: baixa manutenção e visual moderno</p>
+            </div>
 
             {/* Ideia 3 */}
             <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
@@ -164,6 +174,16 @@ export default function BlogJardimPequeno() {
                 Ideal para: Temperos, hortaliças, flores anuais
               </p>
             </div>
+            
+            {/* Imagem de Canteiro Elevado */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jp-canteiro-elevado.jpg"
+                alt="Canteiro elevado com madeira"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Canteiro elevado: prático para temperos e hortaliças</p>
+            </div>
 
             {/* Ideia 4 */}
             <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
@@ -178,6 +198,16 @@ export default function BlogJardimPequeno() {
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Palmeira-areca, Costela-de-adão, Filodendro, Bromélia
               </p>
+            </div>
+            
+            {/* Imagem de Jardim Tropical Compacto */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jp-tropical-compacto.jpg"
+                alt="Jardim tropical compacto"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim tropical: palmeiras, filodendros e bromélias em espaço compacto</p>
             </div>
 
             {/* Ideia 5 */}
@@ -223,6 +253,16 @@ export default function BlogJardimPequeno() {
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Capim-do-texas, Penisetum, Festuca, Carex
               </p>
+            </div>
+            
+            {/* Imagem de Gramíneas Ornamentais */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jp-gramineas.jpg"
+                alt="Canteiro com gramíneas ornamentais"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Gramíneas ornamentais: movimento e leveza no jardim</p>
             </div>
 
             {/* Ideia 8 */}

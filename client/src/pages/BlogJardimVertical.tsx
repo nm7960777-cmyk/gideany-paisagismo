@@ -161,6 +161,17 @@ export default function BlogJardimVertical() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Existem várias opções de estrutura para jardins verticais:
             </p>
+            
+            {/* Imagem de Pallet */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-pallet.jpg"
+                alt="Jardim vertical feito com pallet de madeira"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim vertical com pallet: solução econômica e rústica</p>
+            </div>
+            
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
               <li><strong>Pallets:</strong> Econômicos e rústicos, ideais para áreas externas</li>
               <li><strong>Vasos modulares:</strong> Práticos e fáceis de instalar, vendidos em lojas de jardinagem</li>
@@ -168,6 +179,16 @@ export default function BlogJardimVertical() {
               <li><strong>Treliças com vasos:</strong> Permitem criar composições personalizadas</li>
               <li><strong>Garrafas PET:</strong> Sustentável e econômico, perfeito para hortas</li>
             </ul>
+            
+            {/* Imagem de Vasos Modulares */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-vasos-modulares2.jpg"
+                alt="Vasos modulares para jardim vertical"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Vasos modulares: práticos e modernos para ambientes internos</p>
+            </div>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               3. Prepare a Impermeabilização
@@ -184,6 +205,16 @@ export default function BlogJardimVertical() {
             <p className="text-gray-700 leading-relaxed mb-6">
               A escolha das plantas é crucial para o sucesso do seu jardim vertical. Considere:
             </p>
+            
+            {/* Imagem de Plantas Pendentes */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-plantas-pendentes.jpg"
+                alt="Plantas pendentes ideais para jardim vertical"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Samambaias, jiboias e tradescantias: perfeitas para jardins verticais</p>
+            </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
               <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com pouca luz:</h4>
               <p className="text-gray-700">Jiboia, Samambaia, Lírio-da-paz, Espada-de-são-jorge, Peperômia</p>
@@ -209,6 +240,17 @@ export default function BlogJardimVertical() {
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               6. Instale o Sistema de Irrigação
             </h3>
+            
+            {/* Imagem de Irrigação */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-irrigacao.jpg"
+                alt="Sistema de irrigação por gotejamento em jardim vertical"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Sistema de irrigação por gotejamento: praticidade na manutenção</p>
+            </div>
+            
             <p className="text-gray-700 leading-relaxed mb-6">
               Para jardins verticais maiores, considere instalar um sistema de irrigação por gotejamento. 
               Para projetos menores, a rega manual funciona bem. A dica é regar pela manhã ou final da tarde, 
