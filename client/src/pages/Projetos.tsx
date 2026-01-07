@@ -136,7 +136,7 @@ export default function Projetos() {
       <section className="relative pt-32 pb-20 bg-forest">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/projeto-tropical.jpg')" }}
+          style={{ backgroundImage: "url('/images/novo-jardim-tropical.jpg')" }}
         />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -307,7 +307,7 @@ export default function Projetos() {
               className="relative"
             >
               <img
-                src="/images/projeto-moderno.jpg"
+                src="/images/novo-paisagismo-moderno.jpg"
                 alt="Projeto de paisagismo"
                 className="rounded-lg shadow-2xl"
               />

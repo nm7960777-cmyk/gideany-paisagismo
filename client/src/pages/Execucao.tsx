@@ -130,7 +130,7 @@ export default function Execucao() {
       <section className="relative pt-32 pb-20 bg-forest">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: "url('/images/projeto-fachada.jpg')" }}
+          style={{ backgroundImage: "url('/images/novo-fachada-verde.jpg')" }}
         />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -276,7 +276,7 @@ export default function Execucao() {
               className="relative"
             >
               <img
-                src="/images/projeto-entrada.jpg"
+                src="/images/novo-entrada-residencial.jpg"
                 alt="Execução de paisagismo"
                 className="rounded-lg shadow-2xl"
               />

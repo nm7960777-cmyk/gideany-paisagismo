@@ -120,12 +120,12 @@ export default function Home() {
 
   const projects = [
     {
-      image: "/images/projeto-piscina.jpg",
+      image: "/images/novo-area-piscina.jpg",
       title: "Jardim com Piscina",
       description: "Projeto residencial",
     },
     {
-      image: "/images/jardim-vertical.jpg",
+      image: "/images/novo-jardim-vertical.jpg",
       title: "Jardim Vertical",
       description: "Fachada verde moderna",
     },
@@ -313,7 +313,7 @@ export default function Home() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-original.jpg')" }}
+          style={{ backgroundImage: "url('/images/novo-hero.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-forest/95 via-forest/80 to-forest/40" />
         </div>

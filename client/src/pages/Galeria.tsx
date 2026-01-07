@@ -36,7 +36,7 @@ export default function Galeria() {
   const projetos = [
     {
       id: 1,
-      image: "/images/projeto-tropical.jpg",
+      image: "/images/novo-jardim-tropical.jpg",
       titulo: "Jardim Tropical com Piscina",
       categoria: "residencial",
       local: "São Roque - SP",
@@ -44,7 +44,7 @@ export default function Galeria() {
     },
     {
       id: 2,
-      image: "/images/projeto-moderno.jpg",
+      image: "/images/novo-paisagismo-moderno.jpg",
       titulo: "Paisagismo Moderno",
       categoria: "residencial",
       local: "Cotia - SP",
@@ -52,7 +52,7 @@ export default function Galeria() {
     },
     {
       id: 3,
-      image: "/images/projeto-entrada.jpg",
+      image: "/images/novo-entrada-residencial.jpg",
       titulo: "Entrada Residencial",
       categoria: "residencial",
       local: "São Roque - SP",
@@ -60,7 +60,7 @@ export default function Galeria() {
     },
     {
       id: 4,
-      image: "/images/projeto-fachada.jpg",
+      image: "/images/novo-fachada-verde.jpg",
       titulo: "Fachada Verde",
       categoria: "residencial",
       local: "Sorocaba - SP",
@@ -68,7 +68,7 @@ export default function Galeria() {
     },
     {
       id: 5,
-      image: "/images/projeto-piscina.jpg",
+      image: "/images/novo-area-piscina.jpg",
       titulo: "Área de Piscina",
       categoria: "residencial",
       local: "São Roque - SP",
@@ -76,7 +76,7 @@ export default function Galeria() {
     },
     {
       id: 6,
-      image: "/images/jardim-vertical.jpg",
+      image: "/images/novo-jardim-vertical.jpg",
       titulo: "Jardim Vertical",
       categoria: "vertical",
       local: "São Paulo - SP",
@@ -84,7 +84,7 @@ export default function Galeria() {
     },
     {
       id: 7,
-      image: "/images/paisagismo-comercial.jpg",
+      image: "/images/novo-paisagismo-comercial.jpg",
       titulo: "Paisagismo Corporativo",
       categoria: "comercial",
       local: "São Paulo - SP",
@@ -92,7 +92,7 @@ export default function Galeria() {
     },
     {
       id: 8,
-      image: "/images/paisagismo-corporativo.jpg",
+      image: "/images/novo-corporativo.jpg",
       titulo: "Entrada Comercial",
       categoria: "comercial",
       local: "Cotia - SP",
@@ -100,7 +100,7 @@ export default function Galeria() {
     },
     {
       id: 9,
-      image: "/images/jardim-vertical-fachada.jpg",
+      image: "/images/novo-jardim-vertical-fachada.jpg",
       titulo: "Fachada Verde Corporativa",
       categoria: "vertical",
       local: "São Paulo - SP",
@@ -108,7 +108,7 @@ export default function Galeria() {
     },
     {
       id: 10,
-      image: "/images/jardim-piscina.jpg",
+      image: "/images/novo-jardim-deck.jpg",
       titulo: "Jardim com Deck",
       categoria: "residencial",
       local: "Barueri - SP",
@@ -116,7 +116,7 @@ export default function Galeria() {
     },
     {
       id: 11,
-      image: "/images/projeto-jure.png",
+      image: "/images/novo-projeto-residencial.jpg",
       titulo: "Projeto Jurê",
       categoria: "residencial",
       local: "Cotia - SP",
@@ -132,7 +132,7 @@ export default function Galeria() {
     },
     {
       id: 13,
-      image: "/images/hero-original.jpg",
+      image: "/images/novo-hero.jpg",
       titulo: "Jardim Residencial",
       categoria: "residencial",
       local: "Avaré - SP",

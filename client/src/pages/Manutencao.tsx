@@ -270,7 +270,7 @@ export default function Manutencao() {
               className="relative"
             >
               <img
-                src="/images/jardim-piscina.jpg"
+                src="/images/novo-jardim-deck.jpg"
                 alt="Jardim bem cuidado"
                 className="rounded-lg shadow-2xl"
               />
