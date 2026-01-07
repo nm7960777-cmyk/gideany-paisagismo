@@ -111,7 +111,7 @@ export default function Galeria() {
       image: "/images/jardim-piscina.jpg",
       titulo: "Jardim com Deck",
       categoria: "residencial",
-      local: "São Roque - SP",
+      local: "Barueri - SP",
       descricao: "Integração entre área verde e área de lazer.",
     },
     {
@@ -127,7 +127,7 @@ export default function Galeria() {
       image: "/images/antes-depois-novo.jpg",
       titulo: "Transformação Completa",
       categoria: "residencial",
-      local: "São Roque - SP",
+      local: "São Paulo - SP",
       descricao: "Antes e depois de uma transformação total.",
     },
     {
@@ -135,7 +135,7 @@ export default function Galeria() {
       image: "/images/hero-original.jpg",
       titulo: "Jardim Residencial",
       categoria: "residencial",
-      local: "São Roque - SP",
+      local: "Avaré - SP",
       descricao: "Paisagismo tropical com área de piscina integrada.",
     },
     {
