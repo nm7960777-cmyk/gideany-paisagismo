@@ -387,7 +387,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-white/80 text-sm">Formação Técnica</span>
+                <span className="text-white/80 text-sm">Projetos Exclusivos</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-gold" />
@@ -459,13 +459,13 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <Award className="w-8 h-8 text-gold mx-auto mb-2" />
-                  <p className="font-semibold text-forest">Formação</p>
-                  <p className="text-sm text-foreground/60">Técnica</p>
+                  <p className="font-semibold text-forest">CREA-SP</p>
+                  <p className="text-sm text-foreground/60">Registrada</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <MessageCircle className="w-8 h-8 text-gold mx-auto mb-2" />
-                  <p className="font-semibold text-forest">Atendimento</p>
-                  <p className="text-sm text-foreground/60">Personalizado</p>
+                  <p className="font-semibold text-forest">Projetos</p>
+                  <p className="text-sm text-foreground/60">Exclusivos</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <Users className="w-8 h-8 text-gold mx-auto mb-2" />
