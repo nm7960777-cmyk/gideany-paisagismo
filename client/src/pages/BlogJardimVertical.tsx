@@ -1,28 +1,32 @@
 /**
  * DESIGN SYSTEM: Tropical Luxe
  * Artigo: Como Fazer um Jardim Vertical em Casa
+ * Estilo: Conversacional e envolvente
  */
 
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, User, Share2, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, ChevronRight, AlertTriangle, CheckCircle2, Lightbulb } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function BlogJardimVertical() {
+  useEffect(() => {
+    document.title = "Jardim Vertical: Guia Completo para Iniciantes | Gideany Rezende";
+  }, []);
+
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
-                <span className="text-gold font-cinzel font-bold text-lg">GR</span>
-              </div>
-              <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
+              <span className="text-gold font-cinzel font-bold text-lg">GR</span>
+            </div>
+            <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
+              Gideany Rezende <span className="text-gold">Paisagismo</span>
+            </span>
           </Link>
           <Link href="/blog">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
@@ -38,9 +42,9 @@ export default function BlogJardimVertical() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/"><a className="hover:text-gold">Início</a></Link>
+            <Link href="/" className="hover:text-gold">Início</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
+            <Link href="/blog" className="hover:text-gold">Blog</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Jardim Vertical</span>
           </div>
@@ -54,7 +58,7 @@ export default function BlogJardimVertical() {
               Jardim Vertical
             </span>
             <h1 className="text-3xl md:text-5xl font-cinzel text-white mt-6 mb-6 leading-tight">
-              Como Fazer um Jardim Vertical em Casa: Passo a Passo Completo
+              Jardim Vertical em Casa: O Guia Que Eu Queria Ter Lido Antes de Começar
             </h1>
             <div className="flex flex-wrap items-center gap-6 text-white/70">
               <span className="flex items-center gap-2">
@@ -67,7 +71,7 @@ export default function BlogJardimVertical() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                4 min de leitura
+                5 min de leitura
               </span>
             </div>
           </motion.div>
@@ -84,7 +88,7 @@ export default function BlogJardimVertical() {
         >
           <img
             src="/images/blog-jardim-vertical-correto.jpg"
-            alt="Jardim Vertical em Casa"
+            alt="Jardim Vertical em Casa - Projeto de Paisagismo"
             className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
           />
         </motion.div>
@@ -99,69 +103,93 @@ export default function BlogJardimVertical() {
             transition={{ delay: 0.3 }}
             className="prose prose-lg max-w-none"
           >
+            {/* Introdução Envolvente */}
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Jardins verticais são uma solução criativa e elegante para quem deseja trazer mais verde para dentro de casa, 
-              especialmente em espaços reduzidos. Além de embelezar o ambiente, eles purificam o ar e trazem bem-estar. 
-              Neste guia completo, vou te ensinar como criar seu próprio jardim vertical, mesmo que você nunca tenha 
-              mexido com plantas antes.
+              <strong>"Quero um jardim vertical, mas não sei por onde começar."</strong> Se você já disse isso, 
+              este artigo é pra você. Vou te contar tudo que aprendi em anos projetando jardins verticais — 
+              incluindo os erros que eu mesma já vi (e ajudei a corrigir).
             </p>
 
-            <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              O Que é um Jardim Vertical?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Um jardim vertical é uma estrutura que permite cultivar plantas na vertical, aproveitando paredes, 
-              muros ou painéis. Pode ser feito com diversos materiais como pallets, garrafas PET, vasos modulares, 
-              feltro ou estruturas metálicas. É perfeito para apartamentos, varandas, áreas de serviço e até 
-              ambientes internos com boa iluminação.
+            <p className="text-gray-700 leading-relaxed mb-8">
+              A boa notícia? <strong>Jardim vertical não é difícil.</strong> A má notícia? Tem muita informação 
+              errada por aí que faz as pessoas desistirem ou matarem as plantas em poucas semanas. 
+              Vamos resolver isso juntos.
             </p>
 
+            {/* Seção: O que é */}
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Benefícios do Jardim Vertical
+              Afinal, o Que é um Jardim Vertical?
             </h2>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Otimização de espaço:</strong> Ideal para quem tem pouco espaço horizontal disponível</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Purificação do ar:</strong> Plantas filtram toxinas e liberam oxigênio</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Isolamento térmico:</strong> Ajuda a manter a temperatura do ambiente mais agradável</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Redução de ruídos:</strong> As plantas absorvem parte dos sons externos</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Bem-estar:</strong> O contato com a natureza reduz o estresse e melhora o humor</span>
-              </li>
-            </ul>
-
-            <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Passo a Passo: Como Fazer seu Jardim Vertical
-            </h2>
-
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              1. Escolha o Local
-            </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Analise a iluminação do local. A maioria das plantas precisa de pelo menos 4 horas de luz indireta 
-              por dia. Evite locais com sol direto intenso (pode queimar as folhas) ou muito escuros. 
-              Varandas, sacadas e paredes próximas a janelas são ótimas opções.
-            </p>
-
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              2. Defina a Estrutura
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Existem várias opções de estrutura para jardins verticais:
+              É simples: plantas cultivadas na vertical, aproveitando paredes, muros ou estruturas suspensas. 
+              Pode ser desde um painel de feltro sofisticado até garrafas PET penduradas com barbante.
             </p>
             
+            <p className="text-gray-700 leading-relaxed mb-6">
+              O que importa não é o material, é <strong>entender o que suas plantas precisam</strong>. 
+              E é exatamente isso que vou te ensinar.
+            </p>
+
+            {/* Box de Benefícios */}
+            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-8">
+              <h3 className="font-semibold text-emerald-dark mb-4 flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                Por que ter um jardim vertical?
+              </h3>
+              <ul className="space-y-2 text-gray-700">
+                <li>✓ <strong>Espaço:</strong> Perfeito para apartamentos e varandas pequenas</li>
+                <li>✓ <strong>Ar puro:</strong> Plantas filtram toxinas e liberam oxigênio</li>
+                <li>✓ <strong>Temperatura:</strong> Ajuda a refrescar o ambiente naturalmente</li>
+                <li>✓ <strong>Barulho:</strong> Absorve parte dos ruídos externos</li>
+                <li>✓ <strong>Bem-estar:</strong> Reduz estresse (comprovado cientificamente!)</li>
+              </ul>
+            </div>
+
+            {/* Seção: Passo a Passo */}
+            <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
+              Passo a Passo: Do Zero ao Jardim Pronto
+            </h2>
+
+            {/* Passo 1 */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                1. Escolha o Local (e seja honesto sobre a luz)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Esse é o passo que mais gente erra. Você olha pra parede e pensa: "Aqui tem luz". 
+                Mas será que tem <strong>luz suficiente</strong>?
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                A maioria das plantas precisa de pelo menos <strong>4 horas de luz indireta por dia</strong>. 
+                Varandas, sacadas e paredes perto de janelas grandes são ótimas opções.
+              </p>
+            </div>
+
+            {/* Alerta */}
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 mb-8 rounded-r-lg">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-amber-800">Cuidado com corredores e banheiros!</p>
+                  <p className="text-amber-700 text-sm mt-1">
+                    Esses ambientes geralmente têm pouca luz. Se insistir, use apenas espada-de-são-jorge 
+                    ou zamioculca — as únicas que sobrevivem quase no escuro.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Passo 2 */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                2. Escolha a Estrutura (não precisa ser cara)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Esqueça aqueles painéis caríssimos que você viu no Pinterest. 
+                Dá pra fazer jardim vertical bonito com:
+              </p>
+            </div>
+
             {/* Imagem de Pallet */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
@@ -169,151 +197,235 @@ export default function BlogJardimVertical() {
                 alt="Jardim vertical feito com pallet de madeira"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Pallet fixado na parede com vasos de barro: solução econômica e charmosa</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                <strong>Pallet:</strong> Econômico e rústico. Custo: R$ 30-50
+              </p>
             </div>
-            
-            <ul className="space-y-2 text-gray-700 mb-6 ml-4">
-              <li><strong>Pallets:</strong> Econômicos e rústicos, podem ser pintados e fixados na parede</li>
-              <li><strong>Vasos modulares:</strong> Práticos e fáceis de instalar, encontrados em lojas de jardinagem</li>
-              <li><strong>Vasos com suportes metálicos:</strong> Solução clássica e durável para varandas e paredes</li>
-              <li><strong>Feltro ou bolsas:</strong> Leves e flexíveis, ótimos para paredes internas</li>
-              <li><strong>Treliças com vasos:</strong> Permitem criar composições personalizadas</li>
-              <li><strong>Garrafas PET deitadas:</strong> Sustentável e econômico, ótimo para plantas de sombra</li>
-            </ul>
-            
-            {/* Imagem de Garrafas PET */}
-            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-              <img
-                src="/images/blog-jv-garrafas-pet.jpg"
-                alt="Jardim vertical feito com garrafas PET coloridas"
-                className="w-full h-64 object-cover"
-              />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Garrafas PET coloridas: solução sustentável e criativa para plantas de sombra</p>
-            </div>
-            
-            {/* Imagem de Vasos na Parede */}
+
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jv-vasos-parede.jpg"
                 alt="Vasos de barro com suportes metálicos na parede"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Vasos de barro com suportes: solução clássica e acessível para varandas</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                <strong>Vasos com suportes:</strong> Clássico e acessível. Custo: R$ 15-30 por vaso
+              </p>
             </div>
-            
-            {/* Imagem de Vasos Modulares */}
+
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-garrafas-pet.jpg"
+                alt="Jardim vertical feito com garrafas PET"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                <strong>Garrafas PET:</strong> Sustentável e gratuito. Ótimo para hortas!
+              </p>
+            </div>
+
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jv-vasos-modulares2.jpg"
                 alt="Vasos modulares para jardim vertical"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Vasos modulares: práticos e modernos para ambientes internos</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                <strong>Vasos modulares:</strong> Práticos e modernos. Custo: R$ 50-150 o kit
+              </p>
             </div>
 
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              3. Prepare a Impermeabilização
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Se o jardim vertical for instalado em parede interna, é essencial impermeabilizar a área para 
-              evitar infiltrações. Use mantas impermeabilizantes ou plástico grosso entre a estrutura e a parede. 
-              Isso protege sua casa e garante a durabilidade do projeto.
-            </p>
+            {/* Passo 3 */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                3. Impermeabilize (se for parede interna)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Esse passo é <strong>obrigatório</strong> se o jardim for em parede interna. 
+                Use manta impermeabilizante ou plástico grosso entre a estrutura e a parede.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Já vi gente gastar R$ 2.000 em plantas e estragar a parede por economia de R$ 50 em impermeabilização. 
+                Não seja essa pessoa.
+              </p>
+            </div>
 
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              4. Escolha as Plantas Certas
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              A escolha das plantas é crucial para o sucesso do seu jardim vertical. Considere:
-            </p>
-            
-            {/* Imagem de Plantas Pendentes */}
+            {/* Passo 4 - Plantas */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                4. Escolha as Plantas Certas (a parte mais importante!)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Aqui está o segredo: <strong>combine plantas com necessidades parecidas</strong>. 
+                Não adianta colocar samambaia (que ama água) do lado de suculenta (que odeia).
+              </p>
+            </div>
+
+            {/* Imagem de Plantas */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jv-plantas-pendentes.jpg"
                 alt="Plantas pendentes ideais para jardim vertical"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Samambaias, jiboias e tradescantias: perfeitas para jardins verticais</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                Samambaias, jiboias e tradescantias: as queridinhas dos jardins verticais
+              </p>
             </div>
-            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com pouca luz (sombra):</h4>
-              <p className="text-gray-700">Jiboia (Epipremnum aureum), Samambaia (Nephrolepis), Lírio-da-paz (Spathiphyllum), Espada-de-são-jorge (Sansevieria), Peperômia, Maranta, Calathea, Aspidistra, Zamioculca, Filodendro-brasil</p>
-            </div>
-            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com luz média (meia-sombra):</h4>
-              <p className="text-gray-700">Filodendro, Singônio (Syngonium), Antúrio, Begônia, Clorofito (Chlorophytum), Dracena, Aglaonema, Pilea, Asplênio (Asplenium), Renda-portuguesa</p>
-            </div>
-            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com bastante luz (sol indireto ou direto):</h4>
-              <p className="text-gray-700">Suculentas, Cactos, Hera (Hedera helix), Lambari (Tradescantia zebrina), Tradescantia roxa, Ripsális, Crassula, Echeveria, Sedum, Kalanchoe</p>
-            </div>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              <strong>Dica importante:</strong> Evite misturar plantas com necessidades muito diferentes de água e luz no mesmo painel. Agrupe espécies com exigências semelhantes para facilitar a manutenção.
-            </p>
 
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              5. Prepare o Substrato
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Use um substrato leve e bem drenado. Uma boa mistura é: 50% de terra vegetal, 30% de húmus de 
-              minhoca e 20% de perlita ou vermiculita. Isso garante nutrientes e evita que a água fique 
-              empoçada nas raízes.
-            </p>
+            {/* Tabela de Plantas por Luminosidade */}
+            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
+              <h4 className="font-semibold text-emerald-dark mb-3">🌑 Pouca luz (sombra):</h4>
+              <p className="text-gray-700">
+                <strong>Jiboia</strong> (a mais fácil de todas!), Samambaia, Lírio-da-paz, 
+                Espada-de-são-jorge, Zamioculca, Filodendro-brasil
+              </p>
+            </div>
+            
+            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
+              <h4 className="font-semibold text-emerald-dark mb-3">🌤️ Luz média (meia-sombra):</h4>
+              <p className="text-gray-700">
+                Singônio, Antúrio, Begônia, Clorofito, Pilea, Asplênio, Renda-portuguesa
+              </p>
+            </div>
+            
+            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
+              <h4 className="font-semibold text-emerald-dark mb-3">☀️ Bastante luz (sol indireto):</h4>
+              <p className="text-gray-700">
+                Suculentas, Cactos, Hera, Lambari (Tradescantia), Ripsális, Kalanchoe
+              </p>
+            </div>
 
-            <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              6. Cuide da Irrigação
-            </h3>
-            
-            <p className="text-gray-700 leading-relaxed mb-6">
-              <strong>Nem todo jardim vertical precisa de sistema de irrigação automatizado.</strong> Para projetos menores e médios, a rega manual funciona muito bem e permite que você observe suas plantas de perto, identificando problemas precocemente.
-            </p>
-            
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Existem kits de irrigação por gotejamento prontos disponíveis no mercado, que podem ser úteis para jardins verticais maiores ou para quem viaja com frequência. Porém, o mais importante é conhecer a <strong>necessidade hídrica de cada espécie</strong>:
-            </p>
-            
-            <ul className="space-y-2 text-gray-700 mb-6 ml-4">
-              <li><strong>Samambaias e marantas:</strong> Gostam de substrato sempre úmido (mas não encharcado)</li>
-              <li><strong>Jiboias e filodendros:</strong> Deixe secar levemente entre regas</li>
-              <li><strong>Suculentas e cactos:</strong> Regue apenas quando o substrato estiver completamente seco</li>
-              <li><strong>Espada-de-são-jorge:</strong> Muito tolerante à seca, regue a cada 10-15 dias</li>
-            </ul>
-            
-            <p className="text-gray-700 leading-relaxed mb-6">
-              <strong>Dica:</strong> Regue sempre pela manhã ou final da tarde, evitando o sol forte. Antes de regar, coloque o dedo no substrato - se estiver úmido, espere mais um ou dois dias.
-            </p>
+            {/* Dica de Paisagista */}
+            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mb-8">
+              <div className="flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+                <div>
+                  <p className="font-semibold text-emerald-dark">Dica de paisagista:</p>
+                  <p className="text-gray-700 mt-1">
+                    Comece com <strong>jiboia</strong>. É praticamente indestrutível, cresce rápido, 
+                    fica linda pendente e perdoa seus erros de rega. Se você matar uma jiboia, 
+                    talvez jardinagem não seja pra você (brincadeira... mas nem tanto).
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            {/* Passo 5 */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                5. Prepare o Substrato
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Use uma mistura leve que drene bem:
+              </p>
+              <ul className="text-gray-700 space-y-1 mb-4">
+                <li>• 50% terra vegetal</li>
+                <li>• 30% húmus de minhoca</li>
+                <li>• 20% perlita ou vermiculita</li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed">
+                Essa combinação garante nutrientes e evita que a água fique empoçada nas raízes 
+                (a causa número 1 de morte de plantas em jardins verticais).
+              </p>
+            </div>
+
+            {/* Passo 6 */}
+            <div className="border-l-4 border-gold pl-6 mb-8">
+              <h3 className="text-xl font-semibold text-emerald-dark mb-4">
+                6. Cuide da Irrigação (sem neura)
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>Você não precisa de sistema automatizado.</strong> Para jardins pequenos e médios, 
+                rega manual funciona perfeitamente — e ainda te força a observar suas plantas de perto.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                A regra de ouro: <strong>coloque o dedo no substrato</strong>. Se estiver úmido, não regue. 
+                Se estiver seco, regue. Simples assim.
+              </p>
+            </div>
+
+            {/* Frequência de Rega */}
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+              <h4 className="font-semibold text-blue-800 mb-3">Frequência de rega por tipo de planta:</h4>
+              <ul className="space-y-2 text-blue-900">
+                <li><strong>Samambaias e marantas:</strong> Substrato sempre úmido (2-3x por semana)</li>
+                <li><strong>Jiboias e filodendros:</strong> Deixe secar levemente (1-2x por semana)</li>
+                <li><strong>Suculentas e cactos:</strong> Só quando estiver bem seco (1x a cada 10-15 dias)</li>
+              </ul>
+            </div>
+
+            {/* Seção: Manutenção */}
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Manutenção do Jardim Vertical
+              Manutenção: O Que Fazer Depois de Pronto
             </h2>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Rega:</strong> 2 a 3 vezes por semana no verão, 1 vez por semana no inverno</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Adubação:</strong> A cada 2 meses com adubo orgânico ou NPK 10-10-10</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Poda:</strong> Remova folhas secas e faça podas de formação quando necessário</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Pragas:</strong> Inspecione regularmente e trate com óleo de neem se necessário</span>
-              </li>
-            </ul>
 
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm">
+                <span className="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold">1</span>
+                <div>
+                  <p className="font-semibold text-emerald-dark">Rega</p>
+                  <p className="text-gray-600 text-sm">2-3x por semana no verão, 1x no inverno</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm">
+                <span className="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold">2</span>
+                <div>
+                  <p className="font-semibold text-emerald-dark">Adubação</p>
+                  <p className="text-gray-600 text-sm">A cada 2 meses com adubo orgânico ou NPK 10-10-10</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm">
+                <span className="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold">3</span>
+                <div>
+                  <p className="font-semibold text-emerald-dark">Poda</p>
+                  <p className="text-gray-600 text-sm">Remova folhas secas e faça podas de formação quando necessário</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm">
+                <span className="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-gold font-bold">4</span>
+                <div>
+                  <p className="font-semibold text-emerald-dark">Pragas</p>
+                  <p className="text-gray-600 text-sm">Inspecione semanalmente. Óleo de neem resolve 90% dos problemas</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Erros Comuns */}
+            <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
+              3 Erros Que Eu Vejo Todo Dia (e como evitar)
+            </h2>
+
+            <div className="space-y-4 mb-8">
+              <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                <p className="font-semibold text-red-800">❌ Erro 1: Regar demais</p>
+                <p className="text-red-700 text-sm mt-1">
+                  Mais plantas morrem por excesso de água do que por falta. Na dúvida, espere mais um dia.
+                </p>
+              </div>
+              <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                <p className="font-semibold text-red-800">❌ Erro 2: Misturar plantas incompatíveis</p>
+                <p className="text-red-700 text-sm mt-1">
+                  Suculenta com samambaia = uma vai morrer. Agrupe plantas com necessidades parecidas.
+                </p>
+              </div>
+              <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                <p className="font-semibold text-red-800">❌ Erro 3: Ignorar a luz</p>
+                <p className="text-red-700 text-sm mt-1">
+                  "Achei que tinha luz suficiente" é a frase mais comum que ouço. Observe o local por alguns dias antes de instalar.
+                </p>
+              </div>
+            </div>
+
+            {/* CTA Final */}
             <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
               <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Precisa de Ajuda Profissional?
+                Quer um Jardim Vertical Sob Medida?
               </h3>
               <p className="text-gray-700 mb-4">
-                Se você quer um jardim vertical personalizado, projetado especialmente para seu espaço e 
-                estilo de vida, entre em contato comigo. Faço projetos sob medida para residências e 
-                empresas em São Roque, Cotia, Sorocaba e todo Estado de SP.
+                Se você quer um projeto personalizado — com as plantas certas pro seu espaço, 
+                estrutura adequada e garantia de que vai dar certo — me chama no WhatsApp. 
+                Atendo São Roque, Cotia, Sorocaba e todo Estado de SP.
               </p>
               <a
                 href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim vertical e gostaria de um orçamento."
@@ -336,25 +448,21 @@ export default function BlogJardimVertical() {
             Leia Também
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link href="/blog/horta-apartamento">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
-                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
-                  Horta em Apartamento: O Guia Completo
-                </h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  Aprenda a cultivar temperos e hortaliças mesmo em espaços pequenos.
-                </p>
-              </a>
+            <Link href="/blog/horta-apartamento" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+              <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
+                Horta em Apartamento: O Guia Completo
+              </h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Aprenda a cultivar temperos e hortaliças mesmo em espaços pequenos.
+              </p>
             </Link>
-            <Link href="/blog/jardim-pequeno">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
-                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
-                  Jardim Pequeno: 10 Ideias de Canteiros
-                </h3>
-                <p className="text-gray-600 text-sm mt-2">
-                  Transforme qualquer cantinho em um refúgio verde e relaxante.
-                </p>
-              </a>
+            <Link href="/blog/jardim-pequeno" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+              <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
+                Jardim Pequeno: 10 Ideias de Canteiros
+              </h3>
+              <p className="text-gray-600 text-sm mt-2">
+                Transforme qualquer cantinho em um refúgio verde e relaxante.
+              </p>
             </Link>
           </div>
         </div>
@@ -363,10 +471,8 @@ export default function BlogJardimVertical() {
       {/* Footer */}
       <footer className="bg-emerald-dark py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
-              Voltar ao Site
-            </a>
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
+            Voltar ao Site
           </Link>
         </div>
       </footer>
