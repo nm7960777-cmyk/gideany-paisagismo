@@ -336,7 +336,7 @@ export default function Home() {
               className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6"
             >
               Transformamos Espaços em{" "}
-              <span className="text-gold">Jardins dos Sonhos</span>
+              <span className="text-gold">Ambientes que inspiram</span>
             </motion.h1>
 
             <motion.p
