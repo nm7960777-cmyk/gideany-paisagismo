@@ -75,20 +75,32 @@ export default function Home() {
     {
       name: "Henrique Soares",
       location: "São Roque - SP",
-      text: "A Gideany transformou completamente nosso quintal. Antes era só terra e mato, agora é o lugar favorito da família. Ela entendeu exatamente o que queríamos: um espaço para as crianças brincarem com segurança e um cantinho zen pra gente relaxar. Recomendo de olhos fechados!",
+      text: "Nosso quintal era só terra batida e mato alto. Depois do projeto, virou o lugar favorito da família. A equipe entendeu exatamente o que a gente queria: espaço pras crianças correrem e um cantinho com rede pra descansar no fim de semana. Ficou incrível!",
       initial: "H",
     },
     {
       name: "Ricardo Mendes",
       location: "Cotia - SP",
-      text: "Procurei vários paisagistas antes de encontrar a Gideany. A diferença? Ela realmente escuta. Não veio com projeto pronto — sentou comigo, perguntou sobre nossa rotina, sobre as plantas que eu gostava. O resultado ficou tão natural que parece que o jardim sempre esteve ali.",
+      text: "Conversei com 4 paisagistas antes. A diferença foi que aqui não vieram com projeto pronto. Sentaram, perguntaram sobre nossa rotina, o que a gente gostava. O jardim ficou tão natural que os vizinhos perguntam se sempre foi assim.",
       initial: "R",
     },
     {
       name: "Patrícia Souza",
       location: "Sorocaba - SP",
-      text: "Minha varanda era um depósito de vasos abandonados. Hoje é meu refúgio. A Gideany escolheu plantas que sobrevivem ao sol forte da tarde e ainda montou um sistema de irrigação simples que eu mesma consigo cuidar. Melhor investimento que fiz na casa!",
+      text: "Minha varanda era um cemitério de vasos. Agora é onde tomo café toda manhã. Escolheram plantas que aguentam o sol forte da tarde e montaram uma irrigação simples que eu mesma cuido. Valeu cada centavo.",
       initial: "P",
+    },
+    {
+      name: "Fernanda Lima",
+      location: "Mairiporã - SP",
+      text: "Tinha medo de gastar muito e ficar com um jardim que eu não ia conseguir manter. Me mostraram opções de plantas fáceis e um projeto que cabe no meu tempo. Dois anos depois, tá lindo e eu cuido sozinha.",
+      initial: "F",
+    },
+    {
+      name: "Carlos Eduardo",
+      location: "Itu - SP",
+      text: "Contratei pra empresa. Nosso escritório era cinza e sem vida. Agora tem plantas em todo canto e os funcionários comentam que o ambiente mudou. Até a produtividade melhorou, acredita?",
+      initial: "C",
     },
   ];
 
@@ -149,6 +161,7 @@ export default function Home() {
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
       link: "/blog/jardim-vertical",
+      image: "/images/blog-jardim-vertical-correto.jpg",
     },
     {
       category: "Horta em Apartamento",
@@ -157,6 +170,7 @@ export default function Home() {
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
       link: "/blog/horta-apartamento",
+      image: "/images/blog-horta-apartamento-principal.jpg",
     },
     {
       category: "Jardim Pequeno",
@@ -165,6 +179,7 @@ export default function Home() {
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
       link: "/blog/jardim-pequeno",
+      image: "/images/blog-jp-canteiro-elevado.jpg",
     },
   ];
 
@@ -737,7 +752,14 @@ export default function Home() {
             {blogPosts.map((post, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Link href={post.link}>
-                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
+                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer overflow-hidden">
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
@@ -750,7 +772,7 @@ export default function Home() {
                       <h3 className="font-display text-lg text-forest mb-3 group-hover:text-emerald transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                      <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
                       <Button
