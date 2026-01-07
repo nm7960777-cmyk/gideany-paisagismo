@@ -290,10 +290,20 @@ export default function Galeria() {
                       <h3 className="font-display text-xl text-white mb-1">
                         {projeto.titulo}
                       </h3>
-                      <div className="flex items-center gap-2 text-white/80 text-sm">
+                      <div className="flex items-center gap-2 text-white/80 text-sm mb-3">
                         <MapPin className="w-4 h-4" />
                         {projeto.local}
                       </div>
+                      <a
+                        href={`https://wa.me/5511950583364?text=Olá! Vi o projeto "${projeto.titulo}" no site e gostaria de solicitar um orçamento.`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-2 bg-gold text-forest px-4 py-2 rounded-full text-sm font-medium hover:bg-gold/90 transition-colors"
+                      >
+                        <Phone className="w-4 h-4" />
+                        Solicitar Orçamento
+                      </a>
                     </div>
                   </div>
                 </div>
