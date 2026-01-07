@@ -217,8 +217,8 @@ export default function BlogJardimPequeno() {
             {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/images/blog-jp-canteiro-elevado.jpg"
-                alt="Canteiro elevado com madeira"
+                src="/images/blog-jp-canteiro-flores.jpg"
+                alt="Canteiro elevado com flores ornamentais"
                 className="w-full h-64 object-cover"
               />
               <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
