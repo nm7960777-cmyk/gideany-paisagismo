@@ -37,43 +37,43 @@ export default function Projetos() {
       numero: "01",
       titulo: "Visita Técnica",
       descricao:
-        "Vou até o local ver o terreno, a luz do sol, o tipo de solo. Só assim consigo indicar as plantas certas.",
+        "Realizamos uma visita ao local para entender o espaço, suas características, incidência solar, tipo de solo e suas necessidades específicas.",
     },
     {
       numero: "02",
       titulo: "Briefing Detalhado",
       descricao:
-        "Conversamos sobre o que você quer, quanto pode investir e como usa o espaço. Jardim pra quem tem criança é diferente de jardim pra quem tem cachorro.",
+        "Conversamos sobre seus desejos, estilo de vida, preferências estéticas e orçamento disponível para criar um projeto sob medida.",
     },
     {
       numero: "03",
       titulo: "Desenvolvimento do Projeto",
       descricao:
-        "Crio o projeto com desenho técnico, imagem 3D pra você visualizar e lista completa de plantas com preços estimados.",
+        "Criamos o projeto paisagístico com plantas técnicas, perspectivas 3D, memorial descritivo e lista de espécies recomendadas.",
     },
     {
       numero: "04",
       titulo: "Apresentação e Ajustes",
       descricao:
-        "Mostro o projeto e ajusto o que precisar. Você só aprova quando estiver satisfeito.",
+        "Apresentamos o projeto completo e fazemos os ajustes necessários até que você esteja 100% satisfeito com o resultado.",
     },
     {
       numero: "05",
       titulo: "Entrega Final",
       descricao:
-        "Entrego tudo documentado: plantas técnicas, lista de materiais e orientações. Você pode executar com quem quiser ou com minha equipe.",
+        "Entregamos toda a documentação técnica pronta para execução, com especificações detalhadas de materiais e plantas.",
     },
   ];
 
   const beneficios = [
-    "Projeto feito pro seu espaço, não copiado de outro",
-    "Plantas que funcionam no clima de São Roque e região",
-    "Irrigação planejada pra não desperdiçar água",
-    "Imóvel com jardim bem feito vale mais",
-    "Desenho técnico pra executar sem erro",
-    "Lista completa de tudo que vai precisar",
-    "Imagem 3D pra você ver antes de aprovar",
-    "Tiro dúvidas mesmo depois de entregar o projeto",
+    "Projeto personalizado para seu espaço",
+    "Escolha de espécies adaptadas ao clima local",
+    "Otimização do uso da água com irrigação inteligente",
+    "Valorização do imóvel em até 20%",
+    "Plantas técnicas para execução precisa",
+    "Memorial descritivo completo",
+    "Perspectivas 3D realistas",
+    "Acompanhamento pós-projeto",
   ];
 
   const tiposProjetos = [
@@ -81,25 +81,25 @@ export default function Projetos() {
       icon: TreeDeciduous,
       titulo: "Residencial",
       descricao:
-        "Casas, apartamentos, condomínios. Jardim que cabe no seu espaço e na sua rotina.",
+        "Jardins para casas, apartamentos e condomínios. Transformamos seu lar em um refúgio verde.",
     },
     {
       icon: Ruler,
       titulo: "Comercial",
       descricao:
-        "Empresas, lojas, escritórios. Primeira impressão conta — e verde bem cuidado passa confiança.",
+        "Paisagismo para empresas, lojas e escritórios. Ambiente profissional que impressiona clientes.",
     },
     {
       icon: Palette,
       titulo: "Áreas de Lazer",
       descricao:
-        "Piscina, churrasqueira, espaço gourmet. Integro tudo com o paisagismo pra ficar harmônico.",
+        "Projetos para piscinas, churrasqueiras e espaços gourmet integrados à natureza.",
     },
     {
       icon: Leaf,
       titulo: "Jardins Verticais",
       descricao:
-        "Pouco espaço? Jardim vertical resolve. Funciona em varandas, muros e até dentro de casa.",
+        "Soluções criativas para espaços reduzidos. Verde em qualquer ambiente.",
     },
   ];
 
