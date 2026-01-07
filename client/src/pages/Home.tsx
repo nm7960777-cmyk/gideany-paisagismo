@@ -70,19 +70,19 @@ export default function Home() {
     {
       name: "Henrique Soares",
       location: "São Roque - SP",
-      text: "A Gideany fez o projeto da minha área de piscina. O que mais gostei foi receber o 3D antes — dá pra ver exatamente como vai ficar. Recomendo.",
+      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou como esperado.",
       initial: "H",
     },
     {
       name: "Ricardo Mendes",
       location: "Cotia - SP",
-      text: "Procurei vários paisagistas e a Gideany foi a única que veio até aqui ver o terreno antes de passar orçamento. Fez diferença no resultado final.",
+      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível. Minha família adorou o novo jardim.",
       initial: "R",
     },
     {
       name: "Patrícia Souza",
       location: "Sorocaba - SP",
-      text: "Meu jardim tinha plantas morrendo toda hora. Ela trocou por espécies certas pro clima daqui e agora tá tudo verde. Valeu o investimento.",
+      text: "Contratei para fazer o paisagismo da minha casa nova e não me arrependo. Atendimento personalizado e muita dedicação.",
       initial: "P",
     },
   ];
@@ -92,21 +92,21 @@ export default function Home() {
       icon: Leaf,
       title: "Projetos de Paisagismo",
       description:
-        "Projeto técnico com plantas, 3D e lista de espécies. Você visualiza o resultado antes de começar. Atendemos casas, apartamentos e empresas.",
+        "Desenvolvemos projetos personalizados para residências e empresas, transformando seu espaço em um ambiente único que harmoniza plantas, elementos decorativos e funcionalidade.",
       link: "/servicos/projetos",
     },
     {
       icon: Shovel,
       title: "Execução de Obras",
       description:
-        "Equipe própria que executa o projeto do zero: preparo do solo, plantio, irrigação e iluminação. Cronograma definido e prazo cumprido.",
+        "Executamos o projeto completo com equipe especializada, garantindo qualidade e atenção aos detalhes em cada etapa da implantação.",
       link: "/servicos/execucao",
     },
     {
       icon: Droplets,
       title: "Manutenção de Jardins",
       description:
-        "Planos mensais, quinzenais ou semanais. Poda, adubação, controle de pragas e irrigação. Seu jardim sempre em dia sem você se preocupar.",
+        "Serviço periódico de manutenção para manter seu jardim sempre bonito e saudável, com podas, adubação e cuidados especiais.",
       link: "/servicos/manutencao",
     },
   ];
@@ -445,18 +445,19 @@ export default function Home() {
                 Gideany Clarice Rezende
               </h2>
               <p className="text-foreground/80 text-lg leading-relaxed mb-6">
-                Sou paisagista registrada no CREA-SP e trabalho com o que amo:
-                criar jardins que fazem sentido para quem vai viver neles.
-                Atendo São Roque, Cotia, Sorocaba, São Paulo e região. Aqui não
-                tem projeto de prateleira — cada jardim é pensado para o seu
-                espaço, seu clima e sua rotina.
+                Paisagista com formação técnica e registro no CREA-SP,
+                apaixonada por transformar espaços em verdadeiros refúgios
+                naturais. Atuo em São Roque, Cotia, Sorocaba, São Paulo e toda a
+                região, oferecendo projetos personalizados para residências e
+                empresas que respeitam o meio ambiente e valorizam cada detalhe
+                do seu espaço.
               </p>
               <p className="text-foreground/80 text-lg leading-relaxed mb-8">
-                Meu diferencial? Entrego projeto técnico completo com plantas,
-                perspectivas 3D e lista de espécies adaptadas ao clima da
-                região. Você sabe exatamente o que vai receber antes de começar
-                a obra. E se precisar, minha equipe executa e mantém o jardim
-                depois.
+                Com conhecimento atualizado nas últimas tendências de paisagismo
+                e técnicas sustentáveis, minha missão é criar jardins que não
+                apenas embelezam, mas que também proporcionam bem-estar e
+                conexão com a natureza. Cada projeto é único, desenvolvido com
+                carinho e atenção às necessidades específicas de cada cliente.
               </p>
 
               <div className="grid grid-cols-3 gap-6">
