@@ -182,12 +182,12 @@ export default function BlogHortaApartamento() {
             
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
               <li><strong>Manjericão:</strong> Cresce rápido, adora sol, perfeito para molhos</li>
-              <li><strong>Hortelã:</strong> Muito resistente, cresce em qualquer lugar (cuidado: é invasiva!)</li>
+              <li><strong>Hortelã:</strong> Muito resistente, mas SEMPRE plante em vaso separado - é invasiva e domina outras plantas</li>
               <li><strong>Cebolinha:</strong> Fácil de cultivar, rebrota após o corte</li>
               <li><strong>Salsinha:</strong> Versátil na cozinha, prefere meia-sombra</li>
               <li><strong>Alecrim:</strong> Resistente à seca, ótimo para carnes</li>
               <li><strong>Orégano:</strong> Pouca manutenção, perfeito para pizzas</li>
-              <li><strong>Coentro:</strong> Cresce rápido, mas não gosta de calor extremo</li>
+              <li><strong>Coentro:</strong> Cresce rápido, mas "sobe" (floresce) com calor - prefira plantar no outono/inverno em SP</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">

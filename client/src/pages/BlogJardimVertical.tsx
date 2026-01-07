@@ -165,20 +165,41 @@ export default function BlogJardimVertical() {
             {/* Imagem de Pallet */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/images/blog-jv-pallet.jpg"
+                src="/images/blog-jv-pallet-parede.jpg"
                 alt="Jardim vertical feito com pallet de madeira"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim vertical com pallet: solução econômica e rústica</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Pallet fixado na parede com vasos de barro: solução econômica e charmosa</p>
             </div>
             
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
-              <li><strong>Pallets:</strong> Econômicos e rústicos, ideais para áreas externas</li>
-              <li><strong>Vasos modulares:</strong> Práticos e fáceis de instalar, vendidos em lojas de jardinagem</li>
+              <li><strong>Pallets:</strong> Econômicos e rústicos, podem ser pintados e fixados na parede</li>
+              <li><strong>Vasos modulares:</strong> Práticos e fáceis de instalar, encontrados em lojas de jardinagem</li>
+              <li><strong>Vasos com suportes metálicos:</strong> Solução clássica e durável para varandas e paredes</li>
               <li><strong>Feltro ou bolsas:</strong> Leves e flexíveis, ótimos para paredes internas</li>
               <li><strong>Treliças com vasos:</strong> Permitem criar composições personalizadas</li>
-              <li><strong>Garrafas PET:</strong> Sustentável e econômico, perfeito para hortas</li>
+              <li><strong>Garrafas PET deitadas:</strong> Sustentável e econômico, ótimo para plantas de sombra</li>
             </ul>
+            
+            {/* Imagem de Garrafas PET */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-garrafas-pet.jpg"
+                alt="Jardim vertical feito com garrafas PET coloridas"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Garrafas PET coloridas: solução sustentável e criativa para plantas de sombra</p>
+            </div>
+            
+            {/* Imagem de Vasos na Parede */}
+            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+              <img
+                src="/images/blog-jv-vasos-parede.jpg"
+                alt="Vasos de barro com suportes metálicos na parede"
+                className="w-full h-64 object-cover"
+              />
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Vasos de barro com suportes: solução clássica e acessível para varandas</p>
+            </div>
             
             {/* Imagem de Vasos Modulares */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
@@ -216,17 +237,20 @@ export default function BlogJardimVertical() {
               <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Samambaias, jiboias e tradescantias: perfeitas para jardins verticais</p>
             </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com pouca luz:</h4>
-              <p className="text-gray-700">Jiboia, Samambaia, Lírio-da-paz, Espada-de-são-jorge, Peperômia</p>
+              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com pouca luz (sombra):</h4>
+              <p className="text-gray-700">Jiboia (Epipremnum aureum), Samambaia (Nephrolepis), Lírio-da-paz (Spathiphyllum), Espada-de-são-jorge (Sansevieria), Peperômia, Maranta, Calathea, Aspidistra, Zamioculca, Filodendro-brasil</p>
             </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com luz média:</h4>
-              <p className="text-gray-700">Filodendro, Singônio, Costela-de-adão, Antúrio, Begônia</p>
+              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com luz média (meia-sombra):</h4>
+              <p className="text-gray-700">Filodendro, Singônio (Syngonium), Antúrio, Begônia, Clorofito (Chlorophytum), Dracena, Aglaonema, Pilea, Asplênio (Asplenium), Renda-portuguesa</p>
             </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
-              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com bastante luz:</h4>
-              <p className="text-gray-700">Suculentas, Cactos, Hera, Lambari, Tradescantia</p>
+              <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com bastante luz (sol indireto ou direto):</h4>
+              <p className="text-gray-700">Suculentas, Cactos, Hera (Hedera helix), Lambari (Tradescantia zebrina), Tradescantia roxa, Ripsális, Crassula, Echeveria, Sedum, Kalanchoe</p>
             </div>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              <strong>Dica importante:</strong> Evite misturar plantas com necessidades muito diferentes de água e luz no mesmo painel. Agrupe espécies com exigências semelhantes para facilitar a manutenção.
+            </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               5. Prepare o Substrato
@@ -238,23 +262,26 @@ export default function BlogJardimVertical() {
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
-              6. Instale o Sistema de Irrigação
+              6. Cuide da Irrigação
             </h3>
             
-            {/* Imagem de Irrigação */}
-            <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-              <img
-                src="/images/blog-jv-irrigacao.jpg"
-                alt="Sistema de irrigação por gotejamento em jardim vertical"
-                className="w-full h-64 object-cover"
-              />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Sistema de irrigação por gotejamento: praticidade na manutenção</p>
-            </div>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              <strong>Nem todo jardim vertical precisa de sistema de irrigação automatizado.</strong> Para projetos menores e médios, a rega manual funciona muito bem e permite que você observe suas plantas de perto, identificando problemas precocemente.
+            </p>
             
             <p className="text-gray-700 leading-relaxed mb-6">
-              Para jardins verticais maiores, considere instalar um sistema de irrigação por gotejamento. 
-              Para projetos menores, a rega manual funciona bem. A dica é regar pela manhã ou final da tarde, 
-              evitando o sol forte. Verifique a umidade do substrato antes de regar novamente.
+              Existem kits de irrigação por gotejamento prontos disponíveis no mercado, que podem ser úteis para jardins verticais maiores ou para quem viaja com frequência. Porém, o mais importante é conhecer a <strong>necessidade hídrica de cada espécie</strong>:
+            </p>
+            
+            <ul className="space-y-2 text-gray-700 mb-6 ml-4">
+              <li><strong>Samambaias e marantas:</strong> Gostam de substrato sempre úmido (mas não encharcado)</li>
+              <li><strong>Jiboias e filodendros:</strong> Deixe secar levemente entre regas</li>
+              <li><strong>Suculentas e cactos:</strong> Regue apenas quando o substrato estiver completamente seco</li>
+              <li><strong>Espada-de-são-jorge:</strong> Muito tolerante à seca, regue a cada 10-15 dias</li>
+            </ul>
+            
+            <p className="text-gray-700 leading-relaxed mb-6">
+              <strong>Dica:</strong> Regue sempre pela manhã ou final da tarde, evitando o sol forte. Antes de regar, coloque o dedo no substrato - se estiver úmido, espere mais um ou dois dias.
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">

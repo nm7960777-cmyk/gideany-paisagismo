@@ -127,11 +127,11 @@ export default function BlogJardimPequeno() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Aproveite a extensão do muro criando um canteiro estreito (30-50cm de largura). 
-                Use plantas de diferentes alturas: palmeiras ou dracenas no fundo, arbustos no 
-                meio e forrações na frente. Isso cria profundidade visual sem ocupar muito espaço.
+                Use plantas compactas de diferentes alturas: arbustos pequenos ou tuias anãs no fundo, 
+                plantas médias no meio e forrações na frente. Isso cria profundidade visual sem ocupar muito espaço.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Palmeira-ráfis, Clúsia, Moréia, Grama-amendoim
+                Plantas sugeridas: Moréia, Tuia-limão anã, Buxinho, Liriope, Grama-preta
               </p>
             </div>
 
@@ -191,12 +191,12 @@ export default function BlogJardimPequeno() {
                 4. Jardim Tropical Compacto
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Mesmo em 2m² você pode criar um cantinho tropical. Use uma palmeira pequena 
-                como ponto focal, adicione folhagens de diferentes texturas (costela-de-adão, 
-                filodendro) e complete com bromélias para cor.
+                Mesmo em 2m² você pode criar um cantinho tropical. Use plantas de folhagem 
+                exuberante mas de porte controlado. Combine diferentes texturas e tons de verde, 
+                adicionando bromélias para pontos de cor. Evite palmeiras grandes que vão dominar o espaço.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Palmeira-areca, Costela-de-adão, Filodendro, Bromélia
+                Plantas sugeridas: Filodendro-xanadu, Bromélias, Maranta, Calatéia, Samambaia-paulista
               </p>
             </div>
             
@@ -217,11 +217,11 @@ export default function BlogJardimPequeno() {
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 Se você tem um quintal pequeno, crie uma "ilha" verde no centro. Pode ser 
-                redonda, oval ou orgânica. Plante uma árvore pequena no centro (como jabuticabeira 
-                ou pitangueira) e forrações ao redor.
+                redonda, oval ou orgânica. Use um arbusto ornamental como ponto focal e 
+                forrações ao redor. Evite árvores frutíferas grandes que vão crescer demais.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Jabuticabeira, Pitangueira, Grama-esmeralda, Singônio
+                Plantas sugeridas: Azaléia anã, Gardenia, Agapanto, Grama-preta, Liriope
               </p>
             </div>
 
@@ -246,12 +246,12 @@ export default function BlogJardimPequeno() {
                 7. Canteiro com Gramíneas Ornamentais
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Gramíneas como capim-do-texas e penisetum trazem movimento e leveza ao jardim. 
-                Crie um canteiro com diferentes espécies de gramíneas, variando alturas e cores. 
-                O efeito é moderno e exige pouca manutenção.
+                Gramíneas ornamentais trazem movimento e leveza ao jardim. Para canteiros pequenos, 
+                escolha espécies compactas que não vão dominar o espaço. O capim-do-texas, por exemplo, 
+                pode ficar muito grande - prefira variedades anãs.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Capim-do-texas, Penisetum, Festuca, Carex
+                Plantas sugeridas: Festuca-azul, Carex, Capim-chorona anão, Pennisetum 'Little Bunny'
               </p>
             </div>
             
@@ -283,15 +283,15 @@ export default function BlogJardimPequeno() {
             {/* Ideia 9 */}
             <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                9. Canteiro Zen com Bambu
+                9. Canteiro Zen Estilo Japonês
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Inspire-se nos jardins japoneses. Use bambu-mossô (em vasos para controlar o 
-                crescimento), pedras, areia branca e uma lanterna japonesa. O resultado é um 
-                espaço de meditação e paz.
+                Inspire-se nos jardins japoneses. <strong>ATENÇÃO:</strong> evite bambu plantado 
+                diretamente no solo - ele é extremamente invasivo e pode destruir muros e calçadas! 
+                Se quiser bambu, mantenha SEMPRE em vasos. Prefira plantas como nandina e junipero.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
-                Elementos: Bambu-mossô, Pedras, Areia branca, Lanterna japonesa, Bonsai
+                Plantas sugeridas: Nandina, Junípero-rasteiro, Ophiopogon (grama-preta), Azaléia anã
               </p>
             </div>
 

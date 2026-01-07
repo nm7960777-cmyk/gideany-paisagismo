@@ -130,7 +130,7 @@ export default function Home() {
       description: "Fachada verde moderna",
     },
     {
-      image: "/images/antes-depois.png",
+      image: "/images/antes-depois-novo.jpg",
       title: "Transformação Completa",
       description: "Antes e depois",
     },
@@ -1007,6 +1007,11 @@ export default function Home() {
                 >
                   Blog
                 </a>
+                <Link href="/faq">
+                  <a className="block text-white/60 hover:text-gold transition-colors text-sm">
+                    Perguntas Frequentes
+                  </a>
+                </Link>
               </div>
             </div>
             <div>

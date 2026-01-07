@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogJardimVertical from "./pages/BlogJardimVertical";
 import BlogHortaApartamento from "./pages/BlogHortaApartamento";
 import BlogJardimPequeno from "./pages/BlogJardimPequeno";
+import FAQ from "./pages/FAQ";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path={"/blog/jardim-vertical"} component={BlogJardimVertical} />
       <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
       <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
