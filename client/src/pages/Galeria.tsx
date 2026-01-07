@@ -55,7 +55,7 @@ export default function Galeria() {
       image: "/images/novo-entrada-residencial.jpg",
       titulo: "Entrada Residencial",
       categoria: "residencial",
-      local: "São Roque - SP",
+      local: "Alphaville - SP",
       descricao: "Caminho verde que valoriza a fachada da residência.",
     },
     {
@@ -75,14 +75,6 @@ export default function Galeria() {
       descricao: "Paisagismo que transforma a área de lazer.",
     },
     {
-      id: 6,
-      image: "/images/novo-jardim-vertical.jpg",
-      titulo: "Jardim Vertical",
-      categoria: "vertical",
-      local: "São Paulo - SP",
-      descricao: "Solução verde para espaços compactos.",
-    },
-    {
       id: 7,
       image: "/images/novo-paisagismo-comercial.jpg",
       titulo: "Paisagismo Corporativo",
@@ -95,7 +87,7 @@ export default function Galeria() {
       image: "/images/novo-corporativo.jpg",
       titulo: "Entrada Comercial",
       categoria: "comercial",
-      local: "Cotia - SP",
+      local: "Mogi das Cruzes - SP",
       descricao: "Primeira impressão que encanta clientes.",
     },
     {
@@ -127,7 +119,7 @@ export default function Galeria() {
       image: "/images/antes-depois-novo.jpg",
       titulo: "Transformação Completa",
       categoria: "residencial",
-      local: "São Paulo - SP",
+      local: "São Roque - SP",
       descricao: "Antes e depois de uma transformação total.",
     },
     {
@@ -145,6 +137,38 @@ export default function Galeria() {
       categoria: "residencial",
       local: "São Paulo - SP",
       descricao: "Paisagismo tropical com área de lazer integrada.",
+    },
+    {
+      id: 15,
+      image: "/images/foto-piscina1.png",
+      titulo: "Piscina com Folhagens Tropicais",
+      categoria: "residencial",
+      local: "Registro - SP",
+      descricao: "Área de piscina com plantas tropicais e deck de madeira.",
+    },
+    {
+      id: 16,
+      image: "/images/foto-piscina2.png",
+      titulo: "Piscina com Palmeiras",
+      categoria: "residencial",
+      local: "São Roque - SP",
+      descricao: "Projeto com palmeiras e paisagismo tropical.",
+    },
+    {
+      id: 17,
+      image: "/images/render3.jpg",
+      titulo: "Jardim Residencial",
+      categoria: "residencial",
+      local: "Araçariguama - SP",
+      descricao: "Projeto paisagístico com gramado e plantas ornamentais.",
+    },
+    {
+      id: 18,
+      image: "/images/foto-lounge4.png",
+      titulo: "Área de Estar com Lareira",
+      categoria: "residencial",
+      local: "Boituva - SP",
+      descricao: "Espaço gourmet com lareira e plantas tropicais.",
     },
   ];
 
