@@ -69,7 +69,7 @@ export default function Home() {
     {
       name: "Henrique Soares",
       location: "São Roque - SP",
-      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível como esperado.",
+      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou como esperado.",
       initial: "H",
     },
     {
@@ -118,7 +118,7 @@ export default function Home() {
     {
       image: "/images/projeto-piscina.jpg",
       title: "Jardim com Piscina",
-      description: "Projeto completo residencial",
+      description: "Projeto residencial",
     },
     {
       image: "/images/jardim-vertical.jpg",
@@ -141,18 +141,18 @@ export default function Home() {
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
     },
     {
-      category: "Orçamento",
+      category: "Horta em Apartamento",
       date: "08 Jan 2026",
-      title: "Quanto Custa um Projeto de Paisagismo? Valores 2026",
+      title: "Horta em Apartamento: O Guia Completo",
       excerpt:
-        "Entenda os valores de projetos de paisagismo em São Paulo, o que influencia no preço e como economizar...",
+        "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
     },
     {
-      category: "Plantas",
+      category: "Jardim Pequeno",
       date: "05 Jan 2026",
-      title: "10 Plantas para Jardim de Inverno: Espécies que Amam Sombra",
+      title: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço",
       excerpt:
-        "Descubra as melhores plantas para ambientes internos e com pouca luz. Lista completa com cuidados...",
+        "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
     },
   ];
 
@@ -491,10 +491,7 @@ export default function Home() {
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
               Do Projeto à Execução
             </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              Oferecemos uma gama completa de serviços para transformar e manter
-              seu espaço verde sempre impecável.
-            </p>
+            
           </motion.div>
 
           <motion.div
@@ -562,8 +559,7 @@ export default function Home() {
               Nossos Projetos
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Conheça alguns dos projetos que já realizamos. Cada trabalho é
-              único e feito com dedicação.
+              Residências e empresas transformadas pelo nosso trabalho.
             </p>
           </motion.div>
 
@@ -767,9 +763,7 @@ export default function Home() {
               Vamos Transformar seu Espaço?
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto">
-              Entre em contato para solicitar um orçamento gratuito. Atendemos
-              São Roque, Cotia, Sorocaba, São Paulo e toda a região. Ficaremos
-              felizes em conhecer seu projeto!
+              Conte-nos sua ideia. O primeiro passo é simples.
             </p>
           </motion.div>
 
@@ -961,7 +955,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-white/60 text-sm max-w-md">
-                Transformando espaços em jardins dos sonhos. Projetos exclusivos
+                Transformando espaços em jardins que inspiram. Projetos exclusivos
                 de paisagismo em São Roque, Cotia, Sorocaba, São Paulo e região.
               </p>
             </div>
