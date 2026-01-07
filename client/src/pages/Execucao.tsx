@@ -51,13 +51,13 @@ export default function Execucao() {
       icon: Clock,
       titulo: "Prazo Cumprido",
       descricao:
-        "Cronograma detalhado e compromisso com prazos. Você sabe exatamente quando seu jardim estará pronto.",
+        "Passamos o cronograma antes de iniciar. Você acompanha cada etapa.",
     },
     {
       icon: Truck,
       titulo: "Materiais de Qualidade",
       descricao:
-        "Trabalhamos apenas com fornecedores certificados. Plantas saudáveis e materiais duráveis.",
+        "Selecionamos cada planta pessoalmente. Só usamos o que funciona no clima da região.",
     },
   ];
 
