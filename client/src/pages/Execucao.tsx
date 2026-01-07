@@ -67,11 +67,10 @@ export default function Execucao() {
     "Plantio de árvores, arbustos e forrações",
     "Implantação de gramados",
     "Construção de canteiros e jardineiras",
-    "Instalação de iluminação de jardim",
-    "Colocação de pedras e pisos",
-    "Montagem de pergolados e decks",
-    "Instalação de jardins verticais",
-    "Execução de espelhos d'água",
+    "Projeto de iluminação de jardim",
+    "Colocação de pedras e pisos para jardim",
+    "Projeto de jardins verticais",
+    "Manutenção de jardim",
   ];
 
   const etapasExecucao = [
