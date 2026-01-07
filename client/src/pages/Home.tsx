@@ -139,7 +139,7 @@ export default function Home() {
   const blogPosts = [
     {
       category: "Jardim Vertical",
-      date: "10 Jan 2026",
+      date: "08 Jan 2026",
       title: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
@@ -147,7 +147,7 @@ export default function Home() {
     },
     {
       category: "Horta em Apartamento",
-      date: "08 Jan 2026",
+      date: "03 Jan 2026",
       title: "Horta em Apartamento: O Guia Completo",
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
@@ -155,7 +155,7 @@ export default function Home() {
     },
     {
       category: "Jardim Pequeno",
-      date: "05 Jan 2026",
+      date: "15 Dez 2025",
       title: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço",
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",

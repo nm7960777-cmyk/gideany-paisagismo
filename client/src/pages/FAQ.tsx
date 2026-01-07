@@ -45,8 +45,8 @@ const faqData: FAQItem[] = [
   },
   {
     category: "Orçamento e Valores",
-    question: "Qual o valor médio de um projeto de paisagismo?",
-    answer: "O valor varia conforme o tamanho da área, complexidade do projeto e materiais escolhidos. Projetos residenciais simples começam a partir de R$ 1.500, enquanto projetos completos com execução podem variar de R$ 5.000 a R$ 50.000 ou mais. Cada caso é único - entre em contato para um orçamento personalizado."
+    question: "Como é calculado o valor do projeto?",
+    answer: "Cada projeto é único e o valor depende de diversos fatores: tamanho da área, complexidade do design, tipos de plantas escolhidas, necessidade de sistemas de irrigação, iluminação e outros elementos. Por isso, não trabalhamos com tabelas fixas - fazemos uma avaliação personalizada para cada cliente. Entre em contato para uma visita técnica gratuita e receba um orçamento sob medida para o seu espaço."
   },
   {
     category: "Orçamento e Valores",
@@ -93,7 +93,7 @@ const faqData: FAQItem[] = [
   {
     category: "Execução e Prazos",
     question: "Preciso estar em casa durante a execução?",
-    answer: "Não necessariamente. Após a aprovação do projeto e alinhamento inicial, nossa equipe pode trabalhar de forma autônoma. Enviamos atualizações diárias com fotos do progresso. Apenas pedimos que alguém esteja disponível para liberar o acesso no início e final de cada dia de trabalho."
+    answer: "Não necessariamente você, mas é importante que haja uma pessoa maior de idade na residência durante a execução. Após a aprovação do projeto e alinhamento inicial, nossa equipe pode trabalhar de forma autônoma. Enviamos atualizações diárias com fotos do progresso. Pedimos apenas que essa pessoa responsável esteja disponível para liberar o acesso e acompanhar eventuais decisões no local."
   },
   {
     category: "Execução e Prazos",

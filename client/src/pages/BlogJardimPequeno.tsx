@@ -1,11 +1,12 @@
 /**
  * DESIGN SYSTEM: Tropical Luxe
  * Artigo: Jardim Pequeno em Casa - 10 Ideias Simples de Canteiros
+ * Estilo: Storytelling + Conversacional - Elegante mas acessível
  */
 
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, User, ChevronRight, Lightbulb, AlertTriangle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function BlogJardimPequeno() {
@@ -54,7 +55,7 @@ export default function BlogJardimPequeno() {
               Jardim Pequeno
             </span>
             <h1 className="text-3xl md:text-5xl font-cinzel text-white mt-6 mb-6 leading-tight">
-              Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço
+              Seu Quintal é Pequeno? Veja 10 Ideias que Vão Mudar Sua Visão
             </h1>
             <div className="flex flex-wrap items-center gap-6 text-white/70">
               <span className="flex items-center gap-2">
@@ -63,11 +64,11 @@ export default function BlogJardimPequeno() {
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                05 de Janeiro de 2026
+                15 de Dezembro de 2025
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                12 min de leitura
+                8 min de leitura
               </span>
             </div>
           </motion.div>
@@ -99,286 +100,404 @@ export default function BlogJardimPequeno() {
             transition={{ delay: 0.3 }}
             className="prose prose-lg max-w-none"
           >
+            {/* Introdução envolvente */}
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com 
-              criatividade e planejamento, qualquer cantinho pode virar um refúgio verde e relaxante. 
-              Neste artigo, trago 10 ideias práticas de canteiros para espaços pequenos que vão 
-              transformar sua casa.
+              <strong>"Ah, mas meu quintal é muito pequeno..."</strong>
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Essa é a frase que mais ouço quando visito clientes pela primeira vez. E sabe o que 
+              eu sempre respondo? <em>"Pequeno é relativo. O que falta é visão."</em>
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Já transformei canteiros de 1 metro quadrado em verdadeiros refúgios. Já vi varandas 
+              de apartamento que pareciam mais jardim do que muita casa com quintal enorme. O segredo? 
+              Não é o tamanho do espaço — é o que você faz com ele.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Neste artigo, vou te mostrar <strong>10 ideias práticas</strong> que uso nos meus projetos. 
+              Algumas você pode fazer sozinho neste fim de semana. Outras vão precisar de um pouco mais 
+              de planejamento. Mas todas têm uma coisa em comum: funcionam de verdade.
             </p>
 
-            <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Por Que Investir em um Jardim Pequeno?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Um jardim, mesmo que pequeno, traz inúmeros benefícios para sua casa e sua vida. 
-              Além de valorizar o imóvel, as plantas purificam o ar, reduzem o estresse e criam 
-              um ambiente mais acolhedor. Estudos mostram que o contato diário com a natureza 
-              melhora a saúde mental e a qualidade do sono.
-            </p>
+            {/* Seção de Benefícios */}
+            <div className="bg-emerald-dark/5 rounded-xl p-6 mb-10 border-l-4 border-emerald-dark">
+              <h3 className="text-lg font-semibold text-emerald-dark mb-3 flex items-center gap-2">
+                <Heart className="w-5 h-5 text-gold" />
+                Por que vale a pena investir em um jardim pequeno?
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-0">
+                Além de valorizar seu imóvel (sim, compradores pagam mais por casas com jardim bem cuidado), 
+                plantas purificam o ar, reduzem estresse e criam aquela sensação de "lar" que nenhuma 
+                decoração de loja consegue reproduzir. Estudos mostram que apenas 20 minutos por dia 
+                em contato com plantas já melhora humor e qualidade do sono.
+              </p>
+            </div>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              10 Ideias de Canteiros para Espaços Pequenos
+              As 10 Ideias (com as plantas certas para cada uma)
             </h2>
 
             {/* Ideia 1 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                1. Canteiro Linear ao Longo do Muro
+                1. Canteiro Linear — O Clássico que Sempre Funciona
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Aproveite a extensão do muro criando um canteiro estreito (30-50cm de largura). 
-                Use plantas compactas de diferentes alturas: arbustos pequenos ou tuias anãs no fundo, 
-                plantas médias no meio e forrações na frente. Isso cria profundidade visual sem ocupar muito espaço.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Sabe aquele espaço entre o muro e a calçada? Ou aquela faixa de terra que sobrou 
+                do lado da garagem? É ali que a mágica acontece.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Moréia, Tuia-limão anã, Buxinho, Liriope, Grama-preta
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Com apenas 30 a 50cm de largura, você cria um canteiro que parece muito maior do que é. 
+                O truque é usar <strong>três alturas diferentes</strong>: plantas baixas na frente, 
+                médias no meio, e arbustos compactos no fundo. Isso cria profundidade visual.
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌿 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  <strong>Fundo:</strong> Moréia, Tuia-limão anã, Buxinho<br/>
+                  <strong>Meio:</strong> Liriope, Agapanto anão<br/>
+                  <strong>Frente:</strong> Grama-preta, Ripsális
+                </p>
+              </div>
             </div>
 
             {/* Ideia 2 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                2. Jardim de Pedras com Suculentas
+                2. Jardim de Pedras — Para Quem Não Tem Tempo
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Perfeito para quem tem pouco tempo para manutenção. Crie um canteiro com pedras 
-                decorativas (seixos brancos ou pedriscos) e intercale com suculentas e cactos. 
-                Além de lindo, exige pouquíssima água e cuidados.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Vou ser honesta: nem todo mundo tem tempo (ou paciência) para cuidar de jardim toda semana. 
+                E tudo bem. Existe solução.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Echeveria, Sedum, Agave, Cactos variados
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Suculentas e cactos praticamente se cuidam sozinhos. Combine com seixos brancos ou 
+                pedriscos escuros, e você tem um jardim moderno que pede água uma vez por semana 
+                (às vezes menos).
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌵 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Echeveria, Sedum, Agave-dragão (porte pequeno), Cactos-bola, Kalanchoe
+                </p>
+              </div>
             </div>
             
-            {/* Imagem de Canteiro com Pedras */}
+            {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jp-canteiro-pedras.jpg"
                 alt="Jardim de pedras com suculentas"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim de pedras: baixa manutenção e visual moderno</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                Jardim de pedras: visual moderno e manutenção quase zero
+              </p>
             </div>
 
             {/* Ideia 3 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                3. Canteiro Elevado com Madeira
+                3. Canteiro Elevado — Quando o Chão Não Colabora
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Canteiros elevados são ótimos para espaços com piso cimentado. Use madeira 
-                tratada ou pallets para criar caixas de 40-60cm de altura. Além de práticos, 
-                facilitam o cultivo de temperos e hortaliças.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Piso cimentado? Solo muito duro? Raízes de árvore vizinha? Nada disso é desculpa.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Ideal para: Temperos, hortaliças, flores anuais
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Canteiros elevados resolvem tudo. Use madeira tratada, blocos de concreto ou até 
+                pallets reciclados. Com 40 a 60cm de altura, você tem espaço suficiente para raízes 
+                e ainda facilita o cuidado (nada de ficar agachado!).
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌱 Ideal para:</p>
+                <p className="text-sm text-gray-700">
+                  Temperos (manjericão, alecrim, hortelã), hortaliças de ciclo curto, flores anuais
+                </p>
+              </div>
             </div>
             
-            {/* Imagem de Canteiro Elevado */}
+            {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jp-canteiro-elevado.jpg"
                 alt="Canteiro elevado com madeira"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Canteiro elevado: prático para temperos e hortaliças</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                Canteiro elevado: solução prática para qualquer piso
+              </p>
             </div>
 
             {/* Ideia 4 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                4. Jardim Tropical Compacto
+                4. Cantinho Tropical — Mesmo em 2m²
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Mesmo em 2m² você pode criar um cantinho tropical. Use plantas de folhagem 
-                exuberante mas de porte controlado. Combine diferentes texturas e tons de verde, 
-                adicionando bromélias para pontos de cor. Evite palmeiras grandes que vão dominar o espaço.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Esse é meu favorito. Com as plantas certas, você cria aquela sensação de 
+                "mini-floresta" que todo mundo ama.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Filodendro-xanadu, Bromélias, Maranta, Calatéia, Samambaia-paulista
+              <p className="text-gray-700 leading-relaxed mb-4">
+                O segredo é misturar <strong>texturas e tons de verde</strong>. Folhas grandes com 
+                folhas finas. Verde escuro com verde claro. E um toque de cor com bromélias ou 
+                antúrios.
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌴 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Filodendro-xanadu (compacto!), Maranta, Calatéia, Samambaia-paulista, Bromélias, Antúrio
+                </p>
+              </div>
+              <div className="bg-red-50 rounded-lg p-4 mt-4 flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-red-700">
+                  <strong>Evite:</strong> Costela-de-adão e palmeiras grandes — crescem demais e vão dominar o espaço em poucos anos.
+                </p>
+              </div>
             </div>
             
-            {/* Imagem de Jardim Tropical Compacto */}
+            {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jp-tropical-compacto.jpg"
                 alt="Jardim tropical compacto"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Jardim tropical: palmeiras, filodendros e bromélias em espaço compacto</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                Tropical compacto: sensação de floresta em espaço mínimo
+              </p>
             </div>
 
             {/* Ideia 5 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                5. Canteiro em Formato de Ilha
+                5. Ilha Verde — O Ponto Focal do Quintal
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Se você tem um quintal pequeno, crie uma "ilha" verde no centro. Pode ser 
-                redonda, oval ou orgânica. Use um arbusto ornamental como ponto focal e 
-                forrações ao redor. Evite árvores frutíferas grandes que vão crescer demais.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Se você tem um quintal pequeno mas "quadrado", crie uma ilha no centro. Pode ser 
+                redonda, oval ou com formato orgânico (mais natural).
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Azaléia anã, Gardenia, Agapanto, Grama-preta, Liriope
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Coloque um arbusto ornamental como ponto focal e forrações ao redor. Funciona 
+                como uma "âncora visual" que organiza todo o espaço.
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌺 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  <strong>Centro:</strong> Azaléia anã, Gardênia, Hibisco compacto<br/>
+                  <strong>Bordas:</strong> Agapanto, Liriope, Grama-preta
+                </p>
+              </div>
             </div>
 
             {/* Ideia 6 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                6. Jardim Vertical no Muro
+                6. Jardim Vertical — Quando o Chão Acabou
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Quando o espaço horizontal é limitado, vá para cima! Instale treliças, 
-                vasos de parede ou painéis de jardim vertical. Além de ocupar zero espaço 
-                no chão, transforma muros feios em paredes vivas.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Zero espaço no chão? Vá para cima. Muros feios viram paredes vivas. Grades de 
+                janela viram suportes para vasos.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Jiboia, Samambaia, Peperômia, Hera
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Existem várias opções: treliças com trepadeiras, vasos de parede, painéis modulares 
+                ou até garrafas PET (sim, funciona e fica bonito se bem feito).
+              </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌿 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Jiboia, Samambaia, Peperômia, Lambari, Ripsális, Hera
+                </p>
+              </div>
+              <p className="text-sm text-gray-500 mt-4 italic">
+                → Quer saber mais? Tenho um artigo completo sobre <Link href="/blog/jardim-vertical"><a className="text-gold hover:underline">jardim vertical</a></Link>.
               </p>
             </div>
 
             {/* Ideia 7 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                7. Canteiro com Gramíneas Ornamentais
+                7. Gramíneas Ornamentais — Movimento e Leveza
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Gramíneas ornamentais trazem movimento e leveza ao jardim. Para canteiros pequenos, 
-                escolha espécies compactas que não vão dominar o espaço. O capim-do-texas, por exemplo, 
-                pode ficar muito grande - prefira variedades anãs.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Gramíneas balançam com o vento e trazem uma sensação de movimento que outras plantas 
+                não conseguem. Parecem "vivas" de um jeito diferente.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Festuca-azul, Carex, Capim-chorona anão, Pennisetum 'Little Bunny'
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Mas atenção: algumas crescem MUITO. Capim-do-texas, por exemplo, vira um monstro de 
+                1,5m. Para espaços pequenos, escolha variedades anãs.
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌾 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Festuca-azul (30cm), Carex (40cm), Pennisetum 'Little Bunny' (50cm), Capim-chorona anão
+                </p>
+              </div>
             </div>
             
-            {/* Imagem de Gramíneas Ornamentais */}
+            {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
                 src="/images/blog-jp-gramineas.jpg"
                 alt="Canteiro com gramíneas ornamentais"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Gramíneas ornamentais: movimento e leveza no jardim</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">
+                Gramíneas: movimento natural que transforma qualquer canteiro
+              </p>
             </div>
 
             {/* Ideia 8 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                8. Jardim Sensorial com Aromáticas
+                8. Jardim Sensorial — Perfume + Sabor
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Crie um canteiro que estimule os sentidos. Combine plantas aromáticas como 
-                lavanda, alecrim e hortelã. Além do perfume agradável, você terá temperos 
-                frescos para a cozinha e flores que atraem borboletas.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Imagine sair de casa e sentir cheiro de lavanda. Ou colher manjericão fresco para 
+                o jantar. Esse é o jardim sensorial.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Lavanda, Alecrim, Hortelã, Manjericão, Sálvia
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Combine aromáticas e temperos em um canteiro só. Além do perfume, você atrai 
+                borboletas e abelhas (polinizadores que ajudam todo o jardim).
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌸 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Lavanda, Alecrim, Manjericão, Sálvia, Tomilho, Orégano
+                </p>
+              </div>
+              <div className="bg-amber-50 rounded-lg p-4 mt-4 flex items-start gap-3">
+                <Lightbulb className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-amber-800">
+                  <strong>Dica de paisagista:</strong> Hortelã é invasiva! Plante sempre em vaso separado, 
+                  nunca direto no canteiro — ela vai dominar tudo.
+                </p>
+              </div>
             </div>
 
             {/* Ideia 9 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                9. Canteiro Zen Estilo Japonês
+                9. Estilo Zen/Japonês — Menos é Mais
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Inspire-se nos jardins japoneses. <strong>ATENÇÃO:</strong> evite bambu plantado 
-                diretamente no solo - ele é extremamente invasivo e pode destruir muros e calçadas! 
-                Se quiser bambu, mantenha SEMPRE em vasos. Prefira plantas como nandina e junipero.
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Se você gosta de minimalismo, o estilo japonês é perfeito. Poucas plantas, bem 
+                escolhidas, com pedras e areia.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Nandina, Junípero-rasteiro, Ophiopogon (grama-preta), Azaléia anã
-              </p>
+              <div className="bg-red-50 rounded-lg p-4 mb-4 flex items-start gap-3">
+                <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-red-700">
+                  <strong>NUNCA plante bambu direto no solo!</strong> Ele é extremamente invasivo — 
+                  os rizomas destroem muros, calçadas e até fundações. Se quiser bambu, mantenha 
+                  SEMPRE em vasos grandes.
+                </p>
+              </div>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🎋 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  Nandina (bambu-celeste), Junípero-rasteiro, Grama-preta, Azaléia anã, Buxinho podado
+                </p>
+              </div>
             </div>
 
             {/* Ideia 10 */}
-            <div className="bg-white rounded-xl p-6 shadow-md mb-6 border-l-4 border-gold">
+            <div className="bg-white rounded-xl p-6 shadow-md mb-8 border-l-4 border-gold">
               <h3 className="text-xl font-semibold text-emerald-dark mb-3">
-                10. Canteiro de Flores Coloridas
+                10. Canteiro de Flores — Cor o Ano Todo
               </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Para quem ama cor, crie um canteiro com flores de diferentes épocas de floração. 
-                Assim, você terá flores o ano todo. Combine perenes (que voltam todo ano) com 
-                anuais (que precisam ser replantadas).
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Para quem ama cor, o segredo é combinar plantas com <strong>épocas de floração 
+                diferentes</strong>. Assim você tem flores o ano inteiro.
               </p>
-              <p className="text-sm text-gold mt-3 font-medium">
-                Plantas sugeridas: Lavanda, Gazânia, Petúnia, Tagete, Begônia, Impatiens
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Misture perenes (voltam todo ano) com anuais (precisam ser replantadas). As anuais 
+                dão trabalho, mas compensam com floração intensa.
               </p>
+              <div className="bg-gold/10 rounded-lg p-4 mt-4">
+                <p className="text-sm font-medium text-emerald-dark mb-2">🌷 Plantas que funcionam:</p>
+                <p className="text-sm text-gray-700">
+                  <strong>Perenes:</strong> Lavanda, Agapanto, Lírio-do-brejo<br/>
+                  <strong>Anuais:</strong> Petúnia, Tagete, Begônia, Impatiens, Gazânia
+                </p>
+              </div>
             </div>
 
+            {/* Dicas Rápidas */}
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Dicas Importantes para Canteiros Pequenos
+              Checklist Rápido (Salva no Celular!)
             </h2>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Prepare bem o solo:</strong> Adicione terra vegetal e húmus antes de plantar</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Considere a drenagem:</strong> Evite áreas onde a água empoça</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Respeite o espaçamento:</strong> Plantas apertadas competem por nutrientes</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Use bordas:</strong> Pedras, tijolos ou madeira delimitam o canteiro</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Cubra o solo:</strong> Casca de pinus ou pedriscos evitam ervas daninhas</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Planeje a manutenção:</strong> Escolha plantas adequadas ao tempo que você tem</span>
-              </li>
-            </ul>
+            <div className="bg-emerald-dark text-white rounded-xl p-6 mb-8">
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+                  <span><strong>Solo:</strong> Adicione terra vegetal + húmus antes de plantar</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+                  <span><strong>Drenagem:</strong> Evite áreas onde água empoça</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+                  <span><strong>Espaçamento:</strong> Plantas apertadas competem por nutrientes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+                  <span><strong>Bordas:</strong> Pedras ou madeira delimitam e organizam</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
+                  <span><strong>Cobertura:</strong> Casca de pinus evita ervas daninhas</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-6 h-6 bg-gold text-emerald-dark rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">6</span>
+                  <span><strong>Realismo:</strong> Escolha plantas pro tempo que você TEM</span>
+                </li>
+              </ul>
+            </div>
 
+            {/* Erros Comuns */}
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
-              Erros Comuns em Jardins Pequenos
+              Erros que Vejo Todo Dia (Evite!)
             </h2>
-            <ul className="space-y-3 text-gray-700 mb-8">
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Plantar árvores grandes:</strong> Raízes podem danificar estruturas</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Ignorar a iluminação:</strong> Plantas de sol em sombra não prosperam</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Misturar estilos demais:</strong> Mantenha uma linha visual coerente</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Esquecer da manutenção:</strong> Todo jardim precisa de cuidados regulares</span>
-              </li>
-            </ul>
+            <div className="space-y-4 mb-8">
+              <div className="bg-red-50 rounded-lg p-4 flex items-start gap-3">
+                <span className="text-red-500 font-bold">✗</span>
+                <span className="text-gray-700"><strong>Plantar árvores grandes:</strong> Raízes destroem calçadas e muros. Jabuticabeira e pitangueira são lindas, mas precisam de MUITO espaço.</span>
+              </div>
+              <div className="bg-red-50 rounded-lg p-4 flex items-start gap-3">
+                <span className="text-red-500 font-bold">✗</span>
+                <span className="text-gray-700"><strong>Ignorar a luz:</strong> Planta de sol em sombra = planta morta. Observe seu quintal em diferentes horários antes de escolher.</span>
+              </div>
+              <div className="bg-red-50 rounded-lg p-4 flex items-start gap-3">
+                <span className="text-red-500 font-bold">✗</span>
+                <span className="text-gray-700"><strong>Misturar estilos demais:</strong> Tropical + zen + mediterrâneo = bagunça visual. Escolha UM estilo e siga.</span>
+              </div>
+              <div className="bg-red-50 rounded-lg p-4 flex items-start gap-3">
+                <span className="text-red-500 font-bold">✗</span>
+                <span className="text-gray-700"><strong>Subestimar manutenção:</strong> Todo jardim precisa de cuidado. Se você viaja muito, escolha plantas resistentes.</span>
+              </div>
+            </div>
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Quer um Projeto Personalizado para Seu Espaço?
+            {/* CTA Final */}
+            <div className="bg-gradient-to-r from-emerald-dark to-emerald-dark/90 rounded-xl p-8 mt-12 text-white">
+              <h3 className="text-2xl font-cinzel mb-4">
+                Quer um Projeto Feito pra Você?
               </h3>
-              <p className="text-gray-700 mb-4">
-                Cada espaço é único e merece um projeto pensado especialmente para ele. Se você 
-                quer transformar seu quintal, varanda ou área externa em um jardim dos sonhos, 
-                entre em contato. Faço projetos sob medida em São Roque, Cotia, Sorocaba e 
-                todo Estado de SP.
+              <p className="text-white/90 mb-6 leading-relaxed">
+                Cada espaço é único. O que funciona no quintal do vizinho pode não funcionar no seu. 
+                Se você quer um projeto pensado especialmente para o SEU espaço, com as plantas 
+                certas para a SUA rotina, vamos conversar.
+              </p>
+              <p className="text-white/80 mb-6 text-sm">
+                Atendo São Roque, Cotia, Sorocaba, Alphaville, Barueri e todo Estado de SP.
               </p>
               <a
-                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim pequeno e gostaria de um orçamento para meu espaço."
+                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim pequeno e quero transformar meu espaço. Pode me ajudar?"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">
-                  Solicitar Orçamento pelo WhatsApp
+                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold text-lg px-8 py-6">
+                  Falar no WhatsApp
                 </Button>
               </a>
             </div>
@@ -390,26 +509,28 @@ export default function BlogJardimPequeno() {
       <section className="py-16 bg-emerald-dark/5">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-cinzel text-emerald-dark text-center mb-8">
-            Leia Também
+            Continue Lendo
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Link href="/blog/jardim-vertical">
               <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
-                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
+                <span className="text-sm text-gold">Jardim Vertical</span>
+                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors mt-2">
                   Como Fazer um Jardim Vertical em Casa
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
-                  Aprenda a criar um jardim vertical mesmo em espaços pequenos.
+                  Passo a passo completo para criar seu jardim vertical, mesmo em espaços pequenos.
                 </p>
               </a>
             </Link>
             <Link href="/blog/horta-apartamento">
               <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
-                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
+                <span className="text-sm text-gold">Horta em Apartamento</span>
+                <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors mt-2">
                   Horta em Apartamento: O Guia Completo
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
-                  Cultive temperos e hortaliças mesmo em espaços pequenos.
+                  Tudo que você precisa saber para cultivar temperos e hortaliças em casa.
                 </p>
               </a>
             </Link>
@@ -418,27 +539,18 @@ export default function BlogJardimPequeno() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-emerald-dark py-8 border-t border-gold/20">
+      <footer className="bg-emerald-dark py-8">
         <div className="container mx-auto px-4 text-center">
           <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
-              Voltar ao Site
+            <a className="text-white font-cinzel hover:text-gold transition-colors">
+              Gideany Rezende <span className="text-gold">Paisagismo</span>
             </a>
           </Link>
+          <p className="text-white/60 text-sm mt-2">
+            © 2026 Todos os direitos reservados.
+          </p>
         </div>
       </footer>
-
-      {/* WhatsApp Float */}
-      <a
-        href="https://wa.me/5511950583364"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
-      >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-      </a>
     </div>
   );
 }

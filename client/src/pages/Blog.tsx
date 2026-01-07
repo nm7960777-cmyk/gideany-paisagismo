@@ -31,7 +31,7 @@ export default function Blog() {
       resumo: "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção para transformar qualquer parede em um oásis verde.",
       imagem: "/images/novo-jardim-vertical-fachada.jpg",
       categoria: "Jardim Vertical",
-      data: "10 Jan 2026",
+      data: "08 Jan 2026",
       tempoLeitura: "8 min",
     },
     {
@@ -40,7 +40,7 @@ export default function Blog() {
       resumo: "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado. Descubra como começar sua horta urbana.",
       imagem: "/images/novo-projeto-residencial.jpg",
       categoria: "Horta em Apartamento",
-      data: "08 Jan 2026",
+      data: "03 Jan 2026",
       tempoLeitura: "10 min",
     },
     {
@@ -49,7 +49,7 @@ export default function Blog() {
       resumo: "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
       imagem: "/images/novo-paisagismo-moderno.jpg",
       categoria: "Jardim Pequeno",
-      data: "05 Jan 2026",
+      data: "15 Dez 2025",
       tempoLeitura: "12 min",
     },
   ];
