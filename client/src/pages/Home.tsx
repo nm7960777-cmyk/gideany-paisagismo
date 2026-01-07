@@ -309,7 +309,7 @@ export default function Home() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-garden.jpg')" }}
+          style={{ backgroundImage: "url('/images/hero-original.jpg')" }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-forest/95 via-forest/80 to-forest/40" />
         </div>
