@@ -75,19 +75,19 @@ export default function Home() {
     {
       name: "Henrique Soares",
       location: "São Roque - SP",
-      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou como esperado.",
+      text: "A Gideany transformou completamente nosso quintal. Antes era só terra e mato, agora é o lugar favorito da família. Ela entendeu exatamente o que queríamos: um espaço para as crianças brincarem com segurança e um cantinho zen pra gente relaxar. Recomendo de olhos fechados!",
       initial: "H",
     },
     {
       name: "Ricardo Mendes",
       location: "Cotia - SP",
-      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível. Minha família adorou o novo jardim.",
+      text: "Procurei vários paisagistas antes de encontrar a Gideany. A diferença? Ela realmente escuta. Não veio com projeto pronto — sentou comigo, perguntou sobre nossa rotina, sobre as plantas que eu gostava. O resultado ficou tão natural que parece que o jardim sempre esteve ali.",
       initial: "R",
     },
     {
       name: "Patrícia Souza",
       location: "Sorocaba - SP",
-      text: "Contratei para fazer o paisagismo da minha casa nova e não me arrependo. Atendimento personalizado e muita dedicação.",
+      text: "Minha varanda era um depósito de vasos abandonados. Hoje é meu refúgio. A Gideany escolheu plantas que sobrevivem ao sol forte da tarde e ainda montou um sistema de irrigação simples que eu mesma consigo cuidar. Melhor investimento que fiz na casa!",
       initial: "P",
     },
   ];
@@ -455,8 +455,7 @@ export default function Home() {
               <p className="text-foreground/80 text-lg leading-relaxed mb-6">
                 Engenheira Agrônoma com registro no CREA-SP,
                 apaixonada por transformar espaços em verdadeiros refúgios
-                naturais. Atuo em São Roque, Cotia, Sorocaba e todo o Estado de São Paulo,
-                região, oferecendo projetos personalizados para residências e
+                naturais. Atuo em São Roque, Cotia, Sorocaba e toda a região metropolitana de São Paulo, oferecendo projetos personalizados para residências e
                 empresas que respeitam o meio ambiente e valorizam cada detalhe
                 do seu espaço.
               </p>
