@@ -71,6 +71,7 @@ export default function Execucao() {
     "Colocação de pedras e pisos para jardim",
     "Projeto de jardins verticais",
     "Manutenção de jardim",
+    "Consultoria em paisagismo",
   ];
 
   const etapasExecucao = [

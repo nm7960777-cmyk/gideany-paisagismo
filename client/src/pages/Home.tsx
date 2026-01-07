@@ -445,7 +445,7 @@ export default function Home() {
                 Gideany Clarice Rezende
               </h2>
               <p className="text-foreground/80 text-lg leading-relaxed mb-6">
-                Paisagista com formação técnica e registro no CREA-SP,
+                Engenheira Agrônoma com registro no CREA-SP,
                 apaixonada por transformar espaços em verdadeiros refúgios
                 naturais. Atuo em São Roque, Cotia, Sorocaba, São Paulo e toda a
                 região, oferecendo projetos personalizados para residências e
