@@ -39,6 +39,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 
 // Animation variants
 const fadeInUp = {
@@ -92,18 +93,21 @@ export default function Home() {
       title: "Projetos de Paisagismo",
       description:
         "Desenvolvemos projetos personalizados para residências e empresas, transformando seu espaço em um ambiente único que harmoniza plantas, elementos decorativos e funcionalidade.",
+      link: "/servicos/projetos",
     },
     {
       icon: Shovel,
       title: "Execução de Obras",
       description:
         "Executamos o projeto completo com equipe especializada, garantindo qualidade e atenção aos detalhes em cada etapa da implantação.",
+      link: "/servicos/execucao",
     },
     {
       icon: Droplets,
       title: "Manutenção de Jardins",
       description:
         "Serviço periódico de manutenção para manter seu jardim sempre bonito e saudável, com podas, adubação e cuidados especiais.",
+      link: "/servicos/manutencao",
     },
   ];
 
@@ -514,12 +518,14 @@ export default function Home() {
                     <p className="text-white/70 leading-relaxed mb-6">
                       {service.description}
                     </p>
-                    <Button
-                      variant="ghost"
-                      className="text-gold hover:text-gold hover:bg-gold/10 p-0"
-                    >
-                      Saiba mais <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <Link href={service.link}>
+                      <Button
+                        variant="ghost"
+                        className="text-gold hover:text-gold hover:bg-gold/10 p-0"
+                      >
+                        Saiba mais <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -603,12 +609,14 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button
-              size="lg"
-              className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8"
-            >
-              Ver Todos os Projetos
-            </Button>
+            <Link href="/galeria">
+              <Button
+                size="lg"
+                className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8"
+              >
+                Ver Todos os Projetos
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>
