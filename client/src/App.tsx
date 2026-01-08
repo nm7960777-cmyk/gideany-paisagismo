@@ -14,6 +14,7 @@ import BlogJardimVertical from "./pages/BlogJardimVertical";
 import BlogHortaApartamento from "./pages/BlogHortaApartamento";
 import BlogJardimPequeno from "./pages/BlogJardimPequeno";
 import FAQ from "./pages/FAQ";
+import Links from "./pages/Links";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
       <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />
       <Route path={"/faq"} component={FAQ} />
+      <Route path={"/links"} component={Links} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
