@@ -231,6 +231,12 @@ export default function Home() {
               >
                 Blog
               </a>
+              <Link
+                href="/faq"
+                className="text-white/80 hover:text-gold transition-colors font-medium"
+              >
+                FAQ
+              </Link>
               <Button
                 className="bg-gold hover:bg-gold/90 text-forest font-semibold px-6"
                 onClick={() =>
@@ -296,6 +302,13 @@ export default function Home() {
               >
                 Blog
               </a>
+              <Link
+                href="/faq"
+                className="text-white/80 hover:text-gold py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                FAQ
+              </Link>
               <Button
                 className="bg-gold hover:bg-gold/90 text-forest font-semibold w-full mt-2"
                 onClick={() => {
