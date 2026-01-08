@@ -1014,6 +1014,12 @@ export default function Home() {
                 >
                   Blog
                 </a>
+                <Link
+                  href="/faq"
+                  className="block text-white/60 hover:text-gold transition-colors text-sm"
+                >
+                  FAQ
+                </Link>
               </div>
             </div>
             <div>
