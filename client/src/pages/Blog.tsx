@@ -29,7 +29,7 @@ export default function Blog() {
       slug: "jardim-vertical",
       titulo: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       resumo: "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção para transformar qualquer parede em um oásis verde.",
-      imagem: "/images/novo-jardim-vertical-fachada.jpg",
+      imagem: "/images/blog-jardim-vertical-home-novo.jpg",
       categoria: "Jardim Vertical",
       data: "10 Jan 2026",
       tempoLeitura: "8 min",

@@ -165,7 +165,7 @@ export default function BlogJardimVertical() {
             {/* Imagem de Pallet */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/images/blog-jv-pallet.jpg"
+                src="/images/blog-jv-pallet-novo.jpg"
                 alt="Jardim vertical feito com pallet de madeira"
                 className="w-full h-64 object-cover"
               />

@@ -144,6 +144,7 @@ export default function Home() {
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
       link: "/blog/jardim-vertical",
+      image: "/images/blog-jardim-vertical-home-novo.jpg",
     },
     {
       category: "Horta em Apartamento",
@@ -152,6 +153,7 @@ export default function Home() {
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
       link: "/blog/horta-apartamento",
+      image: "/images/blog-horta-apartamento-principal-novo.jpg",
     },
     {
       category: "Jardim Pequeno",
@@ -160,6 +162,7 @@ export default function Home() {
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
       link: "/blog/jardim-pequeno",
+      image: "/images/blog-jardim-pequeno-principal-novo.jpg",
     },
   ];
 
@@ -733,12 +736,21 @@ export default function Home() {
             {blogPosts.map((post, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Link href={post.link}>
-                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
+                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer overflow-hidden">
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="text-xs font-medium text-emerald-dark bg-gold px-3 py-1 rounded-full">
                           {post.category}
                         </span>
+                      </div>
+                    </div>
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-3 mb-3">
                         <span className="text-xs text-foreground/50">
                           {post.date}
                         </span>
@@ -746,7 +758,7 @@ export default function Home() {
                       <h3 className="font-display text-lg text-forest mb-3 group-hover:text-emerald transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-foreground/70 text-sm leading-relaxed mb-4">
+                      <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
                       <Button
