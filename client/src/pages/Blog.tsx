@@ -59,16 +59,14 @@ export default function Blog() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
                 <span className="text-gold font-cinzel font-bold text-lg">GR</span>
               </div>
               <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
                 Gideany Rezende <span className="text-gold">Paisagismo</span>
               </span>
-            </a>
-          </Link>
+            </Link>
           <Link href="/">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -123,8 +121,7 @@ export default function Blog() {
                 variants={fadeInUp}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <Link href={`/blog/${artigo.slug}`}>
-                  <a className="block">
+                <Link href={`/blog/${artigo.slug}`} className="block">
                     <div className="relative h-56 overflow-hidden">
                       <img
                         src={artigo.imagem}
@@ -159,8 +156,7 @@ export default function Blog() {
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </span>
                     </div>
-                  </a>
-                </Link>
+                  </Link>
               </motion.article>
             ))}
           </motion.div>
@@ -191,10 +187,8 @@ export default function Blog() {
       {/* Footer simples */}
       <footer className="bg-emerald-dark/95 py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
               Voltar ao Site
-            </a>
           </Link>
         </div>
       </footer>
