@@ -336,7 +336,7 @@ export default function BlogJardimPequeno() {
             {/* Imagem */}
             <div className="my-8 rounded-xl overflow-hidden shadow-lg">
               <img
-                src="/images/blog-jp-gramineas.jpg"
+                src="/images/blog-jp-gramineas-pequeno.jpg"
                 alt="Canteiro com gramíneas ornamentais"
                 className="w-full h-64 object-cover"
               />
