@@ -6,7 +6,7 @@
  * - Style: Luxury tropical with Art Deco influences
  */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -57,11 +57,6 @@ const staggerContainer = {
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // SEO: Define o título da página
-  useEffect(() => {
-    document.title = "Paisagismo em São Roque SP | Eng. Gideany Rezende";
-  }, []);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({
     nome: "",
@@ -75,32 +70,20 @@ export default function Home() {
     {
       name: "Henrique Soares",
       location: "São Roque - SP",
-      text: "Nosso quintal era só terra batida e mato alto. Depois do projeto, virou o lugar favorito da família. A equipe entendeu exatamente o que a gente queria: espaço pras crianças correrem e um cantinho com rede pra descansar no fim de semana. Ficou incrível!",
+      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou como esperado.",
       initial: "H",
     },
     {
       name: "Ricardo Mendes",
       location: "Cotia - SP",
-      text: "Conversei com 4 paisagistas antes. A diferença foi que aqui não vieram com projeto pronto. Sentaram, perguntaram sobre nossa rotina, o que a gente gostava. O jardim ficou tão natural que os vizinhos perguntam se sempre foi assim.",
+      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível. Minha família adorou o novo jardim.",
       initial: "R",
     },
     {
       name: "Patrícia Souza",
       location: "Sorocaba - SP",
-      text: "Minha varanda era um cemitério de vasos. Agora é onde tomo café toda manhã. Escolheram plantas que aguentam o sol forte da tarde e montaram uma irrigação simples que eu mesma cuido. Valeu cada centavo.",
+      text: "Contratei para fazer o paisagismo da minha casa nova e não me arrependo. Atendimento personalizado e muita dedicação.",
       initial: "P",
-    },
-    {
-      name: "Fernanda Lima",
-      location: "Mairiporã - SP",
-      text: "Tinha medo de gastar muito e ficar com um jardim que eu não ia conseguir manter. Me mostraram opções de plantas fáceis e um projeto que cabe no meu tempo. Dois anos depois, tá lindo e eu cuido sozinha.",
-      initial: "F",
-    },
-    {
-      name: "Carlos Eduardo",
-      location: "Itu - SP",
-      text: "Contratei pra empresa. Nosso escritório era cinza e sem vida. Agora tem plantas em todo canto e os funcionários comentam que o ambiente mudou. Até a produtividade melhorou, acredita?",
-      initial: "C",
     },
   ];
 
@@ -136,19 +119,19 @@ export default function Home() {
   ];
 
   const projects = [
-{
-      image: "/images/novo-projeto-residencial.jpg",
-      title: "Projeto de Paisagismo Residencial em São Roque",
-      description: "Projeto completo em São Roque",
+    {
+      image: "/images/novo-area-piscina.jpg",
+      title: "Jardim com Piscina",
+      description: "Projeto residencial",
     },
     {
       image: "/images/novo-jardim-vertical.jpg",
-      title: "Jardim Vertical Residencial em Cotia SP",
+      title: "Jardim Vertical",
       description: "Fachada verde moderna",
     },
     {
-      image: "/images/antes-depois-novo.jpg",
-      title: "Transformação de Jardim - Antes e Depois",
+      image: "/images/antes-depois.png",
+      title: "Transformação Completa",
       description: "Antes e depois",
     },
   ];
@@ -156,30 +139,27 @@ export default function Home() {
   const blogPosts = [
     {
       category: "Jardim Vertical",
-      date: "08 Jan 2026",
+      date: "10 Jan 2026",
       title: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
       link: "/blog/jardim-vertical",
-      image: "/images/card-jv-lindo.jpg",
     },
     {
       category: "Horta em Apartamento",
-      date: "03 Jan 2026",
+      date: "08 Jan 2026",
       title: "Horta em Apartamento: O Guia Completo",
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
       link: "/blog/horta-apartamento",
-      image: "/images/card-ha-lindo.jpg",
     },
     {
       category: "Jardim Pequeno",
-      date: "15 Dez 2025",
+      date: "05 Jan 2026",
       title: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço",
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
       link: "/blog/jardim-pequeno",
-      image: "/images/card-jp-lindo.jpg",
     },
   ];
 
@@ -208,7 +188,7 @@ export default function Home() {
             <a href="#" className="flex items-center gap-3">
               <img
                 src="/images/logo_gr.png"
-                alt="Gideany Rezende Paisagismo - Logo"
+                alt="GR Logo"
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
@@ -370,9 +350,9 @@ export default function Home() {
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8 max-w-2xl"
             >
-              Paisagista em São Roque, Cotia e Sorocaba. Projetos de jardins 
-              residenciais e comerciais que transformam seu espaço. 
-              Engenheira Agrônoma com CREA-SP. Orçamento grátis pelo WhatsApp!
+              Projetos exclusivos de paisagismo residencial e comercial que unem
+              beleza, funcionalidade e sustentabilidade. Design com técnicas
+              atualizadas para criar ambientes que encantam.
             </motion.p>
 
             <motion.div
@@ -449,7 +429,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src="/images/gideany_foto.png"
-                  alt="Gideany Rezende - Paisagista em São Roque SP"
+                  alt="Gideany Clarice Rezende"
                   className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gold p-4 rounded-lg shadow-xl hidden md:block">
@@ -470,7 +450,8 @@ export default function Home() {
               <p className="text-foreground/80 text-lg leading-relaxed mb-6">
                 Engenheira Agrônoma com registro no CREA-SP,
                 apaixonada por transformar espaços em verdadeiros refúgios
-                naturais. Atuo em São Roque, Cotia, Sorocaba e toda a região metropolitana de São Paulo, oferecendo projetos personalizados para residências e
+                naturais. Atuo em São Roque, Cotia, Sorocaba e todo o Estado de São Paulo,
+                região, oferecendo projetos personalizados para residências e
                 empresas que respeitam o meio ambiente e valorizam cada detalhe
                 do seu espaço.
               </p>
@@ -752,14 +733,7 @@ export default function Home() {
             {blogPosts.map((post, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Link href={post.link}>
-                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer overflow-hidden">
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
+                  <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-3 mb-4">
                         <span className="text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full">
@@ -772,7 +746,7 @@ export default function Home() {
                       <h3 className="font-display text-lg text-forest mb-3 group-hover:text-emerald transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
+                      <p className="text-foreground/70 text-sm leading-relaxed mb-4">
                         {post.excerpt}
                       </p>
                       <Button
@@ -988,7 +962,7 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src="/images/logo_gr.png"
-                  alt="Gideany Rezende Paisagismo - Logo"
+                  alt="GR Logo"
                   className="h-10 w-auto"
                 />
                 <span className="font-display text-lg text-white">
@@ -1033,9 +1007,6 @@ export default function Home() {
                 >
                   Blog
                 </a>
-                <Link href="/faq" className="block text-white/60 hover:text-gold transition-colors text-sm">
-                    Perguntas Frequentes
-                </Link>
               </div>
             </div>
             <div>

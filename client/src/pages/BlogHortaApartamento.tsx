@@ -14,13 +14,15 @@ export default function BlogHortaApartamento() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/">
+            <a className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
                 <span className="text-gold font-cinzel font-bold text-lg">GR</span>
               </div>
               <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
                 Gideany Rezende <span className="text-gold">Paisagismo</span>
               </span>
+            </a>
           </Link>
           <Link href="/blog">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
@@ -36,9 +38,9 @@ export default function BlogHortaApartamento() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/" className="hover:text-gold">Início</Link>
+            <Link href="/"><a className="hover:text-gold">Início</a></Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog" className="hover:text-gold">Blog</Link>
+            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Horta em Apartamento</span>
           </div>
@@ -65,7 +67,7 @@ export default function BlogHortaApartamento() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                4 min de leitura
+                10 min de leitura
               </span>
             </div>
           </motion.div>
@@ -81,7 +83,7 @@ export default function BlogHortaApartamento() {
           className="max-w-4xl mx-auto"
         >
           <img
-            src="/images/blog-horta-apartamento-nova.jpg"
+            src="/images/blog-horta-apartamento-principal.jpg"
             alt="Horta em Apartamento"
             className="w-full h-[400px] object-cover rounded-2xl shadow-xl"
           />
@@ -180,12 +182,12 @@ export default function BlogHortaApartamento() {
             
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
               <li><strong>Manjericão:</strong> Cresce rápido, adora sol, perfeito para molhos</li>
-              <li><strong>Hortelã:</strong> Muito resistente, mas SEMPRE plante em vaso separado - é invasiva e domina outras plantas</li>
+              <li><strong>Hortelã:</strong> Muito resistente, cresce em qualquer lugar (cuidado: é invasiva!)</li>
               <li><strong>Cebolinha:</strong> Fácil de cultivar, rebrota após o corte</li>
               <li><strong>Salsinha:</strong> Versátil na cozinha, prefere meia-sombra</li>
               <li><strong>Alecrim:</strong> Resistente à seca, ótimo para carnes</li>
               <li><strong>Orégano:</strong> Pouca manutenção, perfeito para pizzas</li>
-              <li><strong>Coentro:</strong> Cresce rápido, mas "sobe" (floresce) com calor - prefira plantar no outono/inverno em SP</li>
+              <li><strong>Coentro:</strong> Cresce rápido, mas não gosta de calor extremo</li>
             </ul>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">

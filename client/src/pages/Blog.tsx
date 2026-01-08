@@ -5,7 +5,6 @@
  * - Typography: Cinzel (display) + Montserrat (body)
  */
 
-import { useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
@@ -25,38 +24,33 @@ const staggerContainer = {
 };
 
 export default function Blog() {
-  // SEO: Define o título da página do Blog
-  useEffect(() => {
-    document.title = "Blog de Paisagismo | Dicas de Jardim - Eng. Gideany Rezende";
-  }, []);
-
   const artigos = [
     {
       slug: "jardim-vertical",
       titulo: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       resumo: "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção para transformar qualquer parede em um oásis verde.",
-      imagem: "/images/card-jv-lindo.jpg",
+      imagem: "/images/novo-jardim-vertical-fachada.jpg",
       categoria: "Jardim Vertical",
-      data: "08 Jan 2026",
-      tempoLeitura: "5 min",
+      data: "10 Jan 2026",
+      tempoLeitura: "8 min",
     },
     {
       slug: "horta-apartamento",
       titulo: "Horta em Apartamento: O Guia Completo",
       resumo: "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado. Descubra como começar sua horta urbana.",
-      imagem: "/images/card-ha-lindo.jpg",
+      imagem: "/images/novo-projeto-residencial.jpg",
       categoria: "Horta em Apartamento",
-      data: "03 Jan 2026",
-      tempoLeitura: "6 min",
+      data: "08 Jan 2026",
+      tempoLeitura: "10 min",
     },
     {
       slug: "jardim-pequeno",
       titulo: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros",
       resumo: "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
-      imagem: "/images/card-jp-lindo.jpg",
+      imagem: "/images/novo-paisagismo-moderno.jpg",
       categoria: "Jardim Pequeno",
-      data: "15 Dez 2025",
-      tempoLeitura: "5 min",
+      data: "05 Jan 2026",
+      tempoLeitura: "12 min",
     },
   ];
 
@@ -65,14 +59,16 @@ export default function Blog() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/">
+            <a className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
                 <span className="text-gold font-cinzel font-bold text-lg">GR</span>
               </div>
               <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
                 Gideany Rezende <span className="text-gold">Paisagismo</span>
               </span>
-            </Link>
+            </a>
+          </Link>
           <Link href="/">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -127,7 +123,8 @@ export default function Blog() {
                 variants={fadeInUp}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <Link href={`/blog/${artigo.slug}`} className="block">
+                <Link href={`/blog/${artigo.slug}`}>
+                  <a className="block">
                     <div className="relative h-56 overflow-hidden">
                       <img
                         src={artigo.imagem}
@@ -162,7 +159,8 @@ export default function Blog() {
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </span>
                     </div>
-                  </Link>
+                  </a>
+                </Link>
               </motion.article>
             ))}
           </motion.div>
@@ -176,7 +174,7 @@ export default function Blog() {
             Quer um projeto personalizado?
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Entre em contato e vamos criar ambientes que inspiram.
+            Entre em contato e vamos transformar seu espaço em um jardim dos sonhos.
           </p>
           <a
             href="https://wa.me/5511950583364"
@@ -193,8 +191,10 @@ export default function Blog() {
       {/* Footer simples */}
       <footer className="bg-emerald-dark/95 py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
+          <Link href="/">
+            <a className="text-white/60 hover:text-gold transition-colors">
               Voltar ao Site
+            </a>
           </Link>
         </div>
       </footer>
