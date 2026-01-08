@@ -524,13 +524,8 @@ export default function Home() {
                     <p className="text-white/70 leading-relaxed mb-6">
                       {service.description}
                     </p>
-                    <Link href={service.link}>
-                      <Button
-                        variant="ghost"
-                        className="text-gold hover:text-gold hover:bg-gold/10 p-0"
-                      >
-                        Saiba mais <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                    <Link href={service.link} className="inline-flex items-center text-gold hover:text-gold/80 transition-colors">
+                      Saiba mais <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </CardContent>
                 </Card>
@@ -615,13 +610,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Link href="/galeria">
-              <Button
-                size="lg"
-                className="bg-emerald hover:bg-emerald/90 text-white font-semibold px-8"
-              >
-                Ver Todos os Projetos
-              </Button>
+            <Link href="/galeria" className="inline-flex items-center justify-center bg-emerald hover:bg-emerald/90 text-white font-semibold px-8 h-10 rounded-md transition-colors">
+              Ver Todos os Projetos
             </Link>
           </motion.div>
         </div>
@@ -716,13 +706,8 @@ export default function Home() {
                 Dicas e Curiosidades
               </h2>
             </div>
-            <Link href="/blog">
-              <Button
-                variant="ghost"
-                className="text-emerald hover:text-emerald hover:bg-emerald/10 mt-4 md:mt-0"
-              >
-                Ver todos os artigos <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+            <Link href="/blog" className="inline-flex items-center text-emerald hover:text-emerald/80 hover:bg-emerald/10 px-4 py-2 rounded-md mt-4 md:mt-0 transition-colors">
+              Ver todos os artigos <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </motion.div>
 
@@ -761,12 +746,9 @@ export default function Home() {
                       <p className="text-foreground/70 text-sm leading-relaxed mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
-                      <Button
-                        variant="ghost"
-                        className="text-emerald hover:text-emerald hover:bg-emerald/10 p-0"
-                      >
+                      <span className="inline-flex items-center text-emerald hover:text-emerald/80 transition-colors">
                         Ler mais <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      </span>
                     </CardContent>
                   </Card>
                 </Link>
