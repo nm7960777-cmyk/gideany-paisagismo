@@ -60,11 +60,6 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Quanto custa um projeto de paisagismo?",
-      answer:
-        "O valor do projeto varia de acordo com o tamanho da área, complexidade do projeto e serviços incluídos. Projetos residenciais simples começam a partir de R$ 1.500, enquanto projetos mais elaborados com perspectivas 3D e acompanhamento de execução podem variar de R$ 3.000 a R$ 10.000 ou mais. Oferecemos orçamento gratuito e sem compromisso para avaliar seu espaço.",
-    },
-    {
       question: "Qual a diferença entre paisagista e jardineiro?",
       answer:
         "O paisagista é o profissional responsável pelo projeto e planejamento do jardim, considerando aspectos técnicos como drenagem, irrigação, escolha de espécies adequadas ao clima e solo, harmonização de cores e texturas. Já o jardineiro executa a manutenção do jardim já implantado, como podas, adubação e irrigação. Como Engenheira Agrônoma, ofereço tanto o projeto técnico quanto o acompanhamento da execução.",
@@ -72,7 +67,7 @@ export default function FAQ() {
     {
       question: "Quanto tempo leva para fazer um projeto de paisagismo?",
       answer:
-        "O prazo para elaboração do projeto varia de 7 a 30 dias, dependendo da complexidade e tamanho da área. Projetos simples podem ser entregues em uma semana, enquanto projetos mais elaborados com perspectivas 3D, detalhamento de irrigação e iluminação podem levar até um mês. Após a aprovação do projeto, a execução geralmente leva de 1 a 4 semanas.",
+        "O prazo para elaboração do projeto varia de 7 a 30 dias, dependendo da complexidade e tamanho da área. Projetos simples podem ser entregues em uma semana, enquanto projetos mais elaborados com detalhamento de irrigação e iluminação podem levar até um mês. Após a aprovação do projeto, a execução geralmente leva de 1 a 4 semanas.",
     },
     {
       question: "Vocês fazem apenas o projeto ou também executam?",
