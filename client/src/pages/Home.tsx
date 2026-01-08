@@ -130,7 +130,7 @@ export default function Home() {
       description: "Projeto residencial",
     },
     {
-      image: "/images/antes-depois.png",
+      image: "/images/antes-depois-novo.jpg",
       title: "Transformação Completa",
       description: "Antes e depois",
     },
