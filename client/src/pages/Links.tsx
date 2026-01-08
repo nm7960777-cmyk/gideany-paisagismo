@@ -1,7 +1,6 @@
 /**
- * DESIGN: O Link Mais Lindo do Brasil
- * Página de Links Premium para Instagram
- * Com acessibilidade: Alto Contraste + E-mail para surdos
+ * DESIGN: Premium Minimalista com Elemento Memorável
+ * Foto grande como ponto focal + borda com gradiente animado sutil
  */
 
 import { useState } from "react";
@@ -14,31 +13,14 @@ import {
   Star,
   Send,
   Instagram,
-  Sparkles,
   Mail,
   Eye,
+  ArrowUpRight,
 } from "lucide-react";
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.5 },
-  },
-};
-
-const buttonVariants = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-};
 
 export default function Links() {
   const [highContrast, setHighContrast] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const links = [
     {
@@ -46,334 +28,294 @@ export default function Links() {
       label: "WhatsApp",
       subtitle: "Fale conosco",
       href: "https://wa.me/5511950583364?text=Olá! Vim pelo Instagram e gostaria de saber mais sobre os serviços de paisagismo.",
-      accent: "#22c55e",
-      ariaLabel: "Enviar mensagem pelo WhatsApp",
     },
     {
       icon: Globe,
       label: "Conheça o Site",
       subtitle: "Veja todos os serviços",
       href: "https://rezendepaisagismo.com.br",
-      accent: "#10b981",
-      ariaLabel: "Visitar site completo com todos os serviços",
     },
     {
       icon: Image,
       label: "Galeria de Projetos",
       subtitle: "Conheça nossos projetos",
       href: "https://rezendepaisagismo.com.br/galeria",
-      accent: "#14b8a6",
-      ariaLabel: "Ver galeria de projetos de paisagismo",
     },
     {
       icon: BookOpen,
       label: "Blog",
       subtitle: "Dicas de paisagismo",
       href: "https://rezendepaisagismo.com.br/blog",
-      accent: "#059669",
-      ariaLabel: "Ler artigos e dicas de paisagismo no blog",
     },
     {
       icon: Star,
       label: "Avalie no Google",
       subtitle: "Sua opinião importa",
       href: "https://g.page/r/CUfAeuZUcxLSEAE/review",
-      accent: "#f59e0b",
-      ariaLabel: "Deixar avaliação no Google",
     },
     {
       icon: Send,
       label: "Solicitar Orçamento",
       subtitle: "Formulário rápido",
       href: "https://rezendepaisagismo.com.br#contato",
-      accent: "#34d399",
-      ariaLabel: "Preencher formulário para solicitar orçamento",
     },
     {
       icon: Mail,
       label: "E-mail",
       subtitle: "Acessível para surdos",
       href: "mailto:eng.gideanyrezende@gmail.com",
-      accent: "#6366f1",
-      ariaLabel: "Enviar e-mail - opção acessível para pessoas surdas",
     },
   ];
 
-  // Estilos para modo alto contraste
-  const contrastStyles = highContrast ? {
-    bg: "bg-black",
-    text: "text-yellow-300",
-    textSecondary: "text-yellow-200",
-    border: "border-yellow-400",
-    buttonBg: "bg-black border-2 border-yellow-400",
-    buttonText: "text-yellow-300",
-  } : {
-    bg: "",
-    text: "text-white",
-    textSecondary: "text-amber-200/90",
-    border: "border-white/10",
-    buttonBg: "bg-white/[0.03]",
-    buttonText: "text-white",
-  };
+  if (highContrast) {
+    return (
+      <div className="min-h-screen bg-black p-4 flex flex-col items-center justify-center">
+        <button
+          onClick={() => setHighContrast(false)}
+          className="fixed top-4 right-4 z-50 p-3 rounded-full bg-yellow-400 text-black hover:bg-yellow-300"
+          aria-label="Desativar modo alto contraste"
+        >
+          <Eye className="w-5 h-5" />
+        </button>
+        
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <div className="w-28 h-28 mx-auto mb-4 rounded-full border-4 border-yellow-400 overflow-hidden">
+              <img 
+                src="/images/gideany-foto-links.png" 
+                alt="Gideany Rezende" 
+                className="w-full h-full object-cover object-[center_20%]"
+              />
+            </div>
+            <h1 className="text-2xl font-bold text-yellow-300 mb-2">Gideany Rezende</h1>
+            <p className="text-yellow-200 text-sm mb-2">Engenheira Agrônoma | Paisagista</p>
+            <p className="text-yellow-400 text-xs">Todo o Estado de São Paulo</p>
+          </div>
+          
+          <nav className="space-y-3">
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full p-4 bg-black border-2 border-yellow-400 rounded-lg hover:bg-yellow-400/10"
+              >
+                <link.icon className="w-5 h-5 text-yellow-400 mr-4" />
+                <div className="flex-1">
+                  <span className="block text-yellow-300 font-medium">{link.label}</span>
+                  <span className="block text-yellow-400/70 text-xs">{link.subtitle}</span>
+                </div>
+              </a>
+            ))}
+          </nav>
+          
+          <div className="mt-8 text-center">
+            <a
+              href="https://instagram.com/girpaisagismo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-yellow-300"
+            >
+              <Instagram className="w-5 h-5" />
+              @girpaisagismo
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className={`min-h-screen relative overflow-hidden ${highContrast ? 'bg-black' : ''}`}>
-      {/* Fundo com gradiente rico - oculto em alto contraste */}
-      {!highContrast && (
-        <>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#030a03] via-[#071a07] to-[#0a1f0a]" />
-          
-          {/* Imagem de fundo sutil */}
-          <div 
-            className="absolute inset-0 opacity-[0.07]"
-            style={{
-              backgroundImage: 'url("/images/novo-hero.jpg")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'blur(2px)',
-            }}
-          />
-          
-          {/* Overlay com padrão */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
-          
-          {/* Partículas de luz */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 bg-amber-400/30 rounded-full"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                  opacity: [0.2, 0.8, 0.2],
-                  scale: [1, 1.5, 1],
-                }}
-                transition={{
-                  duration: 3 + Math.random() * 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-              />
-            ))}
-          </div>
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Fundo base */}
+      <div className="absolute inset-0 bg-[#070c07]" />
+      
+      {/* Imagem de fundo verde */}
+      <div 
+        className="absolute inset-0 opacity-[0.15]"
+        style={{
+          backgroundImage: 'url("/images/novo-hero.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+      
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070c07]/80 via-[#070c07]/70 to-[#070c07]/90" />
+      
+      {/* Luz ambiente */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-emerald-800/20 rounded-full blur-[150px]" />
 
-          {/* Brilhos decorativos */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl" />
-          <div className="absolute top-40 right-5 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl" />
-          <div className="absolute bottom-40 left-5 w-40 h-40 bg-emerald-400/5 rounded-full blur-3xl" />
-        </>
-      )}
-
-      {/* Botão de Alto Contraste - Acessibilidade */}
+      {/* Botão de Alto Contraste */}
       <button
-        onClick={() => setHighContrast(!highContrast)}
-        className={`fixed top-4 right-4 z-50 p-3 rounded-full transition-all duration-300 ${
-          highContrast 
-            ? 'bg-yellow-400 text-black hover:bg-yellow-300' 
-            : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
-        }`}
-        aria-label={highContrast ? "Desativar modo alto contraste" : "Ativar modo alto contraste para melhor visibilidade"}
-        title="Alto Contraste"
+        onClick={() => setHighContrast(true)}
+        className="fixed top-4 right-4 z-50 p-2.5 rounded-full bg-white/5 text-white/40 hover:text-white/80 hover:bg-white/10 transition-all duration-300"
+        aria-label="Ativar modo alto contraste"
       >
-        <Eye className="w-5 h-5" />
+        <Eye className="w-4 h-4" />
       </button>
 
       {/* Conteúdo principal */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-10">
-        <motion.div
-          className="w-full max-w-md"
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
-          role="main"
-          aria-label="Links de contato de Gideany Rezende Paisagismo"
-        >
-          {/* Header com foto/logo */}
-          <motion.div className="text-center mb-8" variants={fadeIn}>
-            {/* Avatar com efeito glassmorphism */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-12">
+        <div className="w-full max-w-sm">
+          
+          {/* Header com foto grande */}
+          <motion.div 
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Avatar grande com borda animada */}
             <div className="relative inline-block mb-6">
-              {/* Anel externo brilhante */}
-              {!highContrast && (
+              {/* Borda com gradiente animado */}
+              <div className="absolute inset-[-3px] rounded-full overflow-hidden">
                 <motion.div
-                  className="absolute inset-[-6px] rounded-full"
+                  className="w-full h-full"
                   style={{
-                    background: 'linear-gradient(135deg, #f59e0b 0%, #10b981 50%, #f59e0b 100%)',
-                    backgroundSize: '200% 200%',
+                    background: 'conic-gradient(from 0deg, #10b981, #059669, #047857, #065f46, #10b981)',
                   }}
                   animate={{
-                    backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
+                    rotate: 360,
                   }}
                   transition={{
-                    duration: 5,
+                    duration: 10,
                     repeat: Infinity,
-                    ease: 'linear',
+                    ease: "linear",
                   }}
                 />
-              )}
-              
-              {/* Container da foto */}
-              <div className={`relative w-32 h-32 rounded-full p-1 ${highContrast ? 'bg-yellow-400' : 'bg-[#0a1a0a]'}`}>
-                <div className="w-full h-full rounded-full overflow-hidden">
-                  <img 
-                    src="/images/gideany-foto-links.png" 
-                    alt="Foto de Gideany Rezende, Engenheira Agrônoma e Paisagista, sorrindo em ambiente com plantas" 
-                    className="w-full h-full object-cover object-[center_20%]"
-                  />
-                </div>
               </div>
               
-              {/* Brilho */}
-              {!highContrast && (
-                <div className="absolute top-3 right-3 w-4 h-4">
-                  <Sparkles className="w-4 h-4 text-amber-400/60" aria-hidden="true" />
-                </div>
-              )}
+              {/* Espaçador */}
+              <div className="absolute inset-[1px] rounded-full bg-[#070c07]" />
+              
+              {/* Foto */}
+              <div className="relative w-36 h-36 rounded-full overflow-hidden">
+                <img 
+                  src="/images/gideany-foto-links.png" 
+                  alt="Gideany Rezende" 
+                  className="w-full h-full object-cover object-[center_20%]"
+                />
+              </div>
             </div>
 
-            {/* Nome com efeito */}
-            <h1 className={`text-3xl font-serif font-bold mb-2 tracking-wide ${contrastStyles.text}`}>
+            {/* Nome */}
+            <h1 className="text-2xl font-light text-white tracking-wide mb-2">
               Gideany Rezende
             </h1>
             
-            {/* Título profissional elegante */}
-            <div className="flex items-center justify-center gap-2 mb-4">
-              {!highContrast && <div className="w-8 h-px bg-gradient-to-r from-transparent to-amber-500/50" aria-hidden="true" />}
-              <p className={`text-sm tracking-wider ${contrastStyles.textSecondary}`}>
-                Engenheira Agrônoma | Paisagista
-              </p>
-              {!highContrast && <div className="w-8 h-px bg-gradient-to-l from-transparent to-amber-500/50" aria-hidden="true" />}
-            </div>
+            {/* Título */}
+            <p className="text-white/40 text-sm tracking-widest uppercase mb-5">
+              Engenheira Agrônoma • Paisagista
+            </p>
 
-            {/* Badge de localização premium */}
-            <div className={`inline-flex items-center gap-2 px-5 py-2 rounded-full border ${
-              highContrast 
-                ? 'bg-black border-yellow-400' 
-                : 'bg-white/5 backdrop-blur-sm border-white/10'
-            }`}>
-              <div className={`w-2 h-2 rounded-full ${highContrast ? 'bg-yellow-400' : 'bg-emerald-400 animate-pulse'}`} aria-hidden="true" />
-              <span className={`text-xs tracking-wide ${highContrast ? 'text-yellow-300' : 'text-emerald-300/90'}`}>
+            {/* Localização */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-900/20 rounded-full border border-emerald-800/30">
+              <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
+              <p className="text-emerald-400/80 text-xs tracking-wide">
                 Atendemos todo o Estado de São Paulo
-              </span>
+              </p>
             </div>
           </motion.div>
 
-          {/* Links com design premium */}
-          <motion.nav className="space-y-3" variants={staggerContainer} aria-label="Links de navegação">
+          {/* Links */}
+          <nav className="space-y-2">
             {links.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative flex items-center w-full p-4 rounded-2xl overflow-hidden transition-all duration-500 ${
-                  highContrast ? 'bg-black border-2 border-yellow-400 hover:bg-yellow-400/10' : ''
-                }`}
-                variants={buttonVariants}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                aria-label={link.ariaLabel}
+                className="group relative flex items-center w-full p-3.5 rounded-xl overflow-hidden"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + index * 0.05, duration: 0.4 }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
-                {/* Fundo do botão com glassmorphism */}
-                {!highContrast && (
-                  <>
-                    <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-md border border-white/[0.08] rounded-2xl transition-all duration-500 group-hover:bg-white/[0.08] group-hover:border-white/[0.15]" />
-                    
-                    {/* Brilho lateral no hover */}
-                    <div 
-                      className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                      style={{ backgroundColor: link.accent }}
-                    />
-                    
-                    {/* Gradiente de brilho */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                  </>
-                )}
+                {/* Fundo do botão */}
+                <motion.div 
+                  className="absolute inset-0 bg-white/[0.03] border border-white/[0.05] rounded-xl"
+                  animate={{
+                    backgroundColor: hoveredIndex === index ? 'rgba(255,255,255,0.06)' : 'rgba(255,255,255,0.03)',
+                    borderColor: hoveredIndex === index ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.05)',
+                  }}
+                  transition={{ duration: 0.2 }}
+                />
+                
+                {/* Linha lateral que aparece no hover */}
+                <motion.div 
+                  className="absolute left-0 top-2 bottom-2 w-0.5 bg-emerald-500 rounded-full"
+                  initial={{ scaleY: 0, opacity: 0 }}
+                  animate={{ 
+                    scaleY: hoveredIndex === index ? 1 : 0,
+                    opacity: hoveredIndex === index ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.2 }}
+                />
                 
                 {/* Ícone */}
-                <div 
-                  className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mr-4 transition-all duration-500 group-hover:scale-110 ${
-                    highContrast ? 'bg-yellow-400/20 border border-yellow-400' : ''
-                  }`}
-                  style={!highContrast ? { 
-                    backgroundColor: `${link.accent}20`,
-                    boxShadow: `0 0 20px ${link.accent}10`,
-                  } : {}}
-                  aria-hidden="true"
-                >
-                  <link.icon 
-                    className="w-5 h-5 transition-colors duration-500" 
-                    style={{ color: highContrast ? '#facc15' : link.accent }}
-                  />
+                <div className="relative z-10 w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center mr-3 group-hover:bg-white/10 transition-colors duration-200">
+                  <link.icon className="w-4 h-4 text-white/50 group-hover:text-emerald-400 transition-colors duration-200" />
                 </div>
                 
                 {/* Texto */}
-                <div className="relative z-10 flex-1">
-                  <span className={`block font-medium text-base transition-colors ${
-                    highContrast ? 'text-yellow-300 group-hover:text-yellow-200' : 'text-white group-hover:text-white'
-                  }`}>
+                <div className="relative z-10 flex-1 min-w-0">
+                  <span className="block text-white/90 text-sm font-medium group-hover:text-white transition-colors duration-200">
                     {link.label}
                   </span>
-                  <span className={`block text-xs mt-0.5 transition-colors ${
-                    highContrast ? 'text-yellow-400/70' : 'text-white/40 group-hover:text-white/60'
-                  }`}>
+                  <span className="block text-white/30 text-xs truncate group-hover:text-white/50 transition-colors duration-200">
                     {link.subtitle}
                   </span>
                 </div>
                 
-                {/* Seta animada */}
-                <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-[-10px] group-hover:translate-x-0">
-                  <svg 
-                    className="w-5 h-5" 
-                    style={{ color: highContrast ? '#facc15' : link.accent }}
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
+                {/* Seta */}
+                <motion.div 
+                  className="relative z-10"
+                  initial={{ opacity: 0, x: -5 }}
+                  animate={{ 
+                    opacity: hoveredIndex === index ? 1 : 0,
+                    x: hoveredIndex === index ? 0 : -5,
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ArrowUpRight className="w-4 h-4 text-emerald-400/70" />
+                </motion.div>
               </motion.a>
             ))}
-          </motion.nav>
+          </nav>
 
-          {/* Instagram elegante */}
-          <motion.div className="mt-8 text-center" variants={fadeIn}>
+          {/* Divisor */}
+          <div className="my-8 flex items-center gap-4">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent to-white/5" />
+            <div className="w-1 h-1 rounded-full bg-emerald-500/30" />
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent to-white/5" />
+          </div>
+
+          {/* Instagram */}
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+          >
             <a
               href="https://instagram.com/girpaisagismo"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-500 group ${
-                highContrast 
-                  ? 'bg-black border-yellow-400 hover:bg-yellow-400/10' 
-                  : 'bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 border-white/10 hover:border-white/20'
-              }`}
-              aria-label="Seguir no Instagram @girpaisagismo"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/[0.03] border border-white/[0.05] text-white/50 hover:text-white/80 hover:bg-white/[0.06] hover:border-white/[0.1] transition-all duration-300"
             >
-              <Instagram className={`w-5 h-5 group-hover:scale-110 transition-transform ${
-                highContrast ? 'text-yellow-400' : 'text-pink-400'
-              }`} />
-              <span className={`transition-colors ${
-                highContrast ? 'text-yellow-300' : 'text-white/70 group-hover:text-white'
-              }`}>
-                @girpaisagismo
-              </span>
+              <Instagram className="w-4 h-4" />
+              <span className="text-sm tracking-wide">@girpaisagismo</span>
             </a>
           </motion.div>
 
-          {/* Footer minimalista */}
-          <motion.p 
-            className={`mt-8 text-center text-xs tracking-wider ${
-              highContrast ? 'text-yellow-400/60' : 'text-white/20'
-            }`}
-            variants={fadeIn}
-          >
-            © 2026 Gideany Rezende Paisagismo
-          </motion.p>
-        </motion.div>
+          {/* Footer */}
+          <p className="mt-10 text-center text-white/15 text-[10px] tracking-widest uppercase">
+            © 2026 Gideany Rezende
+          </p>
+        </div>
       </div>
     </div>
   );
