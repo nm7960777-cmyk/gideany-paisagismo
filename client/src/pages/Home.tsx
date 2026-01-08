@@ -125,9 +125,9 @@ export default function Home() {
       description: "Projeto residencial",
     },
     {
-      image: "/images/novo-jardim-vertical.jpg",
-      title: "Jardim Vertical",
-      description: "Fachada verde moderna",
+      image: "/images/novo-jardim-deck.jpg",
+      title: "Jardim com Deck",
+      description: "Projeto residencial",
     },
     {
       image: "/images/antes-depois.png",

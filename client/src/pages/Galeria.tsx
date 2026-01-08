@@ -90,14 +90,7 @@ export default function Galeria() {
       local: "Mogi das Cruzes - SP",
       descricao: "Primeira impressão que encanta clientes.",
     },
-    {
-      id: 9,
-      image: "/images/novo-jardim-vertical-fachada.jpg",
-      titulo: "Fachada Verde Corporativa",
-      categoria: "vertical",
-      local: "São Paulo - SP",
-      descricao: "Sustentabilidade e beleza na arquitetura comercial.",
-    },
+
     {
       id: 10,
       image: "/images/novo-jardim-deck.jpg",
@@ -176,7 +169,7 @@ export default function Galeria() {
     { id: "todos", nome: "Todos" },
     { id: "residencial", nome: "Residencial" },
     { id: "comercial", nome: "Comercial" },
-    { id: "vertical", nome: "Jardins Verticais" },
+
   ];
 
   const projetosFiltrados =
