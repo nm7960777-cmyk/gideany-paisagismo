@@ -60,7 +60,7 @@ export default function Home() {
 
   // SEO: Define o título da página
   useEffect(() => {
-    document.title = "Paisagista em São Roque SP | Gideany Rezende - CREA";
+    document.title = "Paisagismo em São Roque SP | Eng. Gideany Rezende";
   }, []);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({

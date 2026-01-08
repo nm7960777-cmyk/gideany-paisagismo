@@ -5,6 +5,7 @@
  * - Typography: Cinzel (display) + Montserrat (body)
  */
 
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
@@ -24,6 +25,11 @@ const staggerContainer = {
 };
 
 export default function Blog() {
+  // SEO: Define o título da página do Blog
+  useEffect(() => {
+    document.title = "Blog de Paisagismo | Dicas de Jardim - Eng. Gideany Rezende";
+  }, []);
+
   const artigos = [
     {
       slug: "jardim-vertical",
