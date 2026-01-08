@@ -29,7 +29,7 @@ export default function Blog() {
       slug: "jardim-vertical",
       titulo: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
       resumo: "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção para transformar qualquer parede em um oásis verde.",
-      imagem: "/images/novo-jardim-vertical-fachada.jpg",
+      imagem: "/images/card-jv-lindo.jpg",
       categoria: "Jardim Vertical",
       data: "08 Jan 2026",
       tempoLeitura: "8 min",
@@ -38,7 +38,7 @@ export default function Blog() {
       slug: "horta-apartamento",
       titulo: "Horta em Apartamento: O Guia Completo",
       resumo: "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado. Descubra como começar sua horta urbana.",
-      imagem: "/images/novo-projeto-residencial.jpg",
+      imagem: "/images/card-ha-lindo.jpg",
       categoria: "Horta em Apartamento",
       data: "03 Jan 2026",
       tempoLeitura: "10 min",
@@ -47,7 +47,7 @@ export default function Blog() {
       slug: "jardim-pequeno",
       titulo: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros",
       resumo: "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
-      imagem: "/images/novo-paisagismo-moderno.jpg",
+      imagem: "/images/card-jp-lindo.jpg",
       categoria: "Jardim Pequeno",
       data: "15 Dez 2025",
       tempoLeitura: "12 min",
@@ -59,16 +59,14 @@ export default function Blog() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
                 <span className="text-gold font-cinzel font-bold text-lg">GR</span>
               </div>
               <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
                 Gideany Rezende <span className="text-gold">Paisagismo</span>
               </span>
-            </a>
-          </Link>
+            </Link>
           <Link href="/">
             <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -123,8 +121,7 @@ export default function Blog() {
                 variants={fadeInUp}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <Link href={`/blog/${artigo.slug}`}>
-                  <a className="block">
+                <Link href={`/blog/${artigo.slug}`} className="block">
                     <div className="relative h-56 overflow-hidden">
                       <img
                         src={artigo.imagem}
@@ -159,8 +156,7 @@ export default function Blog() {
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </span>
                     </div>
-                  </a>
-                </Link>
+                  </Link>
               </motion.article>
             ))}
           </motion.div>
@@ -191,10 +187,8 @@ export default function Blog() {
       {/* Footer simples */}
       <footer className="bg-emerald-dark/95 py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
               Voltar ao Site
-            </a>
           </Link>
         </div>
       </footer>
