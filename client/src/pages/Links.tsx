@@ -1,8 +1,10 @@
 /**
- * DESIGN SYSTEM: Tropical Luxe Premium
- * Página de Links para Instagram - Versão Elegante
+ * DESIGN: O Link Mais Lindo do Brasil
+ * Página de Links Premium para Instagram
+ * Com acessibilidade: Alto Contraste + E-mail para surdos
  */
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   MessageCircle,
@@ -12,237 +14,367 @@ import {
   Star,
   Send,
   Instagram,
+  Sparkles,
+  Mail,
+  Eye,
 } from "lucide-react";
 
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.08, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.5 },
   },
 };
 
+const buttonVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
+
 export default function Links() {
+  const [highContrast, setHighContrast] = useState(false);
+
   const links = [
     {
       icon: MessageCircle,
       label: "WhatsApp",
       subtitle: "Fale conosco",
       href: "https://wa.me/5511950583364?text=Olá! Vim pelo Instagram e gostaria de saber mais sobre os serviços de paisagismo.",
-      gradient: "from-green-500 to-green-600",
+      accent: "#22c55e",
+      ariaLabel: "Enviar mensagem pelo WhatsApp",
     },
     {
       icon: Globe,
       label: "Conheça o Site",
       subtitle: "Veja todos os serviços",
       href: "https://rezendepaisagismo.com.br",
-      gradient: "from-emerald-600 to-emerald-700",
+      accent: "#10b981",
+      ariaLabel: "Visitar site completo com todos os serviços",
     },
     {
       icon: Image,
       label: "Galeria de Projetos",
       subtitle: "Conheça nossos projetos",
       href: "https://rezendepaisagismo.com.br/galeria",
-      gradient: "from-teal-600 to-teal-700",
+      accent: "#14b8a6",
+      ariaLabel: "Ver galeria de projetos de paisagismo",
     },
     {
       icon: BookOpen,
       label: "Blog",
       subtitle: "Dicas de paisagismo",
       href: "https://rezendepaisagismo.com.br/blog",
-      gradient: "from-emerald-700 to-emerald-800",
+      accent: "#059669",
+      ariaLabel: "Ler artigos e dicas de paisagismo no blog",
     },
     {
       icon: Star,
       label: "Avalie no Google",
       subtitle: "Sua opinião importa",
       href: "https://g.page/r/CUfAeuZUcxLSEAE/review",
-      gradient: "from-amber-500 to-amber-600",
+      accent: "#f59e0b",
+      ariaLabel: "Deixar avaliação no Google",
     },
     {
       icon: Send,
       label: "Solicitar Orçamento",
       subtitle: "Formulário rápido",
       href: "https://rezendepaisagismo.com.br/#contato",
-      gradient: "from-emerald-500 to-emerald-600",
+      accent: "#34d399",
+      ariaLabel: "Preencher formulário para solicitar orçamento",
+    },
+    {
+      icon: Mail,
+      label: "E-mail",
+      subtitle: "Acessível para surdos",
+      href: "mailto:eng.gideanyrezende@gmail.com?subject=Contato pelo Instagram&body=Olá! Vim pelo Instagram e gostaria de saber mais sobre os serviços de paisagismo.",
+      accent: "#6366f1",
+      ariaLabel: "Enviar e-mail - opção acessível para pessoas surdas",
     },
   ];
 
+  // Estilos para modo alto contraste
+  const contrastStyles = highContrast ? {
+    bg: "bg-black",
+    text: "text-yellow-300",
+    textSecondary: "text-yellow-200",
+    border: "border-yellow-400",
+    buttonBg: "bg-black border-2 border-yellow-400",
+    buttonText: "text-yellow-300",
+  } : {
+    bg: "",
+    text: "text-white",
+    textSecondary: "text-amber-200/90",
+    border: "border-white/10",
+    buttonBg: "bg-white/[0.03]",
+    buttonText: "text-white",
+  };
+
   return (
-    <div className="min-h-screen bg-[#050d05] flex flex-col items-center justify-center px-4 py-10 relative overflow-hidden">
-      {/* Padrão de fundo elegante */}
-      <div className="absolute inset-0">
-        {/* Linhas douradas decorativas */}
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
-        
-        {/* Círculos decorativos sutis */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-emerald-500/5 rounded-full" />
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-amber-500/5 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-emerald-500/3 rounded-full" />
-        
-        {/* Gradientes de luz */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-emerald-500/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[300px] bg-amber-500/3 rounded-full blur-[80px]" />
-      </div>
+    <div className={`min-h-screen relative overflow-hidden ${highContrast ? 'bg-black' : ''}`}>
+      {/* Fundo com gradiente rico - oculto em alto contraste */}
+      {!highContrast && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#030a03] via-[#071a07] to-[#0a1f0a]" />
+          
+          {/* Imagem de fundo sutil */}
+          <div 
+            className="absolute inset-0 opacity-[0.07]"
+            style={{
+              backgroundImage: 'url("/images/novo-hero.jpg")',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'blur(2px)',
+            }}
+          />
+          
+          {/* Overlay com padrão */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
+          
+          {/* Partículas de luz */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-1 h-1 bg-amber-400/30 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  opacity: [0.2, 0.8, 0.2],
+                  scale: [1, 1.5, 1],
+                }}
+                transition={{
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
+          </div>
 
-      {/* Ornamentos de canto */}
-      <svg className="absolute top-4 left-4 w-16 h-16 text-amber-500/10" viewBox="0 0 100 100" fill="none">
-        <path d="M0 50 Q0 0 50 0" stroke="currentColor" strokeWidth="1" fill="none" />
-        <path d="M10 50 Q10 10 50 10" stroke="currentColor" strokeWidth="0.5" fill="none" />
-      </svg>
-      <svg className="absolute top-4 right-4 w-16 h-16 text-amber-500/10 rotate-90" viewBox="0 0 100 100" fill="none">
-        <path d="M0 50 Q0 0 50 0" stroke="currentColor" strokeWidth="1" fill="none" />
-        <path d="M10 50 Q10 10 50 10" stroke="currentColor" strokeWidth="0.5" fill="none" />
-      </svg>
-      <svg className="absolute bottom-4 left-4 w-16 h-16 text-amber-500/10 -rotate-90" viewBox="0 0 100 100" fill="none">
-        <path d="M0 50 Q0 0 50 0" stroke="currentColor" strokeWidth="1" fill="none" />
-        <path d="M10 50 Q10 10 50 10" stroke="currentColor" strokeWidth="0.5" fill="none" />
-      </svg>
-      <svg className="absolute bottom-4 right-4 w-16 h-16 text-amber-500/10 rotate-180" viewBox="0 0 100 100" fill="none">
-        <path d="M0 50 Q0 0 50 0" stroke="currentColor" strokeWidth="1" fill="none" />
-        <path d="M10 50 Q10 10 50 10" stroke="currentColor" strokeWidth="0.5" fill="none" />
-      </svg>
+          {/* Brilhos decorativos */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl" />
+          <div className="absolute top-40 right-5 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl" />
+          <div className="absolute bottom-40 left-5 w-40 h-40 bg-emerald-400/5 rounded-full blur-3xl" />
+        </>
+      )}
 
-      <motion.div
-        className="relative z-10 w-full max-w-sm"
-        initial="hidden"
-        animate="visible"
-        variants={staggerContainer}
+      {/* Botão de Alto Contraste - Acessibilidade */}
+      <button
+        onClick={() => setHighContrast(!highContrast)}
+        className={`fixed top-4 right-4 z-50 p-3 rounded-full transition-all duration-300 ${
+          highContrast 
+            ? 'bg-yellow-400 text-black hover:bg-yellow-300' 
+            : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
+        }`}
+        aria-label={highContrast ? "Desativar modo alto contraste" : "Ativar modo alto contraste para melhor visibilidade"}
+        title="Alto Contraste"
       >
-        {/* Logo e informações */}
-        <motion.div
-          className="flex flex-col items-center mb-8"
-          variants={fadeInUp}
-        >
-          {/* Logo com moldura elegante */}
-          <div className="relative mb-5">
-            {/* Moldura externa dourada */}
-            <div className="absolute inset-[-8px] rounded-full border border-amber-500/30" />
-            <div className="absolute inset-[-4px] rounded-full border border-emerald-500/20" />
-            
-            {/* Container da logo */}
-            <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900 p-1 shadow-2xl shadow-emerald-900/50">
-              <div className="w-full h-full rounded-full bg-[#0a1a0a] flex items-center justify-center overflow-hidden border border-emerald-700/30">
-                <img 
-                  src="/images/logo_gr.png" 
-                  alt="Gideany Rezende Paisagismo" 
-                  className="w-20 h-20 object-contain"
-                />
-              </div>
-            </div>
-            
-            {/* Brilho decorativo */}
-            <div className="absolute top-2 right-2 w-3 h-3 bg-amber-400/40 rounded-full blur-sm" />
-          </div>
-          
-          {/* Nome */}
-          <h1 className="text-2xl font-serif text-white font-semibold tracking-wide text-center">
-            Gideany Rezende
-          </h1>
-          
-          {/* Linha decorativa */}
-          <div className="flex items-center gap-3 my-2">
-            <div className="w-8 h-px bg-gradient-to-r from-transparent to-amber-500/50" />
-            <div className="w-1.5 h-1.5 bg-amber-500/50 rotate-45" />
-            <div className="w-8 h-px bg-gradient-to-l from-transparent to-amber-500/50" />
-          </div>
-          
-          {/* Título profissional */}
-          <p className="text-amber-200/80 text-sm tracking-wide text-center">
-            Engenheira Agrônoma | Paisagista
-          </p>
-          
-          {/* Localização - integrada com badge */}
-          <div className="mt-3 px-4 py-1.5 bg-emerald-900/30 rounded-full border border-emerald-700/20">
-            <p className="text-emerald-400/70 text-xs tracking-wide">
-              Atendemos todo o Estado de São Paulo
-            </p>
-          </div>
-        </motion.div>
+        <Eye className="w-5 h-5" />
+      </button>
 
-        {/* Links */}
-        <motion.div className="space-y-3" variants={staggerContainer}>
-          {links.map((link, index) => (
-            <motion.a
-              key={index}
-              href={link.href}
+      {/* Conteúdo principal */}
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-10">
+        <motion.div
+          className="w-full max-w-md"
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          role="main"
+          aria-label="Links de contato de Gideany Rezende Paisagismo"
+        >
+          {/* Header com foto/logo */}
+          <motion.div className="text-center mb-8" variants={fadeIn}>
+            {/* Avatar com efeito glassmorphism */}
+            <div className="relative inline-block mb-6">
+              {/* Anel externo brilhante */}
+              {!highContrast && (
+                <motion.div
+                  className="absolute inset-[-6px] rounded-full"
+                  style={{
+                    background: 'linear-gradient(135deg, #f59e0b 0%, #10b981 50%, #f59e0b 100%)',
+                    backgroundSize: '200% 200%',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                />
+              )}
+              
+              {/* Container da foto */}
+              <div className={`relative w-32 h-32 rounded-full p-1 ${highContrast ? 'bg-yellow-400' : 'bg-[#0a1a0a]'}`}>
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img 
+                    src="/images/gideany-foto-links.png" 
+                    alt="Foto de Gideany Rezende, Engenheira Agrônoma e Paisagista, sorrindo em ambiente com plantas" 
+                    className="w-full h-full object-cover object-[center_25%]"
+                  />
+                </div>
+              </div>
+              
+              {/* Brilho */}
+              {!highContrast && (
+                <div className="absolute top-3 right-3 w-4 h-4">
+                  <Sparkles className="w-4 h-4 text-amber-400/60" aria-hidden="true" />
+                </div>
+              )}
+            </div>
+
+            {/* Nome com efeito */}
+            <h1 className={`text-3xl font-serif font-bold mb-2 tracking-wide ${contrastStyles.text}`}>
+              Gideany Rezende
+            </h1>
+            
+            {/* Título profissional elegante */}
+            <div className="flex items-center justify-center gap-2 mb-4">
+              {!highContrast && <div className="w-8 h-px bg-gradient-to-r from-transparent to-amber-500/50" aria-hidden="true" />}
+              <p className={`text-sm tracking-wider ${contrastStyles.textSecondary}`}>
+                Engenheira Agrônoma | Paisagista
+              </p>
+              {!highContrast && <div className="w-8 h-px bg-gradient-to-l from-transparent to-amber-500/50" aria-hidden="true" />}
+            </div>
+
+            {/* Badge de localização premium */}
+            <div className={`inline-flex items-center gap-2 px-5 py-2 rounded-full border ${
+              highContrast 
+                ? 'bg-black border-yellow-400' 
+                : 'bg-white/5 backdrop-blur-sm border-white/10'
+            }`}>
+              <div className={`w-2 h-2 rounded-full ${highContrast ? 'bg-yellow-400' : 'bg-emerald-400 animate-pulse'}`} aria-hidden="true" />
+              <span className={`text-xs tracking-wide ${highContrast ? 'text-yellow-300' : 'text-emerald-300/90'}`}>
+                Atendemos todo o Estado de São Paulo
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Links com design premium */}
+          <motion.nav className="space-y-3" variants={staggerContainer} aria-label="Links de navegação">
+            {links.map((link, index) => (
+              <motion.a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative flex items-center w-full p-4 rounded-2xl overflow-hidden transition-all duration-500 ${
+                  highContrast ? 'bg-black border-2 border-yellow-400 hover:bg-yellow-400/10' : ''
+                }`}
+                variants={buttonVariants}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                aria-label={link.ariaLabel}
+              >
+                {/* Fundo do botão com glassmorphism */}
+                {!highContrast && (
+                  <>
+                    <div className="absolute inset-0 bg-white/[0.03] backdrop-blur-md border border-white/[0.08] rounded-2xl transition-all duration-500 group-hover:bg-white/[0.08] group-hover:border-white/[0.15]" />
+                    
+                    {/* Brilho lateral no hover */}
+                    <div 
+                      className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      style={{ backgroundColor: link.accent }}
+                    />
+                    
+                    {/* Gradiente de brilho */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.03] to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                  </>
+                )}
+                
+                {/* Ícone */}
+                <div 
+                  className={`relative z-10 w-12 h-12 rounded-xl flex items-center justify-center mr-4 transition-all duration-500 group-hover:scale-110 ${
+                    highContrast ? 'bg-yellow-400/20 border border-yellow-400' : ''
+                  }`}
+                  style={!highContrast ? { 
+                    backgroundColor: `${link.accent}20`,
+                    boxShadow: `0 0 20px ${link.accent}10`,
+                  } : {}}
+                  aria-hidden="true"
+                >
+                  <link.icon 
+                    className="w-5 h-5 transition-colors duration-500" 
+                    style={{ color: highContrast ? '#facc15' : link.accent }}
+                  />
+                </div>
+                
+                {/* Texto */}
+                <div className="relative z-10 flex-1">
+                  <span className={`block font-medium text-base transition-colors ${
+                    highContrast ? 'text-yellow-300 group-hover:text-yellow-200' : 'text-white group-hover:text-white'
+                  }`}>
+                    {link.label}
+                  </span>
+                  <span className={`block text-xs mt-0.5 transition-colors ${
+                    highContrast ? 'text-yellow-400/70' : 'text-white/40 group-hover:text-white/60'
+                  }`}>
+                    {link.subtitle}
+                  </span>
+                </div>
+                
+                {/* Seta animada */}
+                <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-[-10px] group-hover:translate-x-0">
+                  <svg 
+                    className="w-5 h-5" 
+                    style={{ color: highContrast ? '#facc15' : link.accent }}
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </motion.a>
+            ))}
+          </motion.nav>
+
+          {/* Instagram elegante */}
+          <motion.div className="mt-8 text-center" variants={fadeIn}>
+            <a
+              href="https://instagram.com/girpaisagismo"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-4 w-full px-5 py-3.5 bg-gradient-to-r from-emerald-950/80 to-emerald-900/60 hover:from-emerald-900/90 hover:to-emerald-800/70 border border-emerald-800/30 hover:border-emerald-600/50 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-900/30 overflow-hidden"
-              variants={fadeInUp}
-              whileHover={{ scale: 1.02, y: -2 }}
-              whileTap={{ scale: 0.98 }}
+              className={`inline-flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-500 group ${
+                highContrast 
+                  ? 'bg-black border-yellow-400 hover:bg-yellow-400/10' 
+                  : 'bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 border-white/10 hover:border-white/20'
+              }`}
+              aria-label="Seguir no Instagram @girpaisagismo"
             >
-              {/* Linha dourada superior */}
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              
-              {/* Brilho no hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              
-              {/* Ícone */}
-              <div className={`relative w-11 h-11 rounded-lg bg-gradient-to-br ${link.gradient} flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300`}>
-                <link.icon className="w-5 h-5 text-white" />
-              </div>
-              
-              {/* Texto */}
-              <div className="flex flex-col flex-1">
-                <span className="text-white font-medium text-sm leading-tight">
-                  {link.label}
-                </span>
-                <span className="text-emerald-400/50 text-xs mt-0.5">
-                  {link.subtitle}
-                </span>
-              </div>
+              <Instagram className={`w-5 h-5 group-hover:scale-110 transition-transform ${
+                highContrast ? 'text-yellow-400' : 'text-pink-400'
+              }`} />
+              <span className={`transition-colors ${
+                highContrast ? 'text-yellow-300' : 'text-white/70 group-hover:text-white'
+              }`}>
+                @girpaisagismo
+              </span>
+            </a>
+          </motion.div>
 
-              {/* Seta elegante */}
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
-                <svg className="w-4 h-4 text-amber-400/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </motion.a>
-          ))}
-        </motion.div>
-
-        {/* Separador elegante */}
-        <div className="flex items-center justify-center gap-4 my-6">
-          <div className="w-16 h-px bg-gradient-to-r from-transparent to-emerald-700/30" />
-          <div className="w-1 h-1 bg-amber-500/30 rounded-full" />
-          <div className="w-16 h-px bg-gradient-to-l from-transparent to-emerald-700/30" />
-        </div>
-
-        {/* Instagram */}
-        <motion.div
-          className="flex justify-center"
-          variants={fadeInUp}
-        >
-          <a
-            href="https://instagram.com/girpaisagismo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-emerald-800/30 hover:border-emerald-600/50 text-emerald-400/70 hover:text-emerald-300 transition-all duration-300 text-sm"
+          {/* Footer minimalista */}
+          <motion.p 
+            className={`mt-8 text-center text-xs tracking-wider ${
+              highContrast ? 'text-yellow-400/60' : 'text-white/20'
+            }`}
+            variants={fadeIn}
           >
-            <Instagram className="w-4 h-4" />
-            <span>@girpaisagismo</span>
-          </a>
-        </motion.div>
-
-        {/* Footer */}
-        <motion.div
-          className="mt-6 text-center"
-          variants={fadeInUp}
-        >
-          <p className="text-emerald-900/60 text-xs tracking-wide">
             © 2026 Gideany Rezende Paisagismo
-          </p>
+          </motion.p>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 }
