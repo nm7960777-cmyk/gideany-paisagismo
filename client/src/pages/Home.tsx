@@ -161,7 +161,7 @@ export default function Home() {
       excerpt:
         "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção...",
       link: "/blog/jardim-vertical",
-      image: "/images/blog-jardim-vertical-correto.jpg",
+      image: "/images/card-jv-lindo.jpg",
     },
     {
       category: "Horta em Apartamento",
@@ -170,7 +170,7 @@ export default function Home() {
       excerpt:
         "Cultivar uma horta em apartamento é uma realidade acessível e gratificante, mesmo com espaço limitado.",
       link: "/blog/horta-apartamento",
-      image: "/images/blog-horta-apartamento-principal.jpg",
+      image: "/images/card-ha-lindo.jpg",
     },
     {
       category: "Jardim Pequeno",
@@ -179,7 +179,7 @@ export default function Home() {
       excerpt:
         "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
       link: "/blog/jardim-pequeno",
-      image: "/images/blog-jp-canteiro-elevado.jpg",
+      image: "/images/card-jp-lindo.jpg",
     },
   ];
 
