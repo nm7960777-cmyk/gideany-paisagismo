@@ -85,7 +85,7 @@ export default function Links() {
       icon: Send,
       label: "Solicitar Orçamento",
       subtitle: "Formulário rápido",
-      href: "https://rezendepaisagismo.com.br/#contato",
+      href: "https://rezendepaisagismo.com.br#contato",
       accent: "#34d399",
       ariaLabel: "Preencher formulário para solicitar orçamento",
     },
@@ -93,7 +93,7 @@ export default function Links() {
       icon: Mail,
       label: "E-mail",
       subtitle: "Acessível para surdos",
-      href: "mailto:eng.gideanyrezende@gmail.com?subject=Contato pelo Instagram&body=Olá! Vim pelo Instagram e gostaria de saber mais sobre os serviços de paisagismo.",
+      href: "mailto:eng.gideanyrezende@gmail.com",
       accent: "#6366f1",
       ariaLabel: "Enviar e-mail - opção acessível para pessoas surdas",
     },
@@ -220,7 +220,7 @@ export default function Links() {
                   <img 
                     src="/images/gideany-foto-links.png" 
                     alt="Foto de Gideany Rezende, Engenheira Agrônoma e Paisagista, sorrindo em ambiente com plantas" 
-                    className="w-full h-full object-cover object-[center_25%]"
+                    className="w-full h-full object-cover object-[center_20%]"
                   />
                 </div>
               </div>
