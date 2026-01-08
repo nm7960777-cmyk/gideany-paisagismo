@@ -38,7 +38,7 @@ export default function Blog() {
       imagem: "/images/card-jv-lindo.jpg",
       categoria: "Jardim Vertical",
       data: "08 Jan 2026",
-      tempoLeitura: "8 min",
+      tempoLeitura: "5 min",
     },
     {
       slug: "horta-apartamento",
@@ -47,7 +47,7 @@ export default function Blog() {
       imagem: "/images/card-ha-lindo.jpg",
       categoria: "Horta em Apartamento",
       data: "03 Jan 2026",
-      tempoLeitura: "10 min",
+      tempoLeitura: "6 min",
     },
     {
       slug: "jardim-pequeno",
@@ -56,7 +56,7 @@ export default function Blog() {
       imagem: "/images/card-jp-lindo.jpg",
       categoria: "Jardim Pequeno",
       data: "15 Dez 2025",
-      tempoLeitura: "12 min",
+      tempoLeitura: "5 min",
     },
   ];
 
@@ -176,7 +176,7 @@ export default function Blog() {
             Quer um projeto personalizado?
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Entre em contato e vamos transformar seu espaço em um jardim dos sonhos.
+            Entre em contato e vamos criar ambientes que inspiram.
           </p>
           <a
             href="https://wa.me/5511950583364"
