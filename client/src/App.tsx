@@ -16,6 +16,7 @@ import BlogJardimPequeno from "./pages/BlogJardimPequeno";
 import PaisagismoSaoRoque from "./pages/PaisagismoSaoRoque";
 import PaisagismoCotia from "./pages/PaisagismoCotia";
 import PaisagismoSorocaba from "./pages/PaisagismoSorocaba";
+import FAQ from "./pages/FAQ";
 
 function Router() {
   return (
@@ -33,6 +34,7 @@ function Router() {
       <Route path={"/paisagismo-sao-roque"} component={PaisagismoSaoRoque} />
       <Route path={"/paisagismo-cotia"} component={PaisagismoCotia} />
       <Route path={"/paisagismo-sorocaba"} component={PaisagismoSorocaba} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
