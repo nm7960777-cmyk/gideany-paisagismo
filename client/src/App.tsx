@@ -13,6 +13,9 @@ import Blog from "./pages/Blog";
 import BlogJardimVertical from "./pages/BlogJardimVertical";
 import BlogHortaApartamento from "./pages/BlogHortaApartamento";
 import BlogJardimPequeno from "./pages/BlogJardimPequeno";
+import PaisagismoSaoRoque from "./pages/PaisagismoSaoRoque";
+import PaisagismoCotia from "./pages/PaisagismoCotia";
+import PaisagismoSorocaba from "./pages/PaisagismoSorocaba";
 
 function Router() {
   return (
@@ -26,6 +29,10 @@ function Router() {
       <Route path={"/blog/jardim-vertical"} component={BlogJardimVertical} />
       <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
       <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />
+      {/* Páginas de SEO Local */}
+      <Route path={"/paisagismo-sao-roque"} component={PaisagismoSaoRoque} />
+      <Route path={"/paisagismo-cotia"} component={PaisagismoCotia} />
+      <Route path={"/paisagismo-sorocaba"} component={PaisagismoSorocaba} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
