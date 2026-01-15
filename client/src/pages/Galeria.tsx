@@ -4,6 +4,7 @@
  */
 
 import { useState } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
@@ -30,6 +31,7 @@ const staggerContainer = {
 };
 
 export default function Galeria() {
+  useCanonical('/galeria');
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filtro, setFiltro] = useState("todos");
 

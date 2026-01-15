@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronLeft, Phone, MessageCircle, Plus, Minus } from "lucide-react";
 import { useState } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -56,6 +57,7 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
 }
 
 export default function FAQ() {
+  useCanonical('/faq');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [

@@ -7,6 +7,7 @@
  */
 
 import { useState } from "react";
+import { useCanonical } from "@/hooks/useCanonical";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -56,6 +57,7 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  useCanonical('/');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({

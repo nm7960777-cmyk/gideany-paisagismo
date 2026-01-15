@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
+import { useCanonical } from "@/hooks/useCanonical";
 import {
   MapPin,
   Phone,
@@ -19,6 +20,7 @@ import {
 import { useEffect } from "react";
 
 export default function PaisagismoSaoRoque() {
+  useCanonical('/paisagismo-sao-roque');
   useEffect(() => {
     document.title = "Paisagismo em São Roque SP | Projetos de Jardins | Gideany Rezende";
     const metaDescription = document.querySelector('meta[name="description"]');

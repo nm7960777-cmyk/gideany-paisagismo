@@ -4,11 +4,13 @@
  */
 
 import { Link } from "wouter";
+import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function BlogJardimPequeno() {
+  useCanonical('/blog/jardim-pequeno');
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}

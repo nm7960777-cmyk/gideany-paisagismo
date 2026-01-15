@@ -6,6 +6,7 @@
  */
 
 import { Link } from "wouter";
+import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,7 @@ const staggerContainer = {
 };
 
 export default function Blog() {
+  useCanonical('/blog');
   const artigos = [
     {
       slug: "jardim-vertical",
