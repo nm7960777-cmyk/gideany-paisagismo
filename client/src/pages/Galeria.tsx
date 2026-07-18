@@ -31,7 +31,12 @@ const staggerContainer = {
 };
 
 export default function Galeria() {
-  useCanonical('/galeria');
+  useCanonical('/galeria', {
+    title: "Galeria de Projetos | GR Paisagismo",
+    description:
+      "Conheça projetos paisagísticos, jardins residenciais, áreas de lazer, espaços comerciais e transformações realizadas pela GR Paisagismo.",
+    image: "/images/novo-area-piscina.jpg",
+  });
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filtro, setFiltro] = useState("todos");
 
@@ -214,18 +219,19 @@ export default function Galeria() {
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
+                GR <span className="text-gold">Paisagismo</span>
               </span>
             </Link>
-            <Link href="/">
-              <Button
+            <Button
+              asChild
                 variant="ghost"
                 className="text-white hover:text-gold hover:bg-transparent"
               >
+              <Link href="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </nav>
@@ -343,6 +349,8 @@ export default function Galeria() {
             onClick={closeLightbox}
           >
             <button
+              type="button"
+              aria-label="Fechar imagem"
               className="absolute top-4 right-4 text-white/80 hover:text-white p-2"
               onClick={closeLightbox}
             >
@@ -350,6 +358,8 @@ export default function Galeria() {
             </button>
 
             <button
+              type="button"
+              aria-label="Ver imagem anterior"
               className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
               onClick={(e) => {
                 e.stopPropagation();
@@ -360,6 +370,8 @@ export default function Galeria() {
             </button>
 
             <button
+              type="button"
+              aria-label="Ver próxima imagem"
               className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
               onClick={(e) => {
                 e.stopPropagation();
@@ -421,16 +433,17 @@ export default function Galeria() {
                 <Phone className="w-5 h-5 mr-2" />
                 WhatsApp (11) 95058-3364
               </Button>
-              <Link href="/">
-                <Button
+              <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 px-8"
                 >
+                <Link href="/">
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Voltar ao Site
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -440,7 +453,7 @@ export default function Galeria() {
       <footer className="py-8 bg-forest-light border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2026 Gideany Rezende Paisagismo. CREA-SP 5071612380. Todos os
+            © 2026 GR Paisagismo & Consultoria Ambiental. Todos os
             direitos reservados.
           </p>
         </div>

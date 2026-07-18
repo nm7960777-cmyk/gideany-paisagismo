@@ -1,45 +1,59 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, Home } from "lucide-react";
-import { useLocation } from "wouter";
+import { useCanonical } from "@/hooks/useCanonical";
+import { AlertCircle, ArrowLeft, Leaf } from "lucide-react";
+import { Link } from "wouter";
 
 export default function NotFound() {
-  const [, setLocation] = useLocation();
-
-  const handleGoHome = () => {
-    setLocation("/");
-  };
+  useCanonical("/404", {
+    title: "Página não encontrada | GR Paisagismo",
+    description: "A página solicitada não foi encontrada.",
+    noIndex: true,
+  });
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-cream px-4 py-12">
+      <Link href="/" className="mb-8 flex items-center gap-3" aria-label="Voltar à página inicial">
+        <img
+          src="/images/logo_gr.png"
+          alt="GR Paisagismo & Consultoria Ambiental"
+          className="h-12 w-auto"
+        />
+        <span className="font-display text-forest hidden sm:block">
+          GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
+        </span>
+      </Link>
+
+      <Card className="w-full max-w-lg shadow-xl border border-gold/20 bg-white">
+        <CardContent className="px-8 py-10 text-center">
           <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
+            <div className="w-20 h-20 rounded-full bg-gold/15 flex items-center justify-center">
+              <AlertCircle className="h-11 w-11 text-gold" />
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+          <p className="text-gold font-semibold tracking-widest mb-2">ERRO 404</p>
+          <h1 className="font-display text-3xl text-forest mb-4">
+            Página não encontrada
+          </h1>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
-          </h2>
-
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
+          <p className="text-foreground/65 mb-8 leading-relaxed">
+            O endereço pode ter sido alterado ou a página não está mais disponível.
+            Você pode voltar ao início ou conhecer nossos serviços.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              <Home className="w-4 h-4 mr-2" />
-              Go Home
+            <Button asChild className="bg-forest hover:bg-forest-light text-white px-6">
+              <Link href="/">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Voltar ao início
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="border-gold/40 text-forest hover:bg-gold/10">
+              <Link href="/servicos/paisagismo">
+                <Leaf className="w-4 h-4 mr-2" />
+                Ver serviços
+              </Link>
             </Button>
           </div>
         </CardContent>

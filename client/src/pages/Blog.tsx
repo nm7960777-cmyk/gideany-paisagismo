@@ -25,12 +25,17 @@ const staggerContainer = {
 };
 
 export default function Blog() {
-  useCanonical('/blog');
+  useCanonical('/blog', {
+    title: "Blog de Paisagismo | GR Paisagismo",
+    description:
+      "Conteúdos sobre jardins verticais, hortas em apartamento, canteiros, escolha de plantas e cuidados com áreas verdes.",
+    image: "/images/blog-jardim-vertical-home-novo.jpg",
+  });
   const artigos = [
     {
       slug: "jardim-vertical",
       titulo: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
-      resumo: "Aprenda a criar um jardim vertical do zero, mesmo em espaços pequenos. Dicas de plantas, estruturas e manutenção para transformar qualquer parede em um oásis verde.",
+      resumo: "Conheça os principais cuidados para planejar um jardim vertical em espaços compactos, incluindo estrutura, espécies, irrigação e manutenção.",
       imagem: "/images/blog-jardim-vertical-home-novo.jpg",
       categoria: "Jardim Vertical",
       data: "10 Jan 2026",
@@ -48,7 +53,7 @@ export default function Blog() {
     {
       slug: "jardim-pequeno",
       titulo: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros",
-      resumo: "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
+      resumo: "Veja ideias para organizar canteiros em espaços pequenos, considerando iluminação, drenagem, porte das espécies e rotina de manutenção.",
       imagem: "/images/blog-jardim-pequeno-principal-novo.jpg",
       categoria: "Jardim Pequeno",
       data: "05 Jan 2026",
@@ -62,19 +67,21 @@ export default function Blog() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
-                <span className="text-gold font-cinzel font-bold text-lg">GR</span>
-              </div>
-              <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
-              </span>
-            </Link>
-          <Link href="/">
-            <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+            <img
+              src="/images/logo_gr.png"
+              alt="GR Paisagismo & Consultoria Ambiental"
+              className="h-10 w-auto"
+            />
+            <span className="text-white font-cinzel text-base tracking-wide hidden sm:block">
+              GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
+            </span>
+          </Link>
+          <Button asChild variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+            <Link href="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </header>
 
@@ -172,17 +179,17 @@ export default function Blog() {
             Quer um projeto personalizado?
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Entre em contato e vamos transformar seu espaço em um jardim dos sonhos.
+            Entre em contato para planejar uma solução adequada ao seu espaço.
           </p>
-          <a
-            href="https://wa.me/5511950583364"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold px-8 py-6">
+          <Button asChild className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold px-8 py-6">
+            <a
+              href="https://wa.me/5511950583364"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Solicitar Orçamento
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </section>
 
@@ -200,6 +207,7 @@ export default function Blog() {
         href="https://wa.me/5511950583364"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Falar com a GR pelo WhatsApp"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

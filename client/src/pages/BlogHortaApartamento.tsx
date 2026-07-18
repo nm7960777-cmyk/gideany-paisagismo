@@ -10,28 +10,34 @@ import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function BlogHortaApartamento() {
-  useCanonical('/blog/horta-apartamento');
+  useCanonical('/blog/horta-apartamento', {
+    title: "Horta em Apartamento: Guia Inicial | GR Paisagismo",
+    description:
+      "Cuidados para começar uma horta em apartamento: luminosidade, recipientes, drenagem, espécies, rega, adubação e manejo.",
+    image: "/images/blog-horta-apartamento-principal-novo.jpg",
+    type: "article",
+  });
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
-                <span className="text-gold font-cinzel font-bold text-lg">GR</span>
-              </div>
-              <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/images/logo_gr.png"
+              alt="GR Paisagismo & Consultoria Ambiental"
+              className="h-10 w-auto"
+            />
+            <span className="text-white font-cinzel text-base tracking-wide hidden sm:block">
+              GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
+            </span>
           </Link>
-          <Link href="/blog">
-            <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+          <Button asChild variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+            <Link href="/blog">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </header>
 
@@ -40,9 +46,9 @@ export default function BlogHortaApartamento() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/"><a className="hover:text-gold">Início</a></Link>
+            <Link href="/" className="hover:text-gold">Início</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
+            <Link href="/blog" className="hover:text-gold">Blog</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Horta em Apartamento</span>
           </div>
@@ -61,7 +67,7 @@ export default function BlogHortaApartamento() {
             <div className="flex flex-wrap items-center gap-6 text-white/70">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Gideany Rezende
+                GR Paisagismo
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -104,30 +110,30 @@ export default function BlogHortaApartamento() {
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
               Cultivar uma horta em apartamento é uma realidade cada vez mais acessível e gratificante. 
               Mesmo com espaço limitado, você pode ter temperos frescos, hortaliças e até frutas na sua 
-              varanda ou janela. Neste guia completo, vou te mostrar como começar sua horta urbana do zero.
+              varanda ou janela. Neste guia, apresentamos os principais cuidados para começar uma horta urbana.
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
               Por Que Ter uma Horta em Casa?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Ter uma horta em apartamento vai muito além de ter alimentos frescos. É uma atividade 
-              terapêutica que conecta você com a natureza, reduz o estresse e ainda economiza dinheiro. 
+              Ter uma horta em apartamento vai além de colher alimentos frescos. O cuidado com as plantas
+              amplia o contato cotidiano com a natureza e pode proporcionar momentos de relaxamento.
               Imagine colher manjericão fresco para o molho do macarrão ou hortelã para o chá da tarde!
             </p>
 
             <ul className="space-y-3 text-gray-700 mb-8">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Alimentos frescos e orgânicos:</strong> Você sabe exatamente o que está consumindo</span>
+                <span><strong>Alimentos frescos:</strong> Cultivo próximo ao local de consumo e acompanhamento dos cuidados</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Economia:</strong> Temperos frescos custam caro no mercado</span>
+                <span><strong>Praticidade:</strong> Ervas e hortaliças podem ficar disponíveis para colheitas pontuais</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Terapia:</strong> Cuidar de plantas reduz ansiedade e estresse</span>
+                <span><strong>Bem-estar:</strong> O cuidado com as plantas pode favorecer relaxamento e contato com a natureza</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -135,7 +141,7 @@ export default function BlogHortaApartamento() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Sustentabilidade:</strong> Reduz sua pegada de carbono</span>
+                <span><strong>Aproveitamento de espaço:</strong> Varandas e janelas podem receber cultivos compatíveis com o local</span>
               </li>
             </ul>
 
@@ -143,13 +149,14 @@ export default function BlogHortaApartamento() {
               Escolhendo o Local Ideal
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              O sucesso da sua horta depende principalmente da luz solar. A maioria das hortaliças e 
-              temperos precisa de pelo menos 4 a 6 horas de sol direto por dia. Analise seu apartamento:
+              A luminosidade é um dos principais fatores para o desenvolvimento da horta. Muitas hortaliças
+              e ervas produzem melhor com algumas horas de sol direto, mas a necessidade varia conforme a
+              espécie, a fase de crescimento e o clima. Analise seu apartamento:
             </p>
 
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
               <h4 className="font-semibold text-emerald-dark mb-3">Varandas e sacadas voltadas para Norte:</h4>
-              <p className="text-gray-700">Recebem sol o dia todo - perfeitas para tomates, pimentas e hortaliças</p>
+              <p className="text-gray-700">Podem receber muitas horas de sol; avalie também o calor e a necessidade de rega de cada espécie</p>
             </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
               <h4 className="font-semibold text-emerald-dark mb-3">Varandas voltadas para Leste:</h4>
@@ -179,7 +186,7 @@ export default function BlogHortaApartamento() {
                 alt="Temperos frescos na janela da cozinha"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Temperos na janela: manjericão, alecrim, hortelã e cebolinha sempre frescos</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Temperos na janela: espécies escolhidas de acordo com a luz disponível</p>
             </div>
             
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
@@ -188,7 +195,7 @@ export default function BlogHortaApartamento() {
               <li><strong>Cebolinha:</strong> Fácil de cultivar, rebrota após o corte</li>
               <li><strong>Salsinha:</strong> Versátil na cozinha, prefere meia-sombra</li>
               <li><strong>Alecrim:</strong> Resistente à seca, ótimo para carnes</li>
-              <li><strong>Orégano:</strong> Pouca manutenção, perfeito para pizzas</li>
+              <li><strong>Orégano:</strong> Prefere boa luminosidade e substrato drenável</li>
               <li><strong>Coentro:</strong> Cresce rápido, mas não gosta de calor extremo</li>
             </ul>
 
@@ -196,8 +203,8 @@ export default function BlogHortaApartamento() {
               Hortaliças de Folha
             </h3>
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
-              <li><strong>Alface:</strong> Colheita em 45-60 dias, prefere temperaturas amenas</li>
-              <li><strong>Rúcula:</strong> Rápida (30 dias), tolera meia-sombra</li>
+              <li><strong>Alface:</strong> Em condições adequadas, algumas cultivares podem ser colhidas em aproximadamente 45 a 60 dias</li>
+              <li><strong>Rúcula:</strong> Possui ciclo relativamente rápido, que varia conforme a cultivar e as condições de cultivo</li>
               <li><strong>Espinafre:</strong> Nutritivo, prefere clima mais fresco</li>
               <li><strong>Agrião:</strong> Gosta de umidade, ótimo para sanduíches</li>
             </ul>
@@ -217,9 +224,9 @@ export default function BlogHortaApartamento() {
             </div>
             
             <ul className="space-y-2 text-gray-700 mb-6 ml-4">
-              <li><strong>Tomate-cereja:</strong> Precisa de vaso de 20L e tutor</li>
+              <li><strong>Tomate-cereja:</strong> Requer recipiente compatível com a cultivar, boa luminosidade e, em geral, tutoramento</li>
               <li><strong>Pimentas:</strong> Compactas, produzem muito</li>
-              <li><strong>Rabanete:</strong> Colheita rápida (25-30 dias)</li>
+              <li><strong>Rabanete:</strong> Algumas cultivares têm ciclo curto, condicionado pelo clima e pelo manejo</li>
               <li><strong>Cenoura baby:</strong> Vasos de 30cm de profundidade</li>
             </ul>
 
@@ -236,7 +243,7 @@ export default function BlogHortaApartamento() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Pratinhos:</strong> Para coletar a água que escorre</span>
+                <span><strong>Bandejas ou coletores:</strong> Para proteger o piso, sem deixar água acumulada</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -271,13 +278,13 @@ export default function BlogHortaApartamento() {
                 alt="Preparo do vaso com camadas de drenagem"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Preparo do vaso: argila expandida, manta geotêxtil e substrato</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Preparo do recipiente com saída de água e substrato adequado</p>
             </div>
             
             <p className="text-gray-700 leading-relaxed mb-6">
-              Coloque uma camada de 2-3cm de argila expandida no fundo do vaso. Cubra com uma manta 
-              geotêxtil (ou TNT) para evitar que a terra escoe. Isso garante boa drenagem e evita 
-              que as raízes apodreçam.
+              Use recipientes com furos livres para a saída do excesso de água. Uma pequena tela ou
+              manta permeável pode ser posicionada sobre os furos para ajudar a reter o substrato,
+              sem bloquear a drenagem. O tipo de recipiente e de substrato deve ser compatível com a espécie.
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
@@ -317,7 +324,7 @@ export default function BlogHortaApartamento() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Adubação:</strong> A cada 15-20 dias com húmus de minhoca ou adubo orgânico líquido</span>
+                <span><strong>Adubação:</strong> Defina produto, dose e frequência conforme a espécie, o substrato e as instruções do fabricante</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -325,11 +332,11 @@ export default function BlogHortaApartamento() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Pragas:</strong> Inspecione regularmente. Pulgões podem ser removidos com água e sabão neutro</span>
+                <span><strong>Pragas:</strong> Inspecione regularmente e identifique o problema antes de adotar remoção mecânica ou um produto apropriado</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Rotação:</strong> Troque as plantas de lugar a cada ciclo para evitar esgotamento do solo</span>
+                <span><strong>Renovação:</strong> Entre ciclos, avalie a rotação de espécies e a necessidade de renovar ou corrigir o substrato</span>
               </li>
             </ul>
 
@@ -339,11 +346,11 @@ export default function BlogHortaApartamento() {
             <ul className="space-y-3 text-gray-700 mb-8">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Excesso de água:</strong> Mata mais plantas que a falta dela</span>
+                <span><strong>Excesso de água:</strong> Pode causar falta de oxigenação e apodrecimento das raízes</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Vasos sem furos:</strong> A água acumulada apodrece as raízes</span>
+                <span><strong>Drenagem insuficiente:</strong> O acúmulo de água favorece problemas nas raízes</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></span>
@@ -365,8 +372,8 @@ export default function BlogHortaApartamento() {
               </h3>
               <p className="text-gray-700 mb-4">
                 Se você quer uma horta planejada especialmente para seu espaço, com sistema de 
-                irrigação automática e design integrado à sua varanda, entre em contato. Faço 
-                projetos sob medida em São Roque, Cotia, Sorocaba e todo Estado de SP.
+                irrigação automática e design integrado à sua varanda, entre em contato. Desenvolvemos
+                projetos sob medida em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo.
               </p>
               <a
                 href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre horta em apartamento e gostaria de um orçamento."
@@ -389,25 +396,21 @@ export default function BlogHortaApartamento() {
             Leia Também
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link href="/blog/jardim-vertical">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/jardim-vertical" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Como Fazer um Jardim Vertical em Casa
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
                   Aprenda a criar um jardim vertical mesmo em espaços pequenos.
                 </p>
-              </a>
             </Link>
-            <Link href="/blog/jardim-pequeno">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/jardim-pequeno" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Jardim Pequeno: 10 Ideias de Canteiros
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
                   Transforme qualquer cantinho em um refúgio verde e relaxante.
                 </p>
-              </a>
             </Link>
           </div>
         </div>
@@ -416,10 +419,8 @@ export default function BlogHortaApartamento() {
       {/* Footer */}
       <footer className="bg-emerald-dark py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
-              Voltar ao Site
-            </a>
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
+            Voltar ao Site
           </Link>
         </div>
       </footer>
@@ -429,6 +430,7 @@ export default function BlogHortaApartamento() {
         href="https://wa.me/5511950583364"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Falar com a GR pelo WhatsApp"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

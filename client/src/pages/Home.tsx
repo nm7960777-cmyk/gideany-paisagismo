@@ -6,7 +6,7 @@
  * - Style: Luxury tropical with Art Deco influences
  */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCanonical } from "@/hooks/useCanonical";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,10 +25,7 @@ import {
   Phone,
   MapPin,
   Leaf,
-  Shovel,
-  Droplets,
-  Sun,
-  Lightbulb,
+  FileText,
   MessageCircle,
   Award,
   Users,
@@ -41,6 +38,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { toast } from "sonner";
 
 // Animation variants
 const fadeInUp = {
@@ -56,8 +54,51 @@ const staggerContainer = {
   },
 };
 
+const cityLabels: Record<string, string> = {
+  "sao-roque": "São Roque",
+  cotia: "Cotia",
+  sorocaba: "Sorocaba",
+  "vargem-grande": "Vargem Grande Paulista",
+  itapecerica: "Itapecerica da Serra",
+  "sao-lourenco": "São Lourenço da Serra",
+  embu: "Embu das Artes",
+  taboao: "Taboão da Serra",
+  aracariguama: "Araçariguama",
+  mairinque: "Mairinque",
+  aluminio: "Alumínio",
+  itu: "Itu",
+  "salto-pirapora": "Salto de Pirapora",
+  votorantim: "Votorantim",
+  outra: "Outra localidade",
+};
+
+const serviceLabels: Record<string, string> = {
+  projeto: "Projeto paisagístico",
+  execucao: "Plantio e implantação",
+  manutencao: "Manutenção de jardins",
+  consultoria: "Consultoria ambiental",
+  rap: "RAP — Relatório Ambiental Preliminar",
+  eiv: "EIV — Estudo de Impacto de Vizinhança",
+  "inventario-arboreo": "Inventário ou levantamento arbóreo",
+  vegetacao: "Caracterização de vegetação",
+  supressao: "Parecer para manejo ou supressão de árvores",
+  compensacao: "Plano de compensação arbórea ou vegetal",
+  monitoramento: "Monitoramento de plantio — TCRA/TCA",
+  fauna: "Caracterização de fauna para licenciamento",
+  outro: "Outro serviço",
+};
+
 export default function Home() {
   useCanonical('/');
+
+  useEffect(() => {
+    const sectionId = window.location.hash.replace("#", "");
+    if (!sectionId) return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById(sectionId)?.scrollIntoView();
+    });
+  }, []);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [formData, setFormData] = useState({
@@ -92,32 +133,18 @@ export default function Home() {
   const services = [
     {
       icon: Leaf,
-      title: "Projetos de Paisagismo",
+      title: "Serviços Paisagísticos",
       description:
-        "Desenvolvemos projetos personalizados para residências e empresas, transformando seu espaço em um ambiente único que harmoniza plantas, elementos decorativos e funcionalidade.",
-      link: "/servicos/projetos",
+        "Projetos, plantio e implantação, manutenção, jardins verticais, irrigação e iluminação para áreas residenciais e comerciais.",
+      link: "/servicos/paisagismo",
     },
     {
-      icon: Shovel,
-      title: "Execução de Obras",
+      icon: FileText,
+      title: "Serviços Ambientais",
       description:
-        "Executamos o projeto completo com equipe especializada, garantindo qualidade e atenção aos detalhes em cada etapa da implantação.",
-      link: "/servicos/execucao",
+        "RAP, EIV, caracterização de fauna, arborização, vegetação e suporte técnico para diferentes demandas ambientais.",
+      link: "/servicos/consultoria-ambiental",
     },
-    {
-      icon: Droplets,
-      title: "Manutenção de Jardins",
-      description:
-        "Serviço periódico de manutenção para manter seu jardim sempre bonito e saudável, com podas, adubação e cuidados especiais.",
-      link: "/servicos/manutencao",
-    },
-  ];
-
-  const additionalServices = [
-    { icon: Leaf, name: "Jardins Verticais" },
-    { icon: Droplets, name: "Irrigação Automatizada" },
-    { icon: Sun, name: "Iluminação de Jardins" },
-    { icon: Lightbulb, name: "Consultoria Técnica" },
   ];
 
   const projects = [
@@ -162,15 +189,35 @@ export default function Home() {
       date: "05 Jan 2026",
       title: "Jardim Pequeno em Casa: 10 Ideias Simples de Canteiros para Transformar Seu Espaço",
       excerpt:
-        "Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com criatividade e planejamento, qualquer cantinho pode virar um refúgio relaxante.",
+        "Mesmo em áreas compactas, o planejamento pode aproveitar melhor o espaço e criar um jardim agradável e funcional.",
       link: "/blog/jardim-pequeno",
       image: "/images/blog-jardim-pequeno-principal-novo.jpg",
     },
   ];
 
   const handleWhatsAppSubmit = () => {
-    const message = `Olá! Meu nome é ${formData.nome}.%0A%0ACidade: ${formData.cidade}%0ATipo de Serviço: ${formData.servico}%0A%0AMensagem: ${formData.mensagem}`;
-    window.open(`https://wa.me/5511950583364?text=${message}`, "_blank");
+    const phoneDigits = formData.whatsapp.replace(/\D/g, "");
+
+    if (!formData.nome.trim() || phoneDigits.length < 10 || !formData.cidade || !formData.servico) {
+      toast.error("Preencha nome, WhatsApp, cidade e tipo de serviço.");
+      return;
+    }
+
+    const message = [
+      `Olá! Meu nome é ${formData.nome.trim()}.`,
+      `Meu WhatsApp: ${formData.whatsapp.trim()}`,
+      `Cidade: ${cityLabels[formData.cidade] ?? formData.cidade}`,
+      `Serviço de interesse: ${serviceLabels[formData.servico] ?? formData.servico}`,
+      formData.mensagem.trim() ? `Mensagem: ${formData.mensagem.trim()}` : "",
+    ]
+      .filter(Boolean)
+      .join("\n\n");
+
+    window.open(
+      `https://wa.me/5511950583364?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
   };
 
   const nextTestimonial = () => {
@@ -190,19 +237,19 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
+            <a href="#inicio" aria-label="Ir para o início" className="flex items-center gap-3">
               <img
                 src="/images/logo_gr.png"
                 alt="GR Logo"
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
+                GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
               </span>
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden xl:flex items-center gap-5">
               <a
                 href="#inicio"
                 className="text-white/80 hover:text-gold transition-colors font-medium"
@@ -215,12 +262,18 @@ export default function Home() {
               >
                 Sobre
               </a>
-              <a
-                href="#servicos"
+              <Link
+                href="/servicos/paisagismo"
                 className="text-white/80 hover:text-gold transition-colors font-medium"
               >
-                Serviços
-              </a>
+                Paisagismo
+              </Link>
+              <Link
+                href="/servicos/consultoria-ambiental"
+                className="text-white/80 hover:text-gold transition-colors font-medium"
+              >
+                Ambiental
+              </Link>
               <a
                 href="#galeria"
                 className="text-white/80 hover:text-gold transition-colors font-medium"
@@ -253,8 +306,12 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white p-2"
+              type="button"
+              className="xl:hidden text-white p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="menu-mobile"
             >
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -264,9 +321,10 @@ export default function Home() {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div
+            id="menu-mobile"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden bg-forest border-t border-gold/20"
+            className="xl:hidden bg-forest border-t border-gold/20"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <a
@@ -283,13 +341,20 @@ export default function Home() {
               >
                 Sobre
               </a>
-              <a
-                href="#servicos"
+              <Link
+                href="/servicos/paisagismo"
                 className="text-white/80 hover:text-gold py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Serviços
-              </a>
+                Serviços Paisagísticos
+              </Link>
+              <Link
+                href="/servicos/consultoria-ambiental"
+                className="text-white/80 hover:text-gold py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Consultoria Ambiental
+              </Link>
               <a
                 href="#galeria"
                 className="text-white/80 hover:text-gold py-2"
@@ -352,7 +417,7 @@ export default function Home() {
             >
               <MapPin className="w-4 h-4 text-gold" />
               <span className="text-white/90 text-sm">
-                São Roque • Cotia • Sorocaba e todo Estado de SP
+                Sede em São Roque • Atendimento em todo o Estado de São Paulo
               </span>
             </motion.div>
 
@@ -360,17 +425,16 @@ export default function Home() {
               variants={fadeInUp}
               className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6"
             >
-              Transformamos Espaços em{" "}
-              <span className="text-gold">Ambientes que inspiram</span>
+              Paisagismo e soluções ambientais com{" "}
+              <span className="text-gold">responsabilidade técnica</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8 max-w-2xl"
             >
-              Projetos exclusivos de paisagismo residencial e comercial que unem
-              beleza, funcionalidade e sustentabilidade. Design com técnicas
-              atualizadas para criar ambientes que encantam.
+              Paisagismo, arborização e consultoria ambiental integrados ao
+              planejamento, à implantação e ao acompanhamento técnico de cada área.
             </motion.p>
 
             <motion.div
@@ -386,7 +450,7 @@ export default function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Solicitar Orçamento
+                Solicitar avaliação
               </Button>
               <Button
                 size="lg"
@@ -398,7 +462,7 @@ export default function Home() {
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Ver Projetos
+                Ver projetos de paisagismo
               </Button>
             </motion.div>
 
@@ -408,27 +472,27 @@ export default function Home() {
             >
               <div className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-gold" />
-                <span className="text-white/80 text-sm">CREA-SP Registrada</span>
+                <span className="text-white/80 text-sm">Responsabilidade técnica</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-white/80 text-sm">Projetos Exclusivos</span>
+                <span className="text-white/80 text-sm">Soluções personalizadas</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-gold" />
                 <span className="text-white/80 text-sm">
-                  Equipe Especializada
+                  Atuação Multidisciplinar
                 </span>
               </div>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* CREA Badge */}
+        {/* Technical Badge */}
         <div className="absolute bottom-8 right-8 hidden lg:block">
           <div className="bg-forest/90 border border-gold/30 rounded-lg p-4 backdrop-blur-sm">
-            <p className="text-gold font-display text-lg">CREA-SP 5071612380</p>
-            <p className="text-white/60 text-sm">Responsável Técnica Registrada</p>
+            <p className="text-gold font-display text-lg">Equipe multidisciplinar</p>
+            <p className="text-white/60 text-sm">Competências técnicas reunidas para cada demanda</p>
           </div>
         </div>
       </section>
@@ -436,70 +500,67 @@ export default function Home() {
       {/* About Section */}
       <section id="sobre" className="py-24 bg-cream">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="relative">
-                <img
-                  src="/images/gideany_foto.png"
-                  alt="Gideany Clarice Rezende"
-                  className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
-                />
-                <div className="absolute -bottom-6 -right-6 bg-gold p-4 rounded-lg shadow-xl hidden md:block">
-                  <p className="font-display text-forest text-lg">Sobre Mim</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <p className="text-gold font-medium mb-2">Sobre nós</p>
               <h2 className="font-display text-3xl md:text-4xl text-forest mb-6">
-                Gideany Clarice Rezende
+                Soluções que unem natureza, engenharia e planejamento
               </h2>
-              <p className="text-foreground/80 text-lg leading-relaxed mb-6">
-                Engenheira Agrônoma com registro no CREA-SP,
-                apaixonada por transformar espaços em verdadeiros refúgios
-                naturais. Atuo em São Roque, Cotia, Sorocaba e todo o Estado de São Paulo,
-                região, oferecendo projetos personalizados para residências e
-                empresas que respeitam o meio ambiente e valorizam cada detalhe
-                do seu espaço.
+              <p className="text-foreground/80 text-lg leading-relaxed mb-5">
+                A GR Paisagismo é uma empresa especializada em paisagismo e
+                consultoria ambiental. Desenvolvemos soluções para o uso responsável
+                do território, integrando conhecimento técnico, planejamento e
+                valorização da paisagem.
               </p>
-              <p className="text-foreground/80 text-lg leading-relaxed mb-8">
-                Com conhecimento atualizado nas últimas tendências de paisagismo
-                e técnicas sustentáveis, minha missão é criar jardins que não
-                apenas embelezam, mas que também proporcionam bem-estar e
-                conexão com a natureza. Cada projeto é único, desenvolvido com
-                carinho e atenção às necessidades específicas de cada cliente.
+              <p className="text-foreground/80 text-lg leading-relaxed mb-5">
+                Nossa atuação abrange estudos e diagnósticos ambientais, arborização,
+                projetos paisagísticos, recursos de geotecnologia, implantação e
+                acompanhamento técnico de áreas verdes. Cada serviço é estruturado
+                conforme as características da área, os objetivos da demanda e os
+                requisitos aplicáveis.
               </p>
+              <p className="text-foreground/80 text-lg leading-relaxed mb-5">
+                Essa visão integrada conecta a leitura ambiental do território ao
+                planejamento e à execução, permitindo desenvolver soluções seguras,
+                viáveis e compatíveis com a legislação vigente.
+              </p>
+              <p className="text-foreground/80 text-lg leading-relaxed mb-5">
+                Cada projeto é conduzido com responsabilidade técnica, visão
+                multidisciplinar e compromisso com resultados duradouros,
+                considerando as características ambientais, os objetivos do cliente
+                e a realidade de cada empreendimento.
+              </p>
+              <p className="text-foreground/80 text-lg leading-relaxed">
+                Com sede em São Roque, nossa atuação abrange todo o Estado de São
+                Paulo, com possibilidade de atendimento em outras regiões do país,
+                conforme a disponibilidade e a logística de cada projeto.
+              </p>
+            </div>
 
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <Award className="w-8 h-8 text-gold mx-auto mb-2" />
-                  <p className="font-semibold text-forest">CREA-SP</p>
-                  <p className="text-sm text-foreground/60">Registrada</p>
+                  <p className="font-semibold text-forest">Equipe técnica</p>
+                  <p className="text-sm text-foreground/60">Profissionais habilitados</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <MessageCircle className="w-8 h-8 text-gold mx-auto mb-2" />
-                  <p className="font-semibold text-forest">Projetos</p>
-                  <p className="text-sm text-foreground/60">Exclusivos</p>
+                  <p className="font-semibold text-forest">Soluções</p>
+                  <p className="text-sm text-foreground/60">Personalizadas</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
                   <Users className="w-8 h-8 text-gold mx-auto mb-2" />
-                  <p className="font-semibold text-forest">Equipe</p>
-                  <p className="text-sm text-foreground/60">Especializada</p>
+                  <p className="font-semibold text-forest">Atuação</p>
+                  <p className="text-sm text-foreground/60">Multidisciplinar</p>
                 </div>
               </div>
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -514,9 +575,11 @@ export default function Home() {
           >
             <p className="text-gold font-medium mb-2">Nossos Serviços</p>
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-              Do Projeto à Execução
+              Duas frentes, uma visão integrada
             </h2>
-            
+            <p className="text-white/65 max-w-2xl mx-auto">
+              Escolha a área que melhor corresponde à sua necessidade.
+            </p>
           </motion.div>
 
           <motion.div
@@ -524,7 +587,7 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
           >
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
@@ -548,22 +611,6 @@ export default function Home() {
             ))}
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-            {additionalServices.map((service, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-forest-light border border-gold/20 rounded-lg p-4"
-              >
-                <service.icon className="w-5 h-5 text-gold flex-shrink-0" />
-                <span className="text-white/80 text-sm">{service.name}</span>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
@@ -581,7 +628,7 @@ export default function Home() {
               Nossos Projetos
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Residências e empresas transformadas pelo nosso trabalho.
+              Espaços transformados pelo nosso trabalho.
             </p>
           </motion.div>
 
@@ -678,7 +725,9 @@ export default function Home() {
 
               <div className="flex justify-center gap-4 mt-8">
                 <button
+                  type="button"
                   onClick={prevTestimonial}
+                  aria-label="Ver depoimento anterior"
                   className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -686,8 +735,11 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   {testimonials.map((_, index) => (
                     <button
+                      type="button"
                       key={index}
                       onClick={() => setCurrentTestimonial(index)}
+                      aria-label={`Ver depoimento ${index + 1}`}
+                      aria-pressed={index === currentTestimonial}
                       className={`w-2 h-2 rounded-full transition-colors ${
                         index === currentTestimonial ? "bg-gold" : "bg-gold/30"
                       }`}
@@ -695,7 +747,9 @@ export default function Home() {
                   ))}
                 </div>
                 <button
+                  type="button"
                   onClick={nextTestimonial}
+                  aria-label="Ver próximo depoimento"
                   className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center text-gold hover:bg-gold/10 transition-colors"
                 >
                   <ChevronRight className="w-5 h-5" />
@@ -784,10 +838,10 @@ export default function Home() {
           >
             <p className="text-gold font-medium mb-2">Contato</p>
             <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-              Vamos Transformar seu Espaço?
+              Conte-nos sobre sua demanda
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto">
-              Conte-nos sua ideia. O primeiro passo é simples.
+              Informe a cidade e o serviço procurado para receber uma avaliação inicial.
             </p>
           </motion.div>
 
@@ -838,7 +892,9 @@ export default function Home() {
                     <p className="text-gold font-medium">Área de Atendimento</p>
                   </div>
                   <p className="text-white/80">
-                    São Roque, Cotia, Sorocaba e todo Estado de SP
+                    Nossa sede está em São Roque. Atendemos todo o Estado de São
+                    Paulo e outras regiões do país, conforme a disponibilidade e
+                    a logística de cada projeto.
                   </p>
                 </div>
               </div>
@@ -856,10 +912,12 @@ export default function Home() {
                   </h3>
                   <div className="space-y-4">
                     <div>
-                      <label className="text-white/70 text-sm mb-2 block">
+                      <label htmlFor="nome" className="text-white/70 text-sm mb-2 block">
                         Nome Completo
                       </label>
                       <Input
+                        id="nome"
+                        autoComplete="name"
                         placeholder="Seu nome"
                         className="bg-forest border-gold/20 text-white placeholder:text-white/40"
                         value={formData.nome}
@@ -869,10 +927,14 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <label className="text-white/70 text-sm mb-2 block">
+                      <label htmlFor="whatsapp" className="text-white/70 text-sm mb-2 block">
                         WhatsApp
                       </label>
                       <Input
+                        id="whatsapp"
+                        type="tel"
+                        inputMode="tel"
+                        autoComplete="tel"
                         placeholder="(11) 99999-9999"
                         className="bg-forest border-gold/20 text-white placeholder:text-white/40"
                         value={formData.whatsapp}
@@ -882,7 +944,7 @@ export default function Home() {
                       />
                     </div>
                     <div>
-                      <label className="text-white/70 text-sm mb-2 block">
+                      <label htmlFor="cidade" className="text-white/70 text-sm mb-2 block">
                         Cidade
                       </label>
                       <Select
@@ -891,22 +953,32 @@ export default function Home() {
                           setFormData({ ...formData, cidade: value })
                         }
                       >
-                        <SelectTrigger className="bg-forest border-gold/20 text-white">
+                        <SelectTrigger id="cidade" className="bg-forest border-gold/20 text-white">
                           <SelectValue placeholder="Selecione sua cidade" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="sao-roque">São Roque</SelectItem>
                           <SelectItem value="cotia">Cotia</SelectItem>
                           <SelectItem value="sorocaba">Sorocaba</SelectItem>
-                          <SelectItem value="sao-paulo">São Paulo</SelectItem>
+                          <SelectItem value="vargem-grande">Vargem Grande Paulista</SelectItem>
+                          <SelectItem value="itapecerica">Itapecerica da Serra</SelectItem>
+                          <SelectItem value="sao-lourenco">São Lourenço da Serra</SelectItem>
+                          <SelectItem value="embu">Embu das Artes</SelectItem>
+                          <SelectItem value="taboao">Taboão da Serra</SelectItem>
+                          <SelectItem value="aracariguama">Araçariguama</SelectItem>
+                          <SelectItem value="mairinque">Mairinque</SelectItem>
+                          <SelectItem value="aluminio">Alumínio</SelectItem>
+                          <SelectItem value="itu">Itu</SelectItem>
+                          <SelectItem value="salto-pirapora">Salto de Pirapora</SelectItem>
+                          <SelectItem value="votorantim">Votorantim</SelectItem>
                           <SelectItem value="outra">
-                            Outra cidade da região
+                            Outra localidade
                           </SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <label className="text-white/70 text-sm mb-2 block">
+                      <label htmlFor="servico" className="text-white/70 text-sm mb-2 block">
                         Tipo de Serviço
                       </label>
                       <Select
@@ -915,7 +987,7 @@ export default function Home() {
                           setFormData({ ...formData, servico: value })
                         }
                       >
-                        <SelectTrigger className="bg-forest border-gold/20 text-white">
+                        <SelectTrigger id="servico" className="bg-forest border-gold/20 text-white">
                           <SelectValue placeholder="Selecione o serviço" />
                         </SelectTrigger>
                         <SelectContent>
@@ -929,17 +1001,26 @@ export default function Home() {
                             Manutenção de Jardim
                           </SelectItem>
                           <SelectItem value="consultoria">
-                            Consultoria
+                            Consultoria Ambiental
                           </SelectItem>
+                          <SelectItem value="rap">RAP — Relatório Ambiental Preliminar</SelectItem>
+                          <SelectItem value="eiv">EIV — Estudo de Impacto de Vizinhança</SelectItem>
+                          <SelectItem value="inventario-arboreo">Inventário ou Levantamento Arbóreo</SelectItem>
+                          <SelectItem value="vegetacao">Caracterização de Vegetação</SelectItem>
+                          <SelectItem value="supressao">Parecer para Manejo ou Supressão de Árvores</SelectItem>
+                          <SelectItem value="compensacao">Plano de Compensação Arbórea ou Vegetal</SelectItem>
+                          <SelectItem value="monitoramento">Monitoramento TCRA/TCA</SelectItem>
+                          <SelectItem value="fauna">Caracterização de Fauna</SelectItem>
                           <SelectItem value="outro">Outro</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <label className="text-white/70 text-sm mb-2 block">
+                      <label htmlFor="mensagem" className="text-white/70 text-sm mb-2 block">
                         Mensagem
                       </label>
                       <Textarea
+                        id="mensagem"
                         placeholder="Descreva seu projeto ou dúvida..."
                         className="bg-forest border-gold/20 text-white placeholder:text-white/40 min-h-[120px]"
                         value={formData.mensagem}
@@ -975,12 +1056,12 @@ export default function Home() {
                   className="h-10 w-auto"
                 />
                 <span className="font-display text-lg text-white">
-                  Gideany Rezende <span className="text-gold">Paisagismo</span>
+                  GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
                 </span>
               </div>
               <p className="text-white/60 text-sm max-w-md">
-                Transformando espaços em jardins que inspiram. Projetos exclusivos
-                de paisagismo em São Roque, Cotia, Sorocaba e todo Estado de SP.
+                Paisagismo, arborização, vegetação, estudos e consultoria ambiental
+                com responsabilidade técnica no Estado de São Paulo.
               </p>
             </div>
             <div>
@@ -1039,7 +1120,7 @@ export default function Home() {
           </div>
           <div className="border-t border-gold/10 pt-8 text-center">
             <p className="text-white/40 text-sm">
-              © 2026 Gideany Rezende Paisagismo. Todos os direitos reservados.
+              © 2026 GR Paisagismo & Consultoria Ambiental. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -1048,6 +1129,7 @@ export default function Home() {
       {/* WhatsApp Float Button */}
       <a
         href="https://wa.me/5511950583364"
+        aria-label="Falar com a GR Paisagismo pelo WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50"
