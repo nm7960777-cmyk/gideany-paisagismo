@@ -5,6 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCanonical } from "@/hooks/useCanonical";
 import {
   ArrowLeft,
   CheckCircle,
@@ -34,30 +35,37 @@ const staggerContainer = {
 };
 
 export default function Execucao() {
+  useCanonical("/servicos/execucao", {
+    title: "Implantação e Execução de Jardins | GR Paisagismo",
+    description:
+      "Implantação de projetos paisagísticos com coordenação das etapas, preparação da área, plantio e soluções complementares definidas no escopo.",
+    image: "/images/novo-entrada-residencial.jpg",
+  });
+
   const diferenciais = [
     {
       icon: Users,
-      titulo: "Equipe Própria",
+      titulo: "Coordenação da Execução",
       descricao:
-        "Profissionais treinados e supervisionados diretamente por nós. Qualidade garantida em cada etapa.",
+        "Organização dos profissionais, materiais e etapas previstos para a implantação.",
     },
     {
       icon: Shield,
-      titulo: "Garantia de Serviço",
+      titulo: "Acompanhamento Técnico",
       descricao:
-        "Oferecemos garantia em todos os serviços executados. Sua tranquilidade é nossa prioridade.",
+        "Verificação da execução e orientação dos ajustes necessários conforme o projeto e o escopo contratado.",
     },
     {
       icon: Clock,
-      titulo: "Prazo Cumprido",
+      titulo: "Cronograma Definido",
       descricao:
-        "Passamos o cronograma antes de iniciar. Você acompanha cada etapa.",
+        "As etapas e os prazos previstos são apresentados antes do início da implantação.",
     },
     {
       icon: Truck,
       titulo: "Materiais de Qualidade",
       descricao:
-        "Selecionamos cada planta pessoalmente. Plantas saudáveis e materiais duráveis.",
+        "Especificação e seleção de plantas e materiais compatíveis com o projeto.",
     },
   ];
 
@@ -110,18 +118,19 @@ export default function Execucao() {
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
+                GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
               </span>
             </Link>
-            <Link href="/">
-              <Button
+            <Button
+              asChild
                 variant="ghost"
                 className="text-white hover:text-gold hover:bg-transparent"
               >
+              <Link href="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </nav>
@@ -152,9 +161,9 @@ export default function Execucao() {
               variants={fadeInUp}
               className="text-white/80 text-lg md:text-xl mb-8"
             >
-              Transformamos projetos em realidade com equipe especializada,
-              materiais de qualidade e compromisso com prazos. Do preparo do
-              solo à última planta, cuidamos de tudo.
+              Transformamos projetos em áreas verdes implantadas por meio de
+              planejamento, coordenação técnica e execução organizada, do preparo
+              do solo aos cuidados iniciais após o plantio.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button
@@ -185,8 +194,8 @@ export default function Execucao() {
               Por que escolher nossa execução?
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Não terceirizamos. Nossa equipe própria garante qualidade e
-              atenção em cada detalhe.
+              Coordenamos a implantação com profissionais e fornecedores definidos
+              conforme as necessidades de cada projeto.
             </p>
           </motion.div>
 
@@ -296,8 +305,8 @@ export default function Execucao() {
                 O que executamos
               </h2>
               <p className="text-foreground/70 mb-8">
-                Nossa equipe está preparada para executar todos os elementos do
-                seu projeto paisagístico com excelência.
+                Os serviços são definidos conforme o projeto, as condições do local
+                e o escopo aprovado para a implantação.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {servicos.map((servico, index) => (
@@ -312,7 +321,7 @@ export default function Execucao() {
         </div>
       </section>
 
-      {/* Garantia */}
+      {/* Acompanhamento */}
       <section className="py-16 bg-gold">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -320,10 +329,10 @@ export default function Execucao() {
               <Award className="w-16 h-16 text-forest" />
               <div>
                 <h3 className="font-display text-2xl text-forest">
-                  Garantia de Qualidade
+                  Acompanhamento da Implantação
                 </h3>
                 <p className="text-forest/70">
-                  Todos os serviços com garantia. CREA-SP 5071612380
+                  Acompanhamento técnico definido conforme o escopo do serviço.
                 </p>
               </div>
             </div>
@@ -367,16 +376,17 @@ export default function Execucao() {
                 <Phone className="w-5 h-5 mr-2" />
                 WhatsApp (11) 95058-3364
               </Button>
-              <Link href="/">
-                <Button
+              <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 px-8"
                 >
+                <Link href="/">
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Voltar ao Site
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -386,7 +396,7 @@ export default function Execucao() {
       <footer className="py-8 bg-forest-light border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2026 Gideany Rezende Paisagismo. CREA-SP 5071612380. Todos os
+            © 2026 GR Paisagismo & Consultoria Ambiental. Todos os
             direitos reservados.
           </p>
         </div>

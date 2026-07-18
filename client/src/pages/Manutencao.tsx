@@ -5,6 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCanonical } from "@/hooks/useCanonical";
 import {
   ArrowLeft,
   CheckCircle,
@@ -33,6 +34,13 @@ const staggerContainer = {
 };
 
 export default function Manutencao() {
+  useCanonical("/servicos/manutencao", {
+    title: "Manutenção de Jardins | GR Paisagismo",
+    description:
+      "Manutenção periódica de jardins com podas, irrigação, manejo fitossanitário, adubação, corte de grama e cuidados definidos após avaliação.",
+    image: "/images/manutencao-jardim-novo.jpg",
+  });
+
   const servicosManutencao = [
     {
       icon: Scissors,
@@ -48,15 +56,15 @@ export default function Manutencao() {
     },
     {
       icon: Bug,
-      titulo: "Controle de Pragas",
+      titulo: "Manejo Fitossanitário",
       descricao:
-        "Identificação e tratamento preventivo e corretivo de pragas e doenças.",
+        "Inspeção das plantas e definição das medidas de manejo adequadas a cada situação.",
     },
     {
       icon: Leaf,
       titulo: "Adubação",
       descricao:
-        "Nutrição adequada para cada espécie, garantindo crescimento saudável e floração.",
+        "Manejo nutricional definido conforme as espécies e as condições observadas no jardim.",
     },
     {
       icon: Sun,
@@ -73,10 +81,10 @@ export default function Manutencao() {
   ];
 
   const beneficios = [
-    "Jardim sempre bonito e saudável",
-    "Economia com substituição de plantas",
-    "Prevenção de pragas e doenças",
-    "Valorização contínua do imóvel",
+    "Conservação do aspecto e da organização do jardim",
+    "Identificação antecipada de necessidades de manejo",
+    "Acompanhamento das condições das plantas",
+    "Cuidados compatíveis com cada fase do jardim",
     "Mais tempo livre para você",
     "Profissionais especializados",
     "Equipamentos profissionais",
@@ -96,18 +104,19 @@ export default function Manutencao() {
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
+                GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
               </span>
             </Link>
-            <Link href="/">
-              <Button
+            <Button
+              asChild
                 variant="ghost"
                 className="text-white hover:text-gold hover:bg-transparent"
               >
+              <Link href="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </nav>
@@ -170,7 +179,7 @@ export default function Manutencao() {
               O que fazemos na manutenção
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto">
-              Cuidados completos para manter seu jardim sempre bonito.
+              Cuidados periódicos definidos conforme as necessidades do jardim.
             </p>
           </motion.div>
 
@@ -216,7 +225,7 @@ export default function Manutencao() {
             </h2>
             <p className="text-white/70 mb-8">
               Cada jardim tem suas necessidades. Avaliamos seu espaço e montamos
-              um plano de manutenção sob medida, com a frequência ideal para
+              um plano de manutenção sob medida, com a frequência adequada para
               manter tudo em ordem — seja mensal, quinzenal ou conforme sua
               preferência.
             </p>
@@ -247,9 +256,9 @@ export default function Manutencao() {
                 Por que contratar manutenção profissional?
               </h2>
               <p className="text-foreground/70 mb-8">
-                Um jardim bem cuidado não é apenas bonito - ele valoriza seu
-                imóvel, melhora a qualidade do ar e proporciona bem-estar para
-                toda a família.
+                A manutenção periódica contribui para a conservação do jardim,
+                permite acompanhar o desenvolvimento das plantas e ajuda a identificar
+                necessidades de manejo ao longo do tempo.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {beneficios.map((beneficio, index) => (
@@ -309,16 +318,17 @@ export default function Manutencao() {
                 <Phone className="w-5 h-5 mr-2" />
                 WhatsApp (11) 95058-3364
               </Button>
-              <Link href="/">
-                <Button
+              <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 px-8"
                 >
+                <Link href="/">
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Voltar ao Site
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -328,7 +338,7 @@ export default function Manutencao() {
       <footer className="py-8 bg-forest-dark border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 Gideany Rezende Paisagismo. Todos os direitos reservados.
+            © 2026 GR Paisagismo & Consultoria Ambiental. Todos os direitos reservados.
           </p>
         </div>
       </footer>

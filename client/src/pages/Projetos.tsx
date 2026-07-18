@@ -5,6 +5,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useCanonical } from "@/hooks/useCanonical";
 import {
   ArrowLeft,
   CheckCircle,
@@ -32,6 +33,13 @@ const staggerContainer = {
 };
 
 export default function Projetos() {
+  useCanonical("/servicos/projetos", {
+    title: "Projeto Paisagístico | GR Paisagismo",
+    description:
+      "Projetos paisagísticos para residências, condomínios e empresas, com planejamento de espécies, organização dos espaços e documentos definidos no escopo.",
+    image: "/images/novo-paisagismo-moderno.jpg",
+  });
+
   const etapas = [
     {
       numero: "01",
@@ -61,15 +69,15 @@ export default function Projetos() {
       numero: "05",
       titulo: "Entrega Final",
       descricao:
-        "Entregamos toda a documentação técnica pronta para execução, com especificações detalhadas de materiais e plantas.",
+        "Entregamos os documentos definidos no escopo, com especificações para orientar a execução do projeto.",
     },
   ];
 
   const beneficios = [
     "Projeto personalizado para seu espaço",
     "Escolha de espécies adaptadas ao clima local",
-    "Otimização do uso da água com irrigação inteligente",
-    "Valorização do imóvel em até 20%",
+    "Planejamento do uso da água e da irrigação",
+    "Melhor aproveitamento e organização do espaço",
     "Plantas técnicas detalhadas",
     "Memorial descritivo completo",
     "Imagens ilustrativas do projeto",
@@ -87,7 +95,7 @@ export default function Projetos() {
       icon: Ruler,
       titulo: "Comercial",
       descricao:
-        "Paisagismo para empresas, lojas e escritórios. Ambiente profissional que impressiona clientes.",
+        "Paisagismo para empresas, lojas e escritórios, qualificando áreas de circulação, recepção e permanência.",
     },
     {
       icon: Palette,
@@ -99,7 +107,7 @@ export default function Projetos() {
       icon: Leaf,
       titulo: "Jardins Verticais",
       descricao:
-        "Soluções criativas para espaços reduzidos. Verde em qualquer ambiente.",
+        "Soluções para espaços reduzidos, avaliadas conforme estrutura, iluminação e necessidades de manutenção.",
     },
   ];
 
@@ -116,18 +124,19 @@ export default function Projetos() {
                 className="h-12 w-auto"
               />
               <span className="font-display text-xl text-white hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
+                GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
               </span>
             </Link>
-            <Link href="/">
-              <Button
+            <Button
+              asChild
                 variant="ghost"
                 className="text-white hover:text-gold hover:bg-transparent"
               >
+              <Link href="/">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Voltar
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
       </nav>
@@ -284,9 +293,9 @@ export default function Projetos() {
                 Por que investir em um projeto profissional?
               </h2>
               <p className="text-foreground/70 mb-8">
-                Um projeto de paisagismo bem elaborado evita erros, economiza
-                recursos e garante um resultado que valoriza seu imóvel e
-                proporciona bem-estar por muitos anos.
+                Um projeto de paisagismo bem elaborado ajuda a evitar escolhas
+                inadequadas, orienta a execução e contribui para a funcionalidade,
+                a estética e a valorização do espaço.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {beneficios.map((beneficio, index) => (
@@ -317,7 +326,7 @@ export default function Projetos() {
                   Projeto Completo
                 </p>
                 <p className="text-forest/70 text-sm">
-                  Plantas técnicas + 3D
+                  Entregas definidas no escopo
                 </p>
               </div>
             </motion.div>
@@ -337,8 +346,8 @@ export default function Projetos() {
               Pronto para transformar seu espaço?
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto mb-8">
-              Entre em contato e agende uma visita técnica gratuita. Vamos
-              conhecer seu espaço e suas necessidades.
+              Entre em contato para uma avaliação inicial. A partir das informações
+              do espaço e das suas necessidades, definimos o escopo do projeto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -351,16 +360,17 @@ export default function Projetos() {
                 <Phone className="w-5 h-5 mr-2" />
                 WhatsApp (11) 95058-3364
               </Button>
-              <Link href="/">
-                <Button
+              <Button
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-white/30 text-white hover:bg-white/10 px-8"
                 >
+                <Link href="/">
                   <ArrowLeft className="w-5 h-5 mr-2" />
                   Voltar ao Site
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -370,7 +380,7 @@ export default function Projetos() {
       <footer className="py-8 bg-forest-light border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2026 Gideany Rezende Paisagismo. CREA-SP 5071612380. Todos os
+            © 2026 GR Paisagismo & Consultoria Ambiental. Todos os
             direitos reservados.
           </p>
         </div>

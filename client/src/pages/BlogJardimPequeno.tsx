@@ -10,28 +10,34 @@ import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function BlogJardimPequeno() {
-  useCanonical('/blog/jardim-pequeno');
+  useCanonical('/blog/jardim-pequeno', {
+    title: "Jardim Pequeno: 10 Ideias de Canteiros | GR Paisagismo",
+    description:
+      "Dez ideias para planejar canteiros em espaços pequenos, considerando iluminação, drenagem, porte das espécies e manutenção.",
+    image: "/images/blog-jardim-pequeno-principal-novo.jpg",
+    type: "article",
+  });
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
-                <span className="text-gold font-cinzel font-bold text-lg">GR</span>
-              </div>
-              <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/images/logo_gr.png"
+              alt="GR Paisagismo & Consultoria Ambiental"
+              className="h-10 w-auto"
+            />
+            <span className="text-white font-cinzel text-base tracking-wide hidden sm:block">
+              GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
+            </span>
           </Link>
-          <Link href="/blog">
-            <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+          <Button asChild variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+            <Link href="/blog">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </header>
 
@@ -40,9 +46,9 @@ export default function BlogJardimPequeno() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/"><a className="hover:text-gold">Início</a></Link>
+            <Link href="/" className="hover:text-gold">Início</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
+            <Link href="/blog" className="hover:text-gold">Blog</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Jardim Pequeno</span>
           </div>
@@ -61,7 +67,7 @@ export default function BlogJardimPequeno() {
             <div className="flex flex-wrap items-center gap-6 text-white/70">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Gideany Rezende
+                GR Paisagismo
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -102,20 +108,18 @@ export default function BlogJardimPequeno() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Ter um jardim em casa não é um privilégio apenas de quem tem quintais enormes. Com 
-              criatividade e planejamento, qualquer cantinho pode virar um refúgio verde e relaxante. 
-              Neste artigo, trago 10 ideias práticas de canteiros para espaços pequenos que vão 
-              transformar sua casa.
+              Ter um jardim em casa não exige um quintal enorme. Com criatividade e planejamento,
+              pequenos espaços podem receber vegetação de forma funcional e acolhedora.
+              Neste artigo, apresentamos 10 ideias de canteiros para áreas compactas.
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
               Por Que Investir em um Jardim Pequeno?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Um jardim, mesmo que pequeno, traz inúmeros benefícios para sua casa e sua vida. 
-              Além de valorizar o imóvel, as plantas purificam o ar, reduzem o estresse e criam 
-              um ambiente mais acolhedor. Estudos mostram que o contato diário com a natureza 
-              melhora a saúde mental e a qualidade do sono.
+              Um jardim pequeno pode qualificar o uso do espaço, melhorar a composição visual e
+              aproximar a rotina do contato com a natureza. O cuidado com as plantas também pode
+              favorecer momentos de relaxamento, sem substituir cuidados profissionais de saúde.
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
@@ -143,9 +147,9 @@ export default function BlogJardimPequeno() {
                 2. Jardim de Pedras com Suculentas
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Perfeito para quem tem pouco tempo para manutenção. Crie um canteiro com pedras 
-                decorativas (seixos brancos ou pedriscos) e intercale com suculentas e cactos. 
-                Além de lindo, exige pouquíssima água e cuidados.
+                Pode ser uma alternativa para quem busca manutenção menos frequente. Crie um canteiro
+                com pedras decorativas e espécies adaptadas a ambientes mais secos. A necessidade de
+                água e cuidados ainda varia conforme a espécie, o clima e a drenagem.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Echeveria, Sedum, Agave, Cactos variados
@@ -168,9 +172,9 @@ export default function BlogJardimPequeno() {
                 3. Canteiro Elevado com Madeira
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Canteiros elevados são ótimos para espaços com piso cimentado. Use madeira 
-                tratada ou pallets para criar caixas de 40-60cm de altura. Além de práticos, 
-                facilitam o cultivo de temperos e hortaliças.
+                Canteiros elevados podem ser usados em espaços com piso cimentado. Escolha uma
+                estrutura resistente à umidade, com drenagem e dimensões compatíveis com as raízes.
+                Para cultivo de alimentos, utilize materiais adequados a essa finalidade.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Ideal para: Temperos, hortaliças, flores anuais
@@ -193,9 +197,9 @@ export default function BlogJardimPequeno() {
                 4. Jardim Tropical Compacto
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Mesmo em 2m² você pode criar um cantinho tropical. Use uma palmeira pequena 
-                como ponto focal, adicione folhagens de diferentes texturas (costela-de-adão, 
-                filodendro) e complete com bromélias para cor.
+                Espaços compactos podem receber uma composição tropical. Use espécies de porte
+                compatível com a área e combine folhagens de diferentes texturas, sempre considerando
+                luminosidade, ventilação e espaço para o desenvolvimento das plantas.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Palmeira-areca, Costela-de-adão, Filodendro, Bromélia
@@ -233,9 +237,9 @@ export default function BlogJardimPequeno() {
                 6. Jardim Vertical no Muro
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Quando o espaço horizontal é limitado, vá para cima! Instale treliças, 
-                vasos de parede ou painéis de jardim vertical. Além de ocupar zero espaço 
-                no chão, transforma muros feios em paredes vivas.
+                Quando o espaço horizontal é limitado, treliças, vasos de parede ou painéis
+                verticais podem ampliar a área de plantio. Antes da instalação, verifique a
+                capacidade de suporte, a drenagem e a proteção da parede.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Jiboia, Samambaia, Peperômia, Hera
@@ -250,7 +254,7 @@ export default function BlogJardimPequeno() {
               <p className="text-gray-700 leading-relaxed">
                 Gramíneas como capim-do-texas e penisetum trazem movimento e leveza ao jardim. 
                 Crie um canteiro com diferentes espécies de gramíneas, variando alturas e cores. 
-                O efeito é moderno e exige pouca manutenção.
+                O efeito é leve e, com espécies adequadas ao local, pode simplificar a manutenção.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Capim-do-texas, Penisetum, Festuca, Carex
@@ -273,9 +277,9 @@ export default function BlogJardimPequeno() {
                 8. Jardim Sensorial com Aromáticas
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Crie um canteiro que estimule os sentidos. Combine plantas aromáticas como 
-                lavanda, alecrim e hortelã. Além do perfume agradável, você terá temperos 
-                frescos para a cozinha e flores que atraem borboletas.
+                Crie um canteiro que estimule os sentidos com plantas aromáticas. Agrupe espécies
+                com necessidades semelhantes de luz, água e solo; algumas podem fornecer temperos
+                para a cozinha e flores visitadas por polinizadores.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Lavanda, Alecrim, Hortelã, Manjericão, Sálvia
@@ -303,9 +307,9 @@ export default function BlogJardimPequeno() {
                 10. Canteiro de Flores Coloridas
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                Para quem ama cor, crie um canteiro com flores de diferentes épocas de floração. 
-                Assim, você terá flores o ano todo. Combine perenes (que voltam todo ano) com 
-                anuais (que precisam ser replantadas).
+                Para quem gosta de cor, planeje espécies com épocas de floração diferentes.
+                A continuidade das flores dependerá do clima, das espécies e do manejo; perenes
+                e anuais podem ser combinadas conforme o espaço disponível.
               </p>
               <p className="text-sm text-gold mt-3 font-medium">
                 Plantas sugeridas: Lavanda, Gazânia, Petúnia, Tagete, Begônia, Impatiens
@@ -315,10 +319,15 @@ export default function BlogJardimPequeno() {
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
               Dicas Importantes para Canteiros Pequenos
             </h2>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              As espécies citadas são referências de composição. A escolha final deve considerar
+              clima, luminosidade, drenagem, porte adulto e segurança para crianças e animais,
+              pois algumas plantas ornamentais podem ser tóxicas quando ingeridas.
+            </p>
             <ul className="space-y-3 text-gray-700 mb-8">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Prepare bem o solo:</strong> Adicione terra vegetal e húmus antes de plantar</span>
+                <span><strong>Prepare o solo:</strong> Avalie drenagem, textura e fertilidade antes de definir correções e adubação</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -334,7 +343,7 @@ export default function BlogJardimPequeno() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Cubra o solo:</strong> Casca de pinus ou pedriscos evitam ervas daninhas</span>
+                <span><strong>Cubra o solo:</strong> Coberturas adequadas ajudam a conservar a umidade e a reduzir plantas espontâneas</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -371,8 +380,8 @@ export default function BlogJardimPequeno() {
               <p className="text-gray-700 mb-4">
                 Cada espaço é único e merece um projeto pensado especialmente para ele. Se você 
                 quer transformar seu quintal, varanda ou área externa em um jardim dos sonhos, 
-                entre em contato. Faço projetos sob medida em São Roque, Cotia, Sorocaba e 
-                todo Estado de SP.
+                entre em contato. Desenvolvemos projetos sob medida em São Roque, Cotia, Sorocaba e
+                em todo o Estado de São Paulo.
               </p>
               <a
                 href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim pequeno e gostaria de um orçamento para meu espaço."
@@ -395,25 +404,21 @@ export default function BlogJardimPequeno() {
             Leia Também
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link href="/blog/jardim-vertical">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/jardim-vertical" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Como Fazer um Jardim Vertical em Casa
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
                   Aprenda a criar um jardim vertical mesmo em espaços pequenos.
                 </p>
-              </a>
             </Link>
-            <Link href="/blog/horta-apartamento">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/horta-apartamento" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Horta em Apartamento: O Guia Completo
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
                   Cultive temperos e hortaliças mesmo em espaços pequenos.
                 </p>
-              </a>
             </Link>
           </div>
         </div>
@@ -422,10 +427,8 @@ export default function BlogJardimPequeno() {
       {/* Footer */}
       <footer className="bg-emerald-dark py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
-              Voltar ao Site
-            </a>
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
+            Voltar ao Site
           </Link>
         </div>
       </footer>
@@ -435,6 +438,7 @@ export default function BlogJardimPequeno() {
         href="https://wa.me/5511950583364"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Falar com a GR pelo WhatsApp"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

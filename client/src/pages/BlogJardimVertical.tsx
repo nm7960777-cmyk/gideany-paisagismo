@@ -10,28 +10,34 @@ import { ArrowLeft, Calendar, Clock, User, Share2, ChevronRight } from "lucide-r
 import { Button } from "@/components/ui/button";
 
 export default function BlogJardimVertical() {
-  useCanonical('/blog/jardim-vertical');
+  useCanonical('/blog/jardim-vertical', {
+    title: "Como Fazer um Jardim Vertical | GR Paisagismo",
+    description:
+      "Guia com os principais cuidados para planejar um jardim vertical: local, estrutura, drenagem, espécies, substrato, irrigação e manutenção.",
+    image: "/images/blog-jardim-vertical-correto.jpg",
+    type: "article",
+  });
   return (
     <div className="min-h-screen bg-cream">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-emerald-dark/95 backdrop-blur-sm border-b border-gold/20">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/">
-            <a className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
-                <span className="text-gold font-cinzel font-bold text-lg">GR</span>
-              </div>
-              <span className="text-white font-cinzel text-lg tracking-wide hidden sm:block">
-                Gideany Rezende <span className="text-gold">Paisagismo</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center gap-3">
+            <img
+              src="/images/logo_gr.png"
+              alt="GR Paisagismo & Consultoria Ambiental"
+              className="h-10 w-auto"
+            />
+            <span className="text-white font-cinzel text-base tracking-wide hidden sm:block">
+              GR <span className="text-gold">Paisagismo & Consultoria Ambiental</span>
+            </span>
           </Link>
-          <Link href="/blog">
-            <Button variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+          <Button asChild variant="outline" className="border-gold/30 text-gold hover:bg-gold/10">
+            <Link href="/blog">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Voltar
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </header>
 
@@ -40,9 +46,9 @@ export default function BlogJardimVertical() {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
-            <Link href="/"><a className="hover:text-gold">Início</a></Link>
+            <Link href="/" className="hover:text-gold">Início</Link>
             <ChevronRight className="w-4 h-4" />
-            <Link href="/blog"><a className="hover:text-gold">Blog</a></Link>
+            <Link href="/blog" className="hover:text-gold">Blog</Link>
             <ChevronRight className="w-4 h-4" />
             <span className="text-gold">Jardim Vertical</span>
           </div>
@@ -61,7 +67,7 @@ export default function BlogJardimVertical() {
             <div className="flex flex-wrap items-center gap-6 text-white/70">
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Gideany Rezende
+                GR Paisagismo
               </span>
               <span className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
@@ -102,10 +108,9 @@ export default function BlogJardimVertical() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Jardins verticais são uma solução criativa e elegante para quem deseja trazer mais verde para dentro de casa, 
-              especialmente em espaços reduzidos. Além de embelezar o ambiente, eles purificam o ar e trazem bem-estar. 
-              Neste guia completo, vou te ensinar como criar seu próprio jardim vertical, mesmo que você nunca tenha 
-              mexido com plantas antes.
+              Jardins verticais são uma solução criativa para inserir vegetação em ambientes com pouco espaço horizontal.
+              Além de contribuir para a composição do ambiente, aproximam a rotina do contato com as plantas.
+              Neste guia, apresentamos os principais pontos a considerar antes da implantação.
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
@@ -114,7 +119,7 @@ export default function BlogJardimVertical() {
             <p className="text-gray-700 leading-relaxed mb-6">
               Um jardim vertical é uma estrutura que permite cultivar plantas na vertical, aproveitando paredes, 
               muros ou painéis. Pode ser feito com diversos materiais como pallets, garrafas PET, vasos modulares, 
-              feltro ou estruturas metálicas. É perfeito para apartamentos, varandas, áreas de serviço e até 
+              feltro ou estruturas metálicas. Pode ser utilizado em apartamentos, varandas, áreas de serviço e até
               ambientes internos com boa iluminação.
             </p>
 
@@ -128,19 +133,19 @@ export default function BlogJardimVertical() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Purificação do ar:</strong> Plantas filtram toxinas e liberam oxigênio</span>
+                <span><strong>Conforto visual:</strong> A vegetação contribui para uma composição mais acolhedora</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Isolamento térmico:</strong> Ajuda a manter a temperatura do ambiente mais agradável</span>
+                <span><strong>Conforto térmico:</strong> Dependendo da fachada e do sistema, a vegetação pode contribuir para reduzir a incidência direta de calor</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Redução de ruídos:</strong> As plantas absorvem parte dos sons externos</span>
+                <span><strong>Conforto acústico:</strong> Sistemas densos e bem projetados podem contribuir modestamente para a absorção sonora</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Bem-estar:</strong> O contato com a natureza reduz o estresse e melhora o humor</span>
+                <span><strong>Bem-estar:</strong> O contato e o cuidado com as plantas podem favorecer momentos de relaxamento</span>
               </li>
             </ul>
 
@@ -152,9 +157,9 @@ export default function BlogJardimVertical() {
               1. Escolha o Local
             </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Analise a iluminação do local. A maioria das plantas precisa de pelo menos 4 horas de luz indireta 
-              por dia. Evite locais com sol direto intenso (pode queimar as folhas) ou muito escuros. 
-              Varandas, sacadas e paredes próximas a janelas são ótimas opções.
+              Analise a iluminação do local, pois cada espécie apresenta necessidades diferentes de luz.
+              Observe também a ventilação, a incidência de chuva e a facilidade de acesso para manutenção.
+              A escolha das plantas deve ser feita de acordo com essas condições.
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
@@ -179,7 +184,7 @@ export default function BlogJardimVertical() {
               <li><strong>Vasos modulares:</strong> Práticos e fáceis de instalar, vendidos em lojas de jardinagem</li>
               <li><strong>Feltro ou bolsas:</strong> Leves e flexíveis, ótimos para paredes internas</li>
               <li><strong>Treliças com vasos:</strong> Permitem criar composições personalizadas</li>
-              <li><strong>Garrafas PET:</strong> Sustentável e econômico, perfeito para hortas</li>
+              <li><strong>Garrafas PET:</strong> Alternativa de reaproveitamento para composições pequenas e leves</li>
             </ul>
             
             {/* Imagem de Vasos Modulares */}
@@ -196,9 +201,9 @@ export default function BlogJardimVertical() {
               3. Prepare a Impermeabilização
             </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Se o jardim vertical for instalado em parede interna, é essencial impermeabilizar a área para 
-              evitar infiltrações. Use mantas impermeabilizantes ou plástico grosso entre a estrutura e a parede. 
-              Isso protege sua casa e garante a durabilidade do projeto.
+              Antes da instalação, avalie a proteção da parede, a coleta da água excedente e a capacidade de
+              suporte da estrutura. O sistema de impermeabilização deve ser adequado ao local e executado de
+              modo a não bloquear a drenagem; em instalações maiores, recomenda-se avaliação profissional.
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
@@ -215,7 +220,7 @@ export default function BlogJardimVertical() {
                 alt="Plantas pendentes ideais para jardim vertical"
                 className="w-full h-64 object-cover"
               />
-              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Samambaias, jiboias e tradescantias: perfeitas para jardins verticais</p>
+              <p className="text-sm text-gray-500 text-center py-2 bg-gray-50">Exemplos de folhagens para sistemas verticais, conforme a luminosidade disponível</p>
             </div>
             <div className="bg-emerald-dark/5 rounded-xl p-6 mb-6">
               <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com pouca luz:</h4>
@@ -229,14 +234,18 @@ export default function BlogJardimVertical() {
               <h4 className="font-semibold text-emerald-dark mb-3">Para ambientes com bastante luz:</h4>
               <p className="text-gray-700">Suculentas, Cactos, Hera, Lambari, Tradescantia</p>
             </div>
+            <p className="text-sm text-gray-600 leading-relaxed mb-6">
+              Antes de escolher as espécies, verifique também o porte adulto e a segurança para
+              crianças e animais, pois algumas plantas ornamentais podem ser tóxicas quando ingeridas.
+            </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
               5. Prepare o Substrato
             </h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Use um substrato leve e bem drenado. Uma boa mistura é: 50% de terra vegetal, 30% de húmus de 
-              minhoca e 20% de perlita ou vermiculita. Isso garante nutrientes e evita que a água fique 
-              empoçada nas raízes.
+              Use um substrato leve, drenável e compatível com as espécies escolhidas. A composição varia
+              conforme o sistema, a retenção de umidade necessária e a frequência de irrigação; por isso,
+              proporções fixas não atendem igualmente a todos os jardins verticais.
             </p>
 
             <h3 className="text-xl font-semibold text-emerald-dark mt-8 mb-4">
@@ -265,11 +274,11 @@ export default function BlogJardimVertical() {
             <ul className="space-y-3 text-gray-700 mb-8">
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Rega:</strong> 2 a 3 vezes por semana no verão, 1 vez por semana no inverno</span>
+                <span><strong>Rega:</strong> Verifique a umidade do substrato e ajuste a frequência à espécie, ao clima e à exposição do local</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Adubação:</strong> A cada 2 meses com adubo orgânico ou NPK 10-10-10</span>
+                <span><strong>Adubação:</strong> Escolha produto, dose e frequência conforme as espécies, o substrato e as instruções do fabricante</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
@@ -277,7 +286,7 @@ export default function BlogJardimVertical() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"></span>
-                <span><strong>Pragas:</strong> Inspecione regularmente e trate com óleo de neem se necessário</span>
+                <span><strong>Pragas:</strong> Inspecione regularmente e identifique a causa antes de aplicar qualquer produto ou método de controle</span>
               </li>
             </ul>
 
@@ -286,9 +295,9 @@ export default function BlogJardimVertical() {
                 Precisa de Ajuda Profissional?
               </h3>
               <p className="text-gray-700 mb-4">
-                Se você quer um jardim vertical personalizado, projetado especialmente para seu espaço e 
-                estilo de vida, entre em contato comigo. Faço projetos sob medida para residências e 
-                empresas em São Roque, Cotia, Sorocaba e todo Estado de SP.
+                Se você quer um jardim vertical personalizado, projetado especialmente para seu espaço e
+                estilo de vida, fale com nossa equipe. Desenvolvemos projetos sob medida para diferentes espaços
+                em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo.
               </p>
               <a
                 href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim vertical e gostaria de um orçamento."
@@ -311,25 +320,21 @@ export default function BlogJardimVertical() {
             Leia Também
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Link href="/blog/horta-apartamento">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/horta-apartamento" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Horta em Apartamento: O Guia Completo
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
                   Aprenda a cultivar temperos e hortaliças mesmo em espaços pequenos.
                 </p>
-              </a>
             </Link>
-            <Link href="/blog/jardim-pequeno">
-              <a className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
+            <Link href="/blog/jardim-pequeno" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow group">
                 <h3 className="font-cinzel text-emerald-dark group-hover:text-gold transition-colors">
                   Jardim Pequeno: 10 Ideias de Canteiros
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">
-                  Transforme qualquer cantinho em um refúgio verde e relaxante.
+                  Ideias para planejar canteiros em espaços compactos.
                 </p>
-              </a>
             </Link>
           </div>
         </div>
@@ -338,10 +343,8 @@ export default function BlogJardimVertical() {
       {/* Footer */}
       <footer className="bg-emerald-dark py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">
-          <Link href="/">
-            <a className="text-white/60 hover:text-gold transition-colors">
-              Voltar ao Site
-            </a>
+          <Link href="/" className="text-white/60 hover:text-gold transition-colors">
+            Voltar ao Site
           </Link>
         </div>
       </footer>
@@ -351,6 +354,7 @@ export default function BlogJardimVertical() {
         href="https://wa.me/5511950583364"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Falar com a GR pelo WhatsApp"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
       >
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
