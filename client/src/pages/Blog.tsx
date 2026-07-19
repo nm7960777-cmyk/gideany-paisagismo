@@ -34,8 +34,8 @@ export default function Blog() {
   const artigos = [
     {
       slug: "rap-relatorio-ambiental-preliminar",
-      titulo: "RAP: quando o Relatorio Ambiental Preliminar e solicitado e como se preparar",
-      resumo: "Entenda o papel do RAP no licenciamento ambiental, quais informacoes costumam compor o estudo e por que uma analise inicial bem conduzida evita retrabalho no processo.",
+      titulo: "RAP: quando o Relatório Ambiental Preliminar é solicitado e como se preparar",
+      resumo: "Entenda o papel do RAP no licenciamento ambiental, quais informações costumam compor o estudo e por que uma análise inicial bem conduzida evita retrabalho no processo.",
       imagem: "/images/ambiental-rap-medicao-dap.jpeg",
       categoria: "Licenciamento Ambiental",
       data: "19 Jul 2026",
