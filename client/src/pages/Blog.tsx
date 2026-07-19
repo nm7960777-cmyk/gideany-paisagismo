@@ -26,12 +26,21 @@ const staggerContainer = {
 
 export default function Blog() {
   useCanonical('/blog', {
-    title: "Blog de Paisagismo | GR Paisagismo",
+    title: "Blog | GR Paisagismo & Consultoria Ambiental",
     description:
       "Conteúdos sobre jardins verticais, hortas em apartamento, canteiros, escolha de plantas e cuidados com áreas verdes.",
-    image: "/images/blog-jardim-vertical-home-novo.jpg",
+    image: "/images/ambiental-rap-medicao-dap.jpeg",
   });
   const artigos = [
+    {
+      slug: "rap-relatorio-ambiental-preliminar",
+      titulo: "RAP: quando o Relatorio Ambiental Preliminar e solicitado e como se preparar",
+      resumo: "Entenda o papel do RAP no licenciamento ambiental, quais informacoes costumam compor o estudo e por que uma analise inicial bem conduzida evita retrabalho no processo.",
+      imagem: "/images/ambiental-rap-medicao-dap.jpeg",
+      categoria: "Licenciamento Ambiental",
+      data: "19 Jul 2026",
+      tempoLeitura: "9 min",
+    },
     {
       slug: "jardim-vertical",
       titulo: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",

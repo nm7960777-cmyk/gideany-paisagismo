@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogJardimVertical from "./pages/BlogJardimVertical";
 import BlogHortaApartamento from "./pages/BlogHortaApartamento";
 import BlogJardimPequeno from "./pages/BlogJardimPequeno";
+import BlogRap from "./pages/BlogRap";
 import FAQ from "./pages/FAQ";
 import ServicosAmbientais from "./pages/ServicosAmbientais";
 import ServicosPaisagismo from "./pages/ServicosPaisagismo";
@@ -31,6 +32,7 @@ function Router() {
       <Route path={"/servicos/paisagismo"} component={ServicosPaisagismo} />
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/rap-relatorio-ambiental-preliminar"} component={BlogRap} />
       <Route path={"/blog/jardim-vertical"} component={BlogJardimVertical} />
       <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
       <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />

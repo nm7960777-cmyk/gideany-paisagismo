@@ -14,6 +14,7 @@ import {
   MapPin,
   PawPrint,
   Phone,
+  Quote,
   Scissors,
   TreePine,
   Trees,
@@ -172,6 +173,16 @@ const serviceAreas = [
   "Itu",
   "Salto de Pirapora",
   "Votorantim",
+];
+
+const environmentalReviews = [
+  {
+    name: "João Fonseca",
+    location: "Avaré - SP",
+    service: "Avaliação técnica para RAP",
+    text: "Atendimento técnico realizado para avaliação de demanda relacionada a RAP, com orientação clara sobre o escopo e os próximos encaminhamentos do processo.",
+    initial: "J",
+  },
 ];
 
 export default function ServicosAmbientais() {
@@ -415,6 +426,55 @@ export default function ServicosAmbientais() {
           >
             {renderServiceCards("arborizacao")}
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-cream">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-3xl mx-auto mb-12"
+          >
+            <p className="text-gold font-medium mb-2">Avaliações reais</p>
+            <h2 className="font-display text-3xl md:text-4xl text-forest mb-5">
+              Atendimento em Demandas Ambientais
+            </h2>
+            <p className="text-foreground/70 leading-relaxed">
+              Registros de atendimentos realizados em estudos, avaliações e orientações ambientais.
+            </p>
+          </motion.div>
+
+          <div className="max-w-3xl mx-auto">
+            {environmentalReviews.map((review) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-gold/20 rounded-2xl p-8 md:p-10 shadow-sm"
+              >
+                <Quote className="w-10 h-10 text-gold/35 mb-5" />
+                <p className="text-foreground/80 text-lg leading-relaxed mb-7 italic">
+                  "{review.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-gold rounded-full flex items-center justify-center">
+                    <span className="font-display text-xl text-forest">
+                      {review.initial}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-forest">{review.name}</p>
+                    <p className="text-foreground/60 text-sm">
+                      {review.location} • {review.service}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
