@@ -171,6 +171,15 @@ export default function Home() {
 
   const blogPosts = [
     {
+      category: "Licenciamento Ambiental",
+      date: "19 Jul 2026",
+      title: "RAP: quando o Relatório Ambiental Preliminar é solicitado e como se preparar",
+      excerpt:
+        "Entenda o papel do RAP no licenciamento ambiental, os documentos iniciais e como uma análise bem conduzida evita retrabalho.",
+      link: "/blog/rap-relatorio-ambiental-preliminar",
+      image: "/images/ambiental-rap-medicao-dap.jpeg",
+    },
+    {
       category: "Jardim Vertical",
       date: "10 Jan 2026",
       title: "Como Fazer um Jardim Vertical em Casa: Passo a Passo",
@@ -776,7 +785,7 @@ export default function Home() {
             <div>
               <p className="text-gold font-medium mb-2">Blog</p>
               <h2 className="font-display text-3xl md:text-4xl text-forest">
-                Dicas e Curiosidades
+                Estudos Ambientais e Paisagismo
               </h2>
             </div>
             <Link href="/blog" className="inline-flex items-center text-emerald hover:text-emerald/80 hover:bg-emerald/10 px-4 py-2 rounded-md mt-4 md:mt-0 transition-colors">
@@ -791,7 +800,7 @@ export default function Home() {
             variants={staggerContainer}
             className="grid md:grid-cols-3 gap-8"
           >
-            {blogPosts.map((post, index) => (
+            {blogPosts.slice(0, 3).map((post, index) => (
               <motion.div key={index} variants={fadeInUp}>
                 <Link href={post.link}>
                   <Card className="bg-white border-0 shadow-lg h-full hover:shadow-xl transition-shadow duration-300 group cursor-pointer overflow-hidden">
