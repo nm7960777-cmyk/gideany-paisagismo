@@ -1,9 +1,9 @@
-# Verificações do Site - Gideany Rezende Paisagismo
+# Verificações do Site - GR Paisagismo & Consultoria Ambiental
 
 ## Itens Implementados ✓
-1. Nome alterado para "Gideany Rezende Paisagismo" ✓
+1. Nome alterado para "GR Paisagismo & Consultoria Ambiental" ✓
 2. Logo GR no lugar da folha ✓
-3. Foto da Gideany (IA) na seção Sobre ✓
+3. Foto pessoal removida da seção Sobre ✓
 4. Depoimento de Cleidson Soares com texto correto ✓
 5. Opção "Outro" no tipo de serviço ✓
 

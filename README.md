@@ -1,4 +1,4 @@
-# Gideany Rezende Paisagismo
+# GR Paisagismo & Consultoria Ambiental
 
 Site profissional de paisagismo e jardinagem.
 

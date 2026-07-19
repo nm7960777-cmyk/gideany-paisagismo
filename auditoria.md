@@ -1,4 +1,4 @@
-# AUDITORIA COMPLETA DO SITE - Gideany Rezende Paisagismo
+# AUDITORIA COMPLETA DO SITE - GR Paisagismo & Consultoria Ambiental
 
 ## 🔴 PROBLEMAS CRÍTICOS (Afastam clientes imediatamente)
 
@@ -27,7 +27,7 @@
 
 ## 🟡 PROBLEMAS MÉDIOS
 
-1. **Instagram @girpaisagismo** - Verificar se está correto (não é @gideany ou outro?)
+1. **Instagram @girpaisagismo** - Verificar se está correto.
 
 ## Verificar ainda:
 - [ ] Página de Projetos

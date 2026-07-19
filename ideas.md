@@ -1,7 +1,7 @@
-# Brainstorming de Design - Gideany Rezende Paisagismo
+# Brainstorming de Design - GR Paisagismo & Consultoria Ambiental
 
 ## Contexto
-Site profissional de paisagismo para Gideany Rezende, com foco em projetos de jardins, execução de obras e manutenção. Atende São Roque, Cotia, Sorocaba, São Paulo e região.
+Site profissional para GR Paisagismo & Consultoria Ambiental, com foco em paisagismo, arborização, vegetação, estudos e consultoria ambiental. Atende São Roque, Cotia, Sorocaba, São Paulo e região.
 
 ---
 
