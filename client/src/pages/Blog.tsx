@@ -110,7 +110,7 @@ export default function Blog() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-cinzel text-white mb-6"
           >
-            Dicas e Inspirações
+            Estudos Ambientais e Paisagismo
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -118,8 +118,8 @@ export default function Blog() {
             transition={{ delay: 0.2 }}
             className="text-white/80 max-w-2xl mx-auto"
           >
-            Conteúdos exclusivos sobre paisagismo, jardinagem e como transformar 
-            seu espaço em um ambiente mais verde e acolhedor.
+            Conteúdos sobre RAP, licenciamento ambiental, arborização,
+            vegetação e soluções técnicas para áreas verdes.
           </motion.p>
         </div>
       </section>

@@ -121,10 +121,10 @@ export default function Home() {
       initial: "H",
     },
     {
-      name: "Ricardo Mendes",
-      location: "Cotia - SP",
-      text: "Excelente trabalho! O projeto foi entregue no prazo e o resultado ficou incrível. Minha família adorou o novo jardim.",
-      initial: "R",
+      name: "João Fonseca",
+      location: "Avaré - SP",
+      text: "Procurei atendimento para entender uma demanda de licenciamento e RAP. A orientação foi clara, objetiva e me ajudou a organizar os próximos passos do processo.",
+      initial: "J",
     },
     {
       name: "Patrícia Souza",
