@@ -10,7 +10,9 @@ type PageMetadata = {
 
 export function useCanonical(path: string, metadata: PageMetadata = {}) {
   useEffect(() => {
-    const canonicalUrl = `https://www.rezendepaisagismo.com.br${path}`;
+    const normalizedPath =
+      path === '/' ? '' : `/${path.replace(/^\/+|\/+$/g, '')}`;
+    const canonicalUrl = `https://www.rezendepaisagismo.com.br${normalizedPath}`;
     const absoluteImage = metadata.image
       ? metadata.image.startsWith('http')
         ? metadata.image
@@ -70,8 +72,12 @@ export function useCanonical(path: string, metadata: PageMetadata = {}) {
       robots.content = 'noindex, nofollow';
       robots.dataset.managedByApp = 'true';
       if (!existingRobots) document.head.appendChild(robots);
-    } else if (existingRobots?.dataset.managedByApp === 'true') {
-      existingRobots.remove();
+    } else {
+      const robots = existingRobots ?? document.createElement('meta');
+      robots.name = 'robots';
+      robots.content = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+      robots.dataset.managedByApp = 'true';
+      if (!existingRobots) document.head.appendChild(robots);
     }
     
     return () => {
