@@ -32,7 +32,7 @@ const staggerContainer = {
 
 export default function Galeria() {
   useCanonical('/galeria', {
-    title: "Galeria de Projetos | GR Paisagismo",
+    title: "Galeria de Paisagismo em São Roque e Região | GR Paisagismo",
     description:
       "Conheça projetos paisagísticos, jardins residenciais, áreas de lazer, espaços comerciais e transformações realizadas pela GR Paisagismo.",
     image: "/images/novo-area-piscina.jpg",

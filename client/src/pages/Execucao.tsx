@@ -36,7 +36,7 @@ const staggerContainer = {
 
 export default function Execucao() {
   useCanonical("/servicos/execucao", {
-    title: "Implantação e Execução de Jardins | GR Paisagismo",
+    title: "Execução de Jardins e Obras Paisagísticas em SP | GR Paisagismo",
     description:
       "Implantação de projetos paisagísticos com coordenação das etapas, preparação da área, plantio e soluções complementares definidas no escopo.",
     image: "/images/novo-entrada-residencial.jpg",

@@ -26,7 +26,7 @@ const staggerContainer = {
 
 export default function Blog() {
   useCanonical('/blog', {
-    title: "Blog | GR Paisagismo & Consultoria Ambiental",
+    title: "Blog de Paisagismo e Consultoria Ambiental | GR Paisagismo",
     description:
       "Conteúdos sobre jardins verticais, hortas em apartamento, canteiros, escolha de plantas e cuidados com áreas verdes.",
     image: "/images/ambiental-rap-medicao-dap.jpeg",

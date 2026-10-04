@@ -187,7 +187,7 @@ const environmentalReviews = [
 
 export default function ServicosAmbientais() {
   useCanonical("/servicos/consultoria-ambiental", {
-    title: "Estudos e Consultoria Ambiental | GR Paisagismo",
+    title: "Consultoria Ambiental SP: RAP, EIV e Inventário Arbóreo | GR Paisagismo",
     description:
       "RAP, EIV, caracterização de fauna, inventário arbóreo, vegetação, compensação e monitoramento ambiental, com sede em São Roque e atendimento em todo o Estado de São Paulo.",
     image: "/images/ambiental-hero-campo-dap.jpeg",
