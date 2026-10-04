@@ -90,9 +90,9 @@ const serviceLabels: Record<string, string> = {
 
 export default function Home() {
   useCanonical('/', {
-    title: "GR Paisagismo & Consultoria Ambiental | Paisagismo em São Roque SP",
+    title: "Consultoria Ambiental (RAP, EIV) e Paisagismo | GR Paisagismo",
     description:
-      "Projetos paisagísticos, arborização, vegetação, RAP, EIV e consultoria ambiental com sede em São Roque e atendimento em todo o Estado de São Paulo.",
+      "Consultoria ambiental (RAP, EIV, inventário arbóreo, parecer de supressão) e projetos de paisagismo. Sede em São Roque, atendimento em todo o estado de SP.",
   });
 
   useEffect(() => {
