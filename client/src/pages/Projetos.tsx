@@ -34,7 +34,7 @@ const staggerContainer = {
 
 export default function Projetos() {
   useCanonical("/servicos/projetos", {
-    title: "Projeto Paisagístico | GR Paisagismo",
+    title: "Projeto Paisagístico em São Roque SP | GR Paisagismo",
     description:
       "Projetos paisagísticos para residências, condomínios e empresas, com planejamento de espécies, organização dos espaços e documentos definidos no escopo.",
     image: "/images/novo-paisagismo-moderno.jpg",

@@ -35,7 +35,7 @@ const staggerContainer = {
 
 export default function Manutencao() {
   useCanonical("/servicos/manutencao", {
-    title: "Manutenção de Jardins | GR Paisagismo",
+    title: "Manutenção de Jardins em São Roque e Região | GR Paisagismo",
     description:
       "Manutenção periódica de jardins com podas, irrigação, manejo fitossanitário, adubação, corte de grama e cuidados definidos após avaliação.",
     image: "/images/manutencao-jardim-novo.jpg",
