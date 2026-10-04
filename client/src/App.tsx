@@ -19,6 +19,9 @@ import ServicosAmbientais from "./pages/ServicosAmbientais";
 import ServicosPaisagismo from "./pages/ServicosPaisagismo";
 import AutorizacaoCorteArvores from "./pages/AutorizacaoCorteArvores";
 import LicenciamentoCetesb from "./pages/LicenciamentoCetesb";
+import CarCadastroAmbientalRural from "./pages/CarCadastroAmbientalRural";
+import RapRelatorioAmbientalPreliminar from "./pages/RapRelatorioAmbientalPreliminar";
+import EivEstudoImpactoVizinhanca from "./pages/EivEstudoImpactoVizinhanca";
 
 function Router() {
   return (
@@ -39,6 +42,18 @@ function Router() {
       <Route
         path={"/servicos/licenciamento-ambiental-cetesb"}
         component={LicenciamentoCetesb}
+      />
+      <Route
+        path={"/servicos/car-cadastro-ambiental-rural"}
+        component={CarCadastroAmbientalRural}
+      />
+      <Route
+        path={"/servicos/rap-relatorio-ambiental-preliminar"}
+        component={RapRelatorioAmbientalPreliminar}
+      />
+      <Route
+        path={"/servicos/eiv-estudo-impacto-vizinhanca"}
+        component={EivEstudoImpactoVizinhanca}
       />
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/blog"} component={Blog} />
