@@ -47,12 +47,23 @@ const server = createServer(async (req, res) => {
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
 const base = `http://127.0.0.1:${server.address().port}`;
 
+// Chromium: usa CHROMIUM_PATH se definido; senão o binário do @sparticuz/chromium
+// (feito para rodar em ambientes serverless/CI como a Vercel).
+let executablePath = process.env.CHROMIUM_PATH;
+let launchArgs = ["--no-sandbox"];
+if (!executablePath) {
+  try {
+    const { default: sparticuz } = await import("@sparticuz/chromium");
+    executablePath = await sparticuz.executablePath();
+    launchArgs = sparticuz.args;
+  } catch (e) {
+    console.warn("[prerender] @sparticuz/chromium indisponível:", String(e).split("\n")[0]);
+  }
+}
+
 let browser;
 try {
-  browser = await chromium.launch({
-    executablePath: process.env.CHROMIUM_PATH || undefined,
-    args: ["--no-sandbox"],
-  });
+  browser = await chromium.launch({ executablePath, args: launchArgs, headless: true });
 } catch (e) {
   console.warn("[prerender] Chromium indisponível — pulando pré-renderização.\n", String(e).split("\n")[0]);
   server.close();
@@ -61,8 +72,10 @@ try {
 
 let ok = 0;
 const problems = [];
+// Uma única aba para todas as rotas: o Chromium em modo single-process (sparticuz)
+// fecha inteiro quando uma aba é fechada.
+const page = await browser.newPage();
 for (const route of routes) {
-  const page = await browser.newPage();
   try {
     await page.goto(base + route, { waitUntil: "networkidle" });
     const expected = ORIGIN + route;
@@ -86,8 +99,6 @@ for (const route of routes) {
     ok++;
   } catch (e) {
     problems.push(`${route}: ${String(e).split("\n")[0]}`);
-  } finally {
-    await page.close();
   }
 }
 await browser.close();
