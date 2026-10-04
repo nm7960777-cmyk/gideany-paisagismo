@@ -478,6 +478,39 @@ export default function ServicosAmbientais() {
         </div>
       </section>
 
+      <section className="py-16 bg-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-display text-2xl md:text-3xl text-forest text-center mb-8">
+            Serviços em destaque
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link
+              href="/servicos/licenciamento-ambiental-cetesb"
+              className="block rounded-2xl border border-gold/20 bg-white p-7 shadow-sm hover:border-gold/50 hover:shadow-lg transition-all"
+            >
+              <h3 className="font-display text-xl text-forest mb-2">
+                Licenciamento ambiental e regularização na CETESB
+              </h3>
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Licença prévia, de instalação e de operação, renovação e
+                regularização de atividades.
+              </p>
+            </Link>
+            <Link
+              href="/servicos/autorizacao-corte-supressao-arvores"
+              className="block rounded-2xl border border-gold/20 bg-white p-7 shadow-sm hover:border-gold/50 hover:shadow-lg transition-all"
+            >
+              <h3 className="font-display text-xl text-forest mb-2">
+                Autorização para corte de árvores e inventário arbóreo
+              </h3>
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Parecer técnico, inventário, supressão e compensação ambiental.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-forest">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-center">

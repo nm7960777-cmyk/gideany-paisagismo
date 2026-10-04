@@ -17,6 +17,8 @@ import BlogRap from "./pages/BlogRap";
 import FAQ from "./pages/FAQ";
 import ServicosAmbientais from "./pages/ServicosAmbientais";
 import ServicosPaisagismo from "./pages/ServicosPaisagismo";
+import AutorizacaoCorteArvores from "./pages/AutorizacaoCorteArvores";
+import LicenciamentoCetesb from "./pages/LicenciamentoCetesb";
 
 function Router() {
   return (
@@ -30,6 +32,14 @@ function Router() {
         component={ServicosAmbientais}
       />
       <Route path={"/servicos/paisagismo"} component={ServicosPaisagismo} />
+      <Route
+        path={"/servicos/autorizacao-corte-supressao-arvores"}
+        component={AutorizacaoCorteArvores}
+      />
+      <Route
+        path={"/servicos/licenciamento-ambiental-cetesb"}
+        component={LicenciamentoCetesb}
+      />
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/rap-relatorio-ambiental-preliminar"} component={BlogRap} />
