@@ -11,7 +11,7 @@ type PageMetadata = {
 export function useCanonical(path: string, metadata: PageMetadata = {}) {
   useEffect(() => {
     const normalizedPath =
-      path === '/' ? '' : `/${path.replace(/^\/+|\/+$/g, '')}`;
+      path === '/' ? '/' : `/${path.replace(/^\/+|\/+$/g, '')}`;
     const canonicalUrl = `https://www.rezendepaisagismo.com.br${normalizedPath}`;
     const absoluteImage = metadata.image
       ? metadata.image.startsWith('http')
