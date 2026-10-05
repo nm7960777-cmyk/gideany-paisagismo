@@ -122,6 +122,16 @@ export default function AutorizacaoCorteArvores() {
         },
         { href: "/blog", label: "Artigos do blog" },
       ]}
+      experience={[
+        {
+          title: "Embu das Artes: supressão de eucaliptos em talude",
+          text: "Acompanhamento técnico em campo e elaboração do relatório da supressão de eucaliptos com risco de queda, em talude de um empreendimento logístico, em área com traços de fragmento de vegetação nativa.",
+        },
+        {
+          title: "Avaré: identificação de espécies",
+          text: "Levantamento de uma área, com reconhecimento e identificação das espécies de árvores, mapas e quantificação, atuando como suporte técnico com registro no CREA.",
+        },
+      ]}
       note="As informações desta página são orientativas e não substituem a análise do seu caso. Exigências, prazos e procedimentos variam conforme o município, o tipo de vegetação e a legislação vigente, e a decisão final cabe sempre ao órgão competente."
     />
   );

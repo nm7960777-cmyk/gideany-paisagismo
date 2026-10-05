@@ -125,6 +125,12 @@ export default function RapRelatorioAmbientalPreliminar() {
           "label": "EIV: Estudo de Impacto de Vizinhança"
         }
       ]}
+      experience={[
+        {
+          title: "Avaré: levantamento de área para RAP",
+          text: "Levantamento de campo para pedido de RAP, com identificação de espécies, elaboração de mapas, quantificação e apoio nos relatórios, atuando como suporte técnico com registro no CREA.",
+        },
+      ]}
       note={"As informações desta página são orientativas e não substituem a análise do seu caso. Exigências, prazos e procedimentos variam conforme o município, a atividade e a legislação vigente, e a decisão final cabe sempre ao órgão competente."}
     />
   );
