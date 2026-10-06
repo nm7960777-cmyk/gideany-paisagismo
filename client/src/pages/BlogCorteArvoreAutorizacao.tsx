@@ -14,7 +14,7 @@ export default function BlogCorteArvoreAutorizacao() {
   "h1": "Preciso de autorização para cortar uma árvore? Como saber o que vale para o seu caso",
   "date": "6 de outubro de 2026",
   "readTime": "6 min",
-  "intro": "Na maioria dos casos, sim: cortar ou remover uma árvore costuma exigir autorização do órgão ambiental competente, principalmente quando se trata de espécie nativa, de área protegida ou de obra. Mas a regra depende de onde está a árvore, de que tipo ela é e do município, por isso a resposta correta é sempre analisar o caso antes de cortar.",
+  "intro": "Na maioria dos casos, sim. Cortar ou remover uma árvore costuma exigir autorização do órgão ambiental competente, principalmente quando a árvore é nativa, está em área protegida ou fica em local de obra. Como a regra muda conforme o tipo de árvore, o local e o município, o ideal é analisar o caso antes de cortar.",
   "callout": "Cortar primeiro e perguntar depois é o caminho que mais gera problema. Uma análise técnica prévia costuma ser mais simples e mais barata do que regularizar uma infração.",
   "sections": [
     {
@@ -50,7 +50,7 @@ export default function BlogCorteArvoreAutorizacao() {
     {
       "h2": "Qual é o primeiro passo antes de cortar?",
       "paragraphs": [
-        "Antes de qualquer corte, o recomendado é entender qual órgão é responsável pelo seu caso: a prefeitura, o órgão ambiental estadual ou, em algumas situações, mais de um deles. Depois disso, normalmente são pedidos documentos como matrícula ou cadastro do imóvel, fotos, localização e, muitas vezes, um levantamento técnico das árvores."
+        "Antes de qualquer corte, o recomendado é entender qual órgão é responsável pelo seu caso: o órgão municipal, o órgão ambiental estadual ou, em algumas situações, mais de um deles. Depois disso, normalmente são pedidos documentos como matrícula ou cadastro do imóvel, fotos, localização e, muitas vezes, um levantamento técnico das árvores."
       ],
       "items": [
         "Reúna matrícula ou cadastro do imóvel e o endereço ou coordenadas.",
