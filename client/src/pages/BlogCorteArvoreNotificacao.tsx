@@ -15,7 +15,7 @@ export default function BlogCorteArvoreNotificacao() {
   "date": "6 de outubro de 2026",
   "readTime": "5 min",
   "intro": "Cortar vegetação sem a autorização exigida pode ser considerado infração ambiental e, em alguns casos, crime. Se você já cortou ou recebeu uma notificação, o mais importante é não agir por impulso: leia o documento com atenção, respeite os prazos nele indicados e busque orientação técnica e jurídica para saber qual caminho seguir.",
-  "callout": "Este artigo é informativo e não é aconselhamento jurídico. Em caso de auto de infração ou processo, procure também um advogado de sua confiança.",
+  "callout": "Em caso de auto de infração ou de processo, procure também um advogado de sua confiança.",
   "sections": [
     {
       "h2": "O que a lei diz sobre cortar sem autorização?",

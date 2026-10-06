@@ -62,20 +62,7 @@ export default function BlogInventarioArboreo() {
       ]
     }
   ],
-  "sources": [
-    {
-      "label": "Lei nº 12.651/2012 (Código Florestal)",
-      "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
-    },
-    {
-      "label": "Lei nº 11.428/2006 (Lei da Mata Atlântica)",
-      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11428.htm"
-    },
-    {
-      "label": "Lei nº 9.605/1998 (Lei de Crimes Ambientais)",
-      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
-    }
-  ],
+  "sources": [],
   "ctaTitle": "Precisa de um inventário arbóreo para o seu terreno ou obra?",
   "ctaText": "Fazemos o levantamento em campo, o mapa e o parecer técnico, e orientamos o pedido junto ao órgão competente, com atendimento em todo o Estado de São Paulo.",
   "whatsappMsg": "Olá! Li o artigo sobre inventário arbóreo e gostaria de um orçamento para o meu caso.",

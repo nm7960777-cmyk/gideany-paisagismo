@@ -144,12 +144,16 @@ export default function BlogArticle(p: BlogArticleProps) {
             </div>
 
             <div className="mt-10 text-sm text-gray-500">
+              {p.sources.length > 0 && (
+                <>
               <p className="mb-2">Fontes oficiais consultadas:</p>
               <ul className="space-y-1">
                 {p.sources.map((s) => (
                   <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-gold">{s.label}</a></li>
                 ))}
               </ul>
+                </>
+              )}
               <p className="mt-4">
                 Conteúdo informativo e geral. Regras, exigências e procedimentos variam conforme o município, o tipo de vegetação e a legislação vigente, e a decisão final cabe sempre ao órgão ambiental competente. Não substitui a análise técnica do seu caso.
               </p>
