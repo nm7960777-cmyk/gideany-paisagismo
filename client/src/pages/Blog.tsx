@@ -28,10 +28,37 @@ export default function Blog() {
   useCanonical('/blog', {
     title: "Blog de Paisagismo e Consultoria Ambiental | GR Paisagismo",
     description:
-      "Conteúdos sobre jardins verticais, hortas em apartamento, canteiros, escolha de plantas e cuidados com áreas verdes.",
+      "Conteúdos sobre corte de árvores, licenciamento e estudos ambientais, jardins verticais, hortas em apartamento e cuidados com áreas verdes.",
     image: "/images/ambiental-rap-medicao-dap.jpeg",
   });
   const artigos = [
+    {
+      slug: "preciso-de-autorizacao-para-cortar-arvore",
+      titulo: "Preciso de autorização para cortar uma árvore? Como saber o que vale para o seu caso",
+      resumo: "Entenda quando o corte de árvore costuma exigir autorização, o que muda em APP e na Mata Atlântica e qual é o primeiro passo antes de cortar.",
+      imagem: "/images/ambiental-acompanhamento-supressao.jpeg",
+      categoria: "Corte de Árvores",
+      data: "06 Out 2026",
+      tempoLeitura: "6 min",
+    },
+    {
+      slug: "inventario-arboreo-o-que-e",
+      titulo: "O que é inventário arbóreo e quando ele é exigido",
+      resumo: "Veja quais dados o inventário arbóreo reúne, em que situações costuma ser pedido e como ele apoia o pedido de corte e a compensação.",
+      imagem: "/images/ambiental-caracterizacao-vegetacao.jpeg",
+      categoria: "Corte de Árvores",
+      data: "06 Out 2026",
+      tempoLeitura: "5 min",
+    },
+    {
+      slug: "corte-de-arvore-sem-autorizacao-notificacao",
+      titulo: "Cortou árvore sem autorização ou recebeu notificação? O que fazer",
+      resumo: "O que a lei prevê, o que reunir e por que buscar orientação técnica o quanto antes ao receber uma notificação sobre vegetação.",
+      imagem: "/images/ambiental-compensacao-arborea.jpeg",
+      categoria: "Corte de Árvores",
+      data: "06 Out 2026",
+      tempoLeitura: "5 min",
+    },
     {
       slug: "rap-relatorio-ambiental-preliminar",
       titulo: "RAP: quando o Relatório Ambiental Preliminar é solicitado e como se preparar",
