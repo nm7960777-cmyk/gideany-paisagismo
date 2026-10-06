@@ -14,6 +14,9 @@ import BlogJardimVertical from "./pages/BlogJardimVertical";
 import BlogHortaApartamento from "./pages/BlogHortaApartamento";
 import BlogJardimPequeno from "./pages/BlogJardimPequeno";
 import BlogRap from "./pages/BlogRap";
+import BlogCorteArvoreAutorizacao from "./pages/BlogCorteArvoreAutorizacao";
+import BlogInventarioArboreo from "./pages/BlogInventarioArboreo";
+import BlogCorteArvoreNotificacao from "./pages/BlogCorteArvoreNotificacao";
 import FAQ from "./pages/FAQ";
 import ServicosAmbientais from "./pages/ServicosAmbientais";
 import ServicosPaisagismo from "./pages/ServicosPaisagismo";
@@ -58,6 +61,9 @@ function Router() {
       <Route path={"/galeria"} component={Galeria} />
       <Route path={"/blog"} component={Blog} />
       <Route path={"/blog/rap-relatorio-ambiental-preliminar"} component={BlogRap} />
+      <Route path={"/blog/preciso-de-autorizacao-para-cortar-arvore"} component={BlogCorteArvoreAutorizacao} />
+      <Route path={"/blog/inventario-arboreo-o-que-e"} component={BlogInventarioArboreo} />
+      <Route path={"/blog/corte-de-arvore-sem-autorizacao-notificacao"} component={BlogCorteArvoreNotificacao} />
       <Route path={"/blog/jardim-vertical"} component={BlogJardimVertical} />
       <Route path={"/blog/horta-apartamento"} component={BlogHortaApartamento} />
       <Route path={"/blog/jardim-pequeno"} component={BlogJardimPequeno} />
