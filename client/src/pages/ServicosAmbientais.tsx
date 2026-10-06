@@ -544,6 +544,37 @@ export default function ServicosAmbientais() {
         </div>
       </section>
 
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-display text-2xl md:text-3xl text-forest text-center mb-3">
+            Experiência em campo
+          </h2>
+          <p className="text-foreground/70 text-center max-w-2xl mx-auto mb-8">
+            Alguns dos trabalhos que já realizamos, descritos sem identificar clientes.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link
+              href="/servicos/autorizacao-corte-supressao-arvores"
+              className="block rounded-2xl border border-gold/20 bg-white p-7 shadow-sm hover:border-gold/50 hover:shadow-lg transition-all"
+            >
+              <h3 className="font-display text-xl text-forest mb-2">Embu das Artes</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Acompanhamento técnico em campo e relatório da supressão de eucaliptos com risco de queda em talude, em empreendimento logístico.
+              </p>
+            </Link>
+            <Link
+              href="/servicos/rap-relatorio-ambiental-preliminar"
+              className="block rounded-2xl border border-gold/20 bg-white p-7 shadow-sm hover:border-gold/50 hover:shadow-lg transition-all"
+            >
+              <h3 className="font-display text-xl text-forest mb-2">Avaré</h3>
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Levantamento de área para pedido de RAP: identificação de espécies, mapas, quantificação e apoio nos relatórios.
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 bg-forest">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-center">

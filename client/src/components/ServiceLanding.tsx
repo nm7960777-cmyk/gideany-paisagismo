@@ -50,6 +50,8 @@ export interface ServiceLandingProps {
   areas: string[];
   faq: { q: string; a: string }[];
   related: { href: string; label: string }[];
+  /** Experiência real (opcional): trabalhos já realizados, sem identificar clientes */
+  experience?: { title: string; text: string }[];
   /** Aviso final (limites e responsabilidade técnica) */
   note: string;
 }
@@ -242,6 +244,30 @@ export default function ServiceLanding(props: ServiceLandingProps) {
           </div>
         </div>
       </section>
+
+      {props.experience && props.experience.length > 0 && (
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="font-display text-3xl text-forest text-center mb-3">
+              Experiência em campo
+            </h2>
+            <p className="text-foreground/70 text-center max-w-2xl mx-auto mb-10">
+              Trabalhos que já realizamos, descritos sem identificar clientes.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {props.experience.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-gold/20 bg-white p-7 shadow-sm"
+                >
+                  <h3 className="font-display text-xl text-forest mb-3">{item.title}</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-20 bg-cream">
         <div className="container mx-auto px-4 max-w-4xl text-center">
