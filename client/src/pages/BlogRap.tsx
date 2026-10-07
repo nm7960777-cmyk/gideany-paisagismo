@@ -11,6 +11,8 @@ import {
   User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogCta from "@/components/BlogCta";
+import BlogRelated from "@/components/BlogRelated";
 
 export default function BlogRap() {
   useCanonical("/blog/rap-relatorio-ambiental-preliminar", {
@@ -76,7 +78,7 @@ export default function BlogRap() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                9 min de leitura
+                3 min de leitura
               </span>
             </div>
           </motion.div>
@@ -132,6 +134,15 @@ export default function BlogRap() {
               ou instrução técnica de empreendimentos que possam gerar intervenção, alteração de uso, supressão de
               vegetação, movimentação de solo, aumento de tráfego, pressão sobre drenagem ou outros impactos relevantes.
               A exigência varia conforme o município, o órgão responsável, o porte da atividade e as características da área.
+              Em alguns casos, o órgão pode pedir outros estudos junto ou no lugar do RAP, como o{" "}
+              <Link href="/servicos/eiv-estudo-impacto-vizinhanca" className="text-emerald-dark underline hover:text-gold">
+                Estudo de Impacto de Vizinhança (EIV)
+              </Link>
+              , e a supressão de vegetação pode exigir{" "}
+              <Link href="/blog/preciso-de-autorizacao-para-cortar-arvore" className="text-emerald-dark underline hover:text-gold">
+                autorização específica para o corte de árvores
+              </Link>
+              .
             </p>
 
             <h2 className="text-2xl font-cinzel text-emerald-dark mt-12 mb-6">
@@ -187,27 +198,27 @@ export default function BlogRap() {
               sem prometer conclusões que dependem da análise do órgão competente.
             </p>
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Precisa avaliar se o seu caso exige RAP?
-              </h3>
-              <p className="text-gray-700 mb-4">
-                A GR Paisagismo & Consultoria Ambiental realiza avaliação inicial, vistoria e elaboração de estudos
-                ambientais conforme o escopo do processo, com sede em São Roque e atendimento no Estado de São Paulo.
-              </p>
-              <a
-                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre RAP e gostaria de avaliar uma demanda ambiental."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">
-                  Solicitar avaliação pelo WhatsApp
-                </Button>
-              </a>
-            </div>
+            <BlogCta
+              title="Precisa avaliar se o seu caso exige RAP?"
+              text="A GR Paisagismo & Consultoria Ambiental realiza avaliação inicial, vistoria e elaboração de estudos ambientais conforme o escopo do processo, com sede em São Roque e atendimento no Estado de São Paulo."
+              whatsappMsg="Olá! Vi o artigo sobre RAP e gostaria de avaliar uma demanda ambiental."
+              service={{ href: "/servicos/rap-relatorio-ambiental-preliminar", label: "Conheça o serviço de RAP" }}
+            />
+
+            <p className="mt-10 text-sm text-gray-500">
+              Conteúdo informativo e geral. Regras, exigências e procedimentos variam conforme o município, o tipo de atividade e a legislação vigente, e a decisão final cabe sempre ao órgão ambiental competente. Não substitui a análise técnica do seu caso.
+            </p>
           </motion.div>
         </div>
       </article>
+
+      <BlogRelated
+        items={[
+          { href: "/blog/preciso-de-autorizacao-para-cortar-arvore", title: "Preciso de autorização para cortar uma árvore?", text: "Veja quando o corte costuma exigir autorização e qual o primeiro passo." },
+          { href: "/blog/inventario-arboreo-o-que-e", title: "O que é inventário arbóreo", text: "Entenda o levantamento das árvores que apoia pedidos e estudos." },
+          { href: "/servicos/eiv-estudo-impacto-vizinhanca", title: "Estudo de Impacto de Vizinhança (EIV)", text: "Conheça o EIV e quando ele pode ser pedido junto ao licenciamento." },
+        ]}
+      />
 
       <footer className="bg-emerald-dark py-8 border-t border-gold/20">
         <div className="container mx-auto px-4 text-center">

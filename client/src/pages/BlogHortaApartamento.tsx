@@ -8,6 +8,7 @@ import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogCta from "@/components/BlogCta";
 
 export default function BlogHortaApartamento() {
   useCanonical('/blog/horta-apartamento', {
@@ -75,7 +76,7 @@ export default function BlogHortaApartamento() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                10 min de leitura
+                5 min de leitura
               </span>
             </div>
           </motion.div>
@@ -366,25 +367,13 @@ export default function BlogHortaApartamento() {
               </li>
             </ul>
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Quer um Projeto de Horta Personalizado?
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Se você quer uma horta planejada especialmente para seu espaço, com sistema de 
-                irrigação automática e design integrado à sua varanda, entre em contato. Desenvolvemos
-                projetos sob medida em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo.
-              </p>
-              <a
-                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre horta em apartamento e gostaria de um orçamento."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">
-                  Solicitar Orçamento pelo WhatsApp
-                </Button>
-              </a>
-            </div>
+            <BlogCta
+              title={"Quer um Projeto de Horta Personalizado?"}
+              text={"Se você quer uma horta planejada especialmente para seu espaço, com sistema de irrigação automática e design integrado à sua varanda, entre em contato. Desenvolvemos projetos sob medida em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo."}
+              whatsappMsg={"Olá! Vi o artigo sobre horta em apartamento e gostaria de um orçamento."}
+              buttonLabel={"Solicitar Orçamento pelo WhatsApp"}
+              service={{ href: "/servicos/paisagismo", label: "Conheça nossos serviços de paisagismo" }}
+            />
           </motion.div>
         </div>
       </article>

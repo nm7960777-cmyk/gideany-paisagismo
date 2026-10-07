@@ -13,7 +13,7 @@ export default function BlogCorteArvoreAutorizacao() {
   "crumb": "Autorização para cortar árvore",
   "h1": "Preciso de autorização para cortar uma árvore? Como saber o que vale para o seu caso",
   "date": "6 de outubro de 2026",
-  "readTime": "6 min",
+  "readTime": "5 min",
   "intro": "Na maioria dos casos, sim. Cortar ou remover uma árvore costuma exigir autorização do órgão ambiental competente, principalmente quando a árvore é nativa, está em área protegida ou fica em local de obra. Como a regra muda conforme o tipo de árvore, o local e o município, o ideal é analisar o caso antes de cortar.",
   "callout": "Cortar primeiro e perguntar depois é o caminho que mais gera problema. Uma análise técnica prévia costuma ser mais simples e mais barata do que regularizar uma infração.",
   "sections": [
@@ -62,7 +62,27 @@ export default function BlogCorteArvoreAutorizacao() {
       "after": [
         "Em muitos casos o pedido é instruído com um inventário arbóreo e um parecer técnico, e o órgão pode definir medidas de compensação, como o plantio de mudas."
       ]
-    }
+    },
+  {
+    "h2": "Poda, árvore na calçada e árvore plantada: a regra é a mesma?",
+    "paragraphs": [
+      "Não necessariamente. A poda, a árvore na calçada ou em via pública e a árvore plantada pelo próprio morador costumam ter regras definidas pelo município, e elas variam bastante de uma cidade para outra. Em algumas cidades a poda de árvores na calçada é de responsabilidade do poder público e não pode ser feita pelo morador por conta própria.",
+      "Por isso, mesmo para uma intervenção que pareça simples, o recomendado é consultar a regra local ou pedir uma avaliação técnica antes de agir."
+    ]
+  },
+  {
+    "h2": "Resumo: o que levar em conta antes de cortar",
+    "items": [
+      "Qual é o tipo de árvore: nativa, exótica ou plantada.",
+      "Onde ela está: terreno urbano, área rural, calçada, APP ou área de Mata Atlântica.",
+      "Por que o corte é necessário: obra, risco de queda, doença ou regularização.",
+      "Qual órgão decide: municipal, estadual ou mais de um.",
+      "Se há alguma notificação ou exigência já recebida."
+    ],
+    "after": [
+      "Com essas informações em mãos, a avaliação técnica fica mais rápida e o caminho até a autorização, mais claro."
+    ]
+  }
   ],
   "sources": [
     {
@@ -93,7 +113,8 @@ export default function BlogCorteArvoreAutorizacao() {
     {
       "href": "/blog/corte-de-arvore-sem-autorizacao-notificacao",
       "label": "Cortou árvore sem autorização ou recebeu notificação? O que fazer"
-    }
+    },
+    {"href": "/blog/rap-relatorio-ambiental-preliminar", "label": "RAP: quando o Relatório Ambiental Preliminar é solicitado"}
   ]
 }}
     />

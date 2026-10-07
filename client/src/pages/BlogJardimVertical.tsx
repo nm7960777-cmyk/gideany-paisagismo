@@ -8,6 +8,7 @@ import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, User, Share2, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogCta from "@/components/BlogCta";
 
 export default function BlogJardimVertical() {
   useCanonical('/blog/jardim-vertical', {
@@ -75,7 +76,7 @@ export default function BlogJardimVertical() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                8 min de leitura
+                4 min de leitura
               </span>
             </div>
           </motion.div>
@@ -290,25 +291,13 @@ export default function BlogJardimVertical() {
               </li>
             </ul>
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Precisa de Ajuda Profissional?
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Se você quer um jardim vertical personalizado, projetado especialmente para seu espaço e
-                estilo de vida, fale com nossa equipe. Desenvolvemos projetos sob medida para diferentes espaços
-                em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo.
-              </p>
-              <a
-                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim vertical e gostaria de um orçamento."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">
-                  Solicitar Orçamento pelo WhatsApp
-                </Button>
-              </a>
-            </div>
+            <BlogCta
+              title={"Precisa de Ajuda Profissional?"}
+              text={"Se você quer um jardim vertical personalizado, projetado especialmente para seu espaço e estilo de vida, fale com nossa equipe. Desenvolvemos projetos sob medida para diferentes espaços em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo."}
+              whatsappMsg={"Olá! Vi o artigo sobre jardim vertical e gostaria de um orçamento."}
+              buttonLabel={"Solicitar Orçamento pelo WhatsApp"}
+              service={{ href: "/servicos/paisagismo", label: "Conheça nossos serviços de paisagismo" }}
+            />
           </motion.div>
         </div>
       </article>

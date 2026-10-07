@@ -39,7 +39,7 @@ export default function Blog() {
       imagem: "/images/ambiental-acompanhamento-supressao.jpeg",
       categoria: "Corte de Árvores",
       data: "06 Out 2026",
-      tempoLeitura: "6 min",
+      tempoLeitura: "5 min",
     },
     {
       slug: "inventario-arboreo-o-que-e",
@@ -48,7 +48,7 @@ export default function Blog() {
       imagem: "/images/ambiental-caracterizacao-vegetacao.jpeg",
       categoria: "Corte de Árvores",
       data: "06 Out 2026",
-      tempoLeitura: "5 min",
+      tempoLeitura: "4 min",
     },
     {
       slug: "corte-de-arvore-sem-autorizacao-notificacao",
@@ -57,7 +57,7 @@ export default function Blog() {
       imagem: "/images/ambiental-compensacao-arborea.jpeg",
       categoria: "Corte de Árvores",
       data: "06 Out 2026",
-      tempoLeitura: "5 min",
+      tempoLeitura: "4 min",
     },
     {
       slug: "rap-relatorio-ambiental-preliminar",
@@ -66,7 +66,7 @@ export default function Blog() {
       imagem: "/images/ambiental-rap-medicao-dap.jpeg",
       categoria: "Licenciamento Ambiental",
       data: "19 Jul 2026",
-      tempoLeitura: "9 min",
+      tempoLeitura: "3 min",
     },
     {
       slug: "jardim-vertical",
@@ -75,7 +75,7 @@ export default function Blog() {
       imagem: "/images/blog-jardim-vertical-home-novo.jpg",
       categoria: "Jardim Vertical",
       data: "10 Jan 2026",
-      tempoLeitura: "8 min",
+      tempoLeitura: "4 min",
     },
     {
       slug: "horta-apartamento",
@@ -84,7 +84,7 @@ export default function Blog() {
       imagem: "/images/blog-horta-apartamento-principal-novo.jpg",
       categoria: "Horta em Apartamento",
       data: "08 Jan 2026",
-      tempoLeitura: "10 min",
+      tempoLeitura: "5 min",
     },
     {
       slug: "jardim-pequeno",
@@ -93,7 +93,7 @@ export default function Blog() {
       imagem: "/images/blog-jardim-pequeno-principal-novo.jpg",
       categoria: "Jardim Pequeno",
       data: "05 Jan 2026",
-      tempoLeitura: "12 min",
+      tempoLeitura: "4 min",
     },
   ];
 
