@@ -13,7 +13,7 @@ export default function BlogCorteArvoreNotificacao() {
   "crumb": "Corte sem autorização",
   "h1": "Cortou árvore sem autorização ou recebeu notificação? O que fazer",
   "date": "6 de outubro de 2026",
-  "readTime": "5 min",
+  "readTime": "4 min",
   "intro": "Cortar vegetação sem a autorização exigida pode ser considerado infração ambiental e, em alguns casos, crime. Se você já cortou ou recebeu uma notificação, o mais importante é não agir por impulso: leia o documento com atenção, respeite os prazos nele indicados e busque orientação técnica e jurídica para saber qual caminho seguir.",
   "callout": "Em caso de auto de infração ou de processo, procure também um advogado de sua confiança.",
   "sections": [
@@ -45,7 +45,27 @@ export default function BlogCorteArvoreNotificacao() {
       "paragraphs": [
         "Sim. Na maioria das vezes, uma avaliação técnica antes do corte mostra se há autorização exigida, qual órgão é responsável e quais documentos preparar. É um caminho mais previsível do que regularizar depois."
       ]
-    }
+    },
+  {
+    "h2": "Notificação, auto de infração e embargo: qual a diferença?",
+    "paragraphs": [
+      "Os nomes e os procedimentos variam conforme o órgão, mas, de forma geral, esses documentos têm funções diferentes:"
+    ],
+    "items": [
+      "A notificação costuma pedir informações, documentos ou providências dentro de um prazo.",
+      "O auto de infração registra a infração constatada e pode indicar as sanções aplicáveis.",
+      "O embargo ou a suspensão paralisa a atividade ou a obra na área até a regularização."
+    ],
+    "after": [
+      "Cada um traz prazos e caminhos de defesa próprios. Por isso é importante ler o que está escrito no seu documento e não confiar em informação genérica."
+    ]
+  },
+  {
+    "h2": "A regularização depois do corte é sempre possível?",
+    "paragraphs": [
+      "Nem sempre. Quando possível, ela costuma envolver documentos técnicos, medidas de recuperação ou compensação e a análise do órgão competente, que decide o resultado. Não existe garantia de que o caso seja resolvido de determinada forma ou em determinado prazo."
+    ]
+  }
   ],
   "sources": [
     {
@@ -76,7 +96,8 @@ export default function BlogCorteArvoreNotificacao() {
     {
       "href": "/blog/inventario-arboreo-o-que-e",
       "label": "O que é inventário arbóreo e quando ele é exigido"
-    }
+    },
+    {"href": "/blog/rap-relatorio-ambiental-preliminar", "label": "RAP: quando o Relatório Ambiental Preliminar é solicitado"}
   ]
 }}
     />

@@ -8,6 +8,7 @@ import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, User, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogCta from "@/components/BlogCta";
 
 export default function BlogJardimPequeno() {
   useCanonical('/blog/jardim-pequeno', {
@@ -75,7 +76,7 @@ export default function BlogJardimPequeno() {
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                12 min de leitura
+                4 min de leitura
               </span>
             </div>
           </motion.div>
@@ -373,26 +374,13 @@ export default function BlogJardimPequeno() {
               </li>
             </ul>
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">
-                Quer um Projeto Personalizado para Seu Espaço?
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Cada espaço é único e merece um projeto pensado especialmente para ele. Se você 
-                quer transformar seu quintal, varanda ou área externa em um jardim dos sonhos, 
-                entre em contato. Desenvolvemos projetos sob medida em São Roque, Cotia, Sorocaba e
-                em todo o Estado de São Paulo.
-              </p>
-              <a
-                href="https://wa.me/5511950583364?text=Olá! Vi o artigo sobre jardim pequeno e gostaria de um orçamento para meu espaço."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">
-                  Solicitar Orçamento pelo WhatsApp
-                </Button>
-              </a>
-            </div>
+            <BlogCta
+              title={"Quer um Projeto Personalizado para Seu Espaço?"}
+              text={"Cada espaço é único e merece um projeto pensado especialmente para ele. Se você quer transformar seu quintal, varanda ou área externa em um jardim dos sonhos, entre em contato. Desenvolvemos projetos sob medida em São Roque, Cotia, Sorocaba e em todo o Estado de São Paulo."}
+              whatsappMsg={"Olá! Vi o artigo sobre jardim pequeno e gostaria de um orçamento para meu espaço."}
+              buttonLabel={"Solicitar Orçamento pelo WhatsApp"}
+              service={{ href: "/servicos/paisagismo", label: "Conheça nossos serviços de paisagismo" }}
+            />
           </motion.div>
         </div>
       </article>

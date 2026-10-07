@@ -13,7 +13,7 @@ export default function BlogInventarioArboreo() {
   "crumb": "Inventário arbóreo",
   "h1": "O que é inventário arbóreo e quando ele é exigido",
   "date": "6 de outubro de 2026",
-  "readTime": "5 min",
+  "readTime": "4 min",
   "intro": "O inventário arbóreo é o levantamento das árvores de uma área, com identificação de cada indivíduo, medidas, localização e condição. Ele costuma ser a base técnica de pedidos de autorização para corte ou manejo, de projetos e de regularizações, porque mostra ao órgão ambiental exatamente o que existe no local.",
   "callout": "Um bom inventário não é só uma lista de árvores: é a leitura técnica que sustenta a decisão do órgão e define, por exemplo, o que pode ser mantido, manejado ou compensado.",
   "sections": [
@@ -60,7 +60,27 @@ export default function BlogInventarioArboreo() {
       "paragraphs": [
         "Identificar espécies, medir e localizar árvores exige presença em campo. É lá que se percebe se há vegetação nativa, indícios de APP, árvores com risco e outros pontos que podem mudar o caminho do processo. Um levantamento genérico, feito sem visita, aumenta a chance de exigências complementares do órgão."
       ]
-    }
+    },
+  {
+    "h2": "Inventário, laudo e parecer técnico são a mesma coisa?",
+    "paragraphs": [
+      "Não. Na prática, os termos costumam ser usados com sentidos diferentes, embora cada órgão possa usar a sua própria nomenclatura. De forma geral:"
+    ],
+    "items": [
+      "O inventário é o levantamento: registra o que existe no local, árvore por árvore.",
+      "O parecer ou laudo técnico é a análise: interpreta os dados e fundamenta a conclusão, por exemplo a necessidade de manejo ou remoção de uma árvore.",
+      "O plano de compensação é a proposta de medida, como o plantio de mudas, quando a supressão é autorizada."
+    ],
+    "after": [
+      "Em muitos processos os três documentos aparecem juntos, e é o órgão competente que define o que precisa ser apresentado."
+    ]
+  },
+  {
+    "h2": "Quem pode elaborar o inventário?",
+    "paragraphs": [
+      "Como é um documento técnico que subsidia uma decisão do órgão ambiental, ele normalmente deve ser elaborado por profissional habilitado, com a respectiva responsabilidade técnica. A exigência exata varia conforme o município e o órgão, por isso vale conferir antes de contratar."
+    ]
+  }
   ],
   "sources": [],
   "ctaTitle": "Precisa de um inventário arbóreo para o seu terreno ou obra?",
@@ -78,7 +98,8 @@ export default function BlogInventarioArboreo() {
     {
       "href": "/blog/corte-de-arvore-sem-autorizacao-notificacao",
       "label": "Cortou árvore sem autorização ou recebeu notificação? O que fazer"
-    }
+    },
+    {"href": "/blog/rap-relatorio-ambiental-preliminar", "label": "RAP: quando o Relatório Ambiental Preliminar é solicitado"}
   ]
 }}
     />

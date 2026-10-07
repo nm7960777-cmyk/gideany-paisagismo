@@ -3,6 +3,7 @@ import { useCanonical } from "@/hooks/useCanonical";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, CheckCircle, ChevronRight, Clock, FileSearch, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BlogCta from "@/components/BlogCta";
 
 export type BlogSection = {
   h2: string;
@@ -121,18 +122,7 @@ export default function BlogArticle(p: BlogArticleProps) {
               </section>
             ))}
 
-            <div className="bg-gold/10 border border-gold/30 rounded-xl p-6 mt-12">
-              <h3 className="text-xl font-cinzel text-emerald-dark mb-4">{p.ctaTitle}</h3>
-              <p className="text-gray-700 mb-4">{p.ctaText}</p>
-              <div className="flex flex-wrap gap-3">
-                <a href={`https://wa.me/5511950583364?text=${encodeURIComponent(p.whatsappMsg)}`} target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-gold hover:bg-gold/90 text-emerald-dark font-semibold">Solicitar avaliação pelo WhatsApp</Button>
-                </a>
-                <Button asChild variant="outline" className="border-emerald-dark/30 text-emerald-dark">
-                  <Link href={p.service.href}>{p.service.label}</Link>
-                </Button>
-              </div>
-            </div>
+            <BlogCta title={p.ctaTitle} text={p.ctaText} whatsappMsg={p.whatsappMsg} service={p.service} />
 
             <div className="mt-10">
               <h3 className="text-lg font-cinzel text-emerald-dark mb-3">Leia também</h3>
